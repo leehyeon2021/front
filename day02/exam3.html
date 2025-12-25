@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> sample 3 </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+<!-- <img src="사진파일경로" /> <-혼자 기능. 안 닫아도 됨. -->
+<!-- src에는 (사진)파일이 위치한 경로를 넣어주면 된다.-->
+<!-- 추후에는 벡엔드(자바/파이썬) 서버 경로를 넣어주면 된다.-->
+<img src="./무당벌레.png" /> <br />
+bug <br />
+bug <br />
+<img src="../무당벌레.png" /> <br />
+
+<audio 
+    src="오디오.mp3" 
+    controls> </audio>  <!-- 나중에 MUI 같은 곳에 가서 형태 바꾸기-->
+<!-- autoplay는 오디오에서는 정책상 차단. 그러나 muted(음소거)로 실행하면 가능.--> 
+ <!--주로 백그라운드 영상에서 사용.-->
+
+<video
+    src="비디오.mp4"
+    controls
+    autoplay
+    muted> </video>
+<!-- 소리 없는 영상 만들 떄 사용-->
+<!-- 추후에 JS(자바스크립트)를 이용한 동적 처리 가능.-->
+
+<!-- 유튜브에서 퍼가기<> 하면 나오는 거 -->
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/EGbPifAnRFs?si=PcG56ISFBa11Dhro" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen></iframe>
+
+<!-- 구글 지도에서 퍼가기<> 하면 나오는 거. -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.4443279616!2d126.9281851!3d37.37932310000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b67b86fa90ca9%3A0x50ab76efd5310e0d!2z7ISx6rKw64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1766544975449!5m2!1sko!2skr" 
+    width="600" height="450" style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<!-- iframe은 커스텀을 제공하지 않음. 회사 소개 같은 간단한 것만 iframe 사용. -->
+
+</body>
+</html>

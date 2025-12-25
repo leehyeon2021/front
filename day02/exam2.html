@@ -1,0 +1,46 @@
+ <!--주석: 실행 결과에 출력되지 않음. 간단한 코드 설명. 협업에서 코드 설명을 위한 것.-->
+ <!DOCTYPE html> <!-- HTML5 알림: 생략 가능-->
+<html> <!--HTML의 시작 알리는 마크업: 생략 가능하나 생략 금지-->
+<head> <!-- HTML 웹페이지의 옵션 정의하는 마크업-->
+    <meta charset='utf-8'> <!-- 유니코드 (한글 번역방법: 인코딩 방법으로 함.)-->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!--qmfkdnwj ghksrud-->
+    <title> 내 홈페이지 </title> <!--웹페이지 제목-->
+    <meta name='viewport' content='width=device-width, initial-scale=1'> 
+    <!--드바이스(브라우저 크기에 따른 자동 반응형)-->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!--css 파일 호출-->
+    <script src='main.js'></script> <!--js 파일 호출-->
+</head> <!--head end-->
+<body> <!--웹페이지 본문-->
+  
+    <ol> <!-- order list: 홈페이지 메뉴, 제품항목 등. 순차적인 아이템 배치. 글머리 때문이 아님.-->
+        <li> <!-- list item: 순차적인 것.-->
+            1일차
+        </li>
+        <li> 2일차 </li>
+        <li> 3일차 </li>
+    </ol>
+    <ul> <!--un order list: il, ul은 글머리 차이. 숫자냐 동그라미냐.-->
+        <li> 1일차 </li>
+        <li> 2일차 </li>
+    </ul>
+
+    <a herf="https://www.naver.com"> 여기 클릭 </a> <!-- 하이퍼 링크. 내부 페이지 이동 --> <br/>
+    <a href="exam1.html"> 이전 실습 페이지로 </a> <br/>
+    <a href="tel:010-3333-3333"> 전화 걸기(모바일 환경에서 가능) </a> <br/>
+
+    <!-- 외울 것: 상대 경로(현재위치기준. 바뀜) vs. 절대 경로(고정위치기준. 안 바뀜)-->
+    <a href="./exam.html"> 현위치: ./, 생략 가능 </a> <br/>
+    <a href="../day01/test.html"> 현위치 기준에서 상위 폴더 1번(../) 이동. ../../(2번) </a> <br/>
+    <!-- ../ 한 번에 하나 위의 상위폴더로 감-->
+
+    <a href="C:\Users\SKU-102-19\Desktop\Front\day01\test.html"> Copy Path 절대 경로 </a> <br/>
+    <a href="http://172.29.109.210:5500/front/day02/exam1.html"> 서버 환경 절대주소 </a> <br/> <!-- 교수님 서버 -->
+    <a href="./exam1.html"> 서버환경 상대경로 </a> <br/>
+    <!-- 절대경로가 좋음. 왜냐면 로컬이나 서버가 바뀌어도 똑같음. 로컬은 혼자 쓰는, 서버는 공용. -->
+    <!-- 둘 다 앞이 바뀌어서 절대경로로 수정하려면 번거로움. -->
+    <!-- 웬만하면 상대경로 권장 -->
+
+    <a href="../day03/test.html"> 다른 폴더의 html </a>
+</body>
+</html>
