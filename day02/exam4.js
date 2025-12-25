@@ -9,6 +9,3 @@ console.log("exam4.js");
 /*
     여러 줄 주석
 */
-
-
-
