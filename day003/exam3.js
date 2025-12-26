@@ -89,6 +89,7 @@ console.log( ary1.length );
 // 배열은 변수에 저장. 
 
 
+
 // 형변환이 필요한 이유: 파이썬 같은 다른 자료를 확인하기 위함.
 // 자료 타입 학인: typeof 자료
     // ppt 참고.
@@ -99,9 +100,21 @@ console.log( ary1.length );
 let input = prompt(`숫자: `); // prompt 사용자가 숫자를 입력해도 무조건 문자로 반환된다. 
 console.log( typeof input ); // "100" -> spring(문자열)
 
+// 자동 타입변환
 input = input * 1;              // 숫자로 바꾸는 방법1] 
 console.log( typeof input);     // "100" * 1 --> 100 number로 나옴. (숫자)
 
 input = Number(input);     // 숫자로 바꾸는 방법2]
 console.log(typeof input); // Number()
+
+// 수동 타입변환
+// 숫자 형식만 바꿀 수 있음.
+console.log( Number("100") );   // "100"이 100이 되는 것.
+console.log( parseInt("100") ); // "100" -> 100
+console.log( parseFloat(`3.14`) ); // "3.14" -> 3.14
+
+console.log( String( 100 ) );   // 100 -> "100"
+console.log( 100 + "" );        // ""<- 이 안에 빈 칸 넣으면 안 됨. 100 -> "100"
+
+console.log( Boolean("true") ); // "true" -> true
 
