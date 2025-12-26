@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form> <!-- 입력 상자들을 감싼 폼 양식: 추후에 백엔드랑 통신할 때 사용 ('폼 전송') -->
+        <!-- form은 전송 마크업이기 때문에 전송 안 할 거면 필요 없음. (백엔드 없는 지금엔 필요 없음. 없어도 작동함.)-->
+        
+        텍스트: <input type="text" autofocus disabled/> <br/> <!-- disabled는 아예 열리지 않아서 입력 불가.-->
+        <!-- autofocus 자동으로. 사용자 편의 제공.-->
+         텍스트: <input type="text" autofocus maxlength="10"/> <br/> <!-- maxlength는 (유효성 검사?) 글자 수 제한.-->
+         텍스트: <input type="text" autofocus placeholder="아이디 또는 전화번호"/> <br/> <!-- 입력 전 가이드 라인. -->
+        비밀번호: <input type="password"/> <br/>
+        텍스트2: <input type="text" value="유재석" readonly /> <br/>
+        <!-- redonly == 수정 금지. (예: 번호 인증 후 입력할 수 없게 할 때)-->
+        첨부파일(단일): <input type="file" /> <br/>
+        <!-- '파일 선택' 버튼. 벡엔드 없어서 업로드 처리는 안 됨. 자바나 파이썬 필요-->
+        첨부파일(복수): <input type="file" multiple /> <br/>
+        <!-- 드래그 앤 드랍은 스크립트로 만들어야 함. (드래그앤드랍은 당연하지만 웹은 있고 앱은 없음)-->
+        
+
+        숫자: <input type="number" /> <br/>
+        <!-- 버튼이 너무 작아서 잘 안 씀. 글자 입력 안 됨. 별도의 div로 버튼 만들기. 스크립트 기능도 만들어야 함. -->
+        날짜: <input type="date" /> <br/>
+        <!-- 달력 나옴 -->
+        날짜/시간: <input type="datetime-local" />
+        <!-- local 까지 넣으면 서울 시간에 맞춰서 해줌-->
+        시간: <input type="time" /><br/>
+        월: <input type="month" /> 주: <input type="week" /> <br/>
+        <!-- 날짜 관련. -->
+        <!-- 구글 캘린더에서 api 제공 중. (api: 다른 회사 거 활용하게 해주는 거.)-->
+        스크롤: <input type="range"/> <br/>
+        <!-- 음악 쪽 -->
+        
+
+        체크박스(복수): 뉴스<input type="checkbox" />
+                      광고<input type="checkbox"/> <br/> <!-- name 해놔도 복수 처리 됨. -->
+        체크박스(단일): 뉴스<input type="radio" name="가입경로" /> <!-- radio는 neme을 똑같이 해놔야 단일로 처리 됨. -->
+                      광고<input type="radio" name="가입경로" /> <br/>
+
+        폼전송: <input type="submit" value="로그인" /> <br/>
+        <!-- 전송하려면 백앤드 필요-->
+        폼 초기화: <input type="reset" value="다시쓰기" /> <br/>
+        일반버튼: <button type="button"> 회원가입 </button> <br/>
+        <!-- form 안에 있을 때 type에 "button"이라고 꼭 지정해야 함. 아니면 submit이 아니게 되어서 오류 남. -->
+        <!-- 추후엔 폼전송보다는 스크립트 전송을 사용. AJAX --> <!-- 그래서 input 보다는 button을 많이 사용해보기. -->
+        
+        긴 텍스트: <textarea cols="50" rows="5"></textarea> <br/>
+        <!--textarea는 긴 글. cols는 칸 수. rows는 줄 수. / 꺽쇠 사이에 한 칸 띄우면 텍스트 상자에 공백이 들어감. -->
+        목록 상자: <select>
+                    <option> @dawm.net </option>
+                    <option> @naver.com </option>
+                    <option> @gamil.com </option>
+                  </select> <br/> <!-- 셀렉트에서는 옵션으로 옵션 만들어 줌.-->
+
+        <!--HTML ppt 해주신 거 확인하기 -->
+            <!-- maxlength-->
+    </form>
+</body>
+</html>
