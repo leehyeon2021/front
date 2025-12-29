@@ -1,15 +1,93 @@
+@font-face {
+    font-family: 'YeogiOttaeJalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+.title{
+    font-family: 'YeogiOttaeJalnan';
+    color: rgb(167, 89, 16);
+    font-size: 30px;
+    text-align: left;
+}
+
+.content {
+    font-family: 'GMarketSans';
+    color: rgb(85, 56, 36);
+    word-spacing: 1px;
+    letter-spacing: 3px;
+    line-height: 150%;
+}
+
+.title2{
+    font-family: 'YeogiOttaeJalnan';
+    color: rgb(167, 89, 16);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.writer{
+    font-family: 'GMarketSans';
+    color: rgb(85, 56, 36);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.writer2{
+    font-family: 'GMarketSans';
+    color:black;
+    font-size: 20px;
+}
+
+.cheak{
+    color: rgb(167, 89, 16);
+    text-align: center;
+}
+
+.writer3{
+    font-family: 'GMarketSans';
+    color: rgb(85, 56, 36);
+    font-size: 20px;
+}
+
+.writer4{
+    font-family: 'GMarketSans';
+    color: rgb(167, 89, 16);
+    font-size: 20px;
+    text-align: left;
+}
+
 .subtitle{
-    color: rgb(167, 114, 16);
+    font-family: 'GMarketSans';
+    color: rgb(167, 89, 16);
 }
 
 .center{
     text-align: center;
+    color: rgb(85, 56, 36)
 }
 
 .option{
-    color: #af3939;
+    text-align: left;
+    font-family: 'GMarketSans';
+    color: rgb(85, 56, 36)
 }
 
 .qna{
+    font-family: 'YeogiOttaeJalnan';
+    color: rgb(167, 89, 16);
     font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.button{
+    font-family: 'GMarketSans';
+    color: rgb(167, 89, 16);
 }
