@@ -2,12 +2,14 @@
     // // 1. 밑변, 높이 입력 받기
     // let 밑변 = Number(prompt(`밑변을 입력하시오.`));
     // let 높이 = Number(prompt(`높이를 입력하시오.`));
-
     // // 2. 삼각형 넓이 계산
     // let 넓이 = 밑변*높이/2;
-
     // // 3. 콘솔 출력
     // console.log(`삼각형 넓이: ${넓이}`);
+
+// 참고: 1. 한국어는 변수명(임의) 또는 문자, 2. 영문은 키워드/약속/문법
+// 참고: 변수명은 띄어쓰기 불가능. 숫자로 시작 불가능. 특수문자는 일부($_!등)만 가능.
+// 참고: let 변수명 = 3 <선언/만들기>, 변수명 = 3 <수정/호출>
 
 // 문제2: 섭씨를 화씨로 변환
     // // 1. 섭씨 입력 받기
@@ -37,7 +39,7 @@
     // let id = prompt(`아이디를 입력하시오.`);
     // let email = prompt(`이메일을 입력하시오`);
     // // 2. 아이디 이메일 확인
-    // let manager = id==`admin` && email==`admin@test.com`;
+    // let manager = id==`admin` || email==`admin@test.com`;
     // // 3. 여부에 따라 관리자 / 일반 사용자 입력
     // let result = manager ? `관리자`:`일반 사용자`;
     // console.log(result);
@@ -60,5 +62,25 @@
 
 
 // 문제8: '좋아요' 카운터 만들기
-    
-    // 모르겠어!
+    // // 1. 좋아요 수 저장 변수 3 선언
+    // let likeCount = 3;
+    // // 2. 증강 연산자 사용 변수 값 1 증가
+    // ++likeCount
+    // // 3. 콘솔 출력
+    // console.log(`좋아요: ${likeCount}`);
+
+// 문제9: 할 일 목록에 항목 추가하기
+    // // 1. 배열 만들기
+    // let todoList = [`장보기`, `과제하기`];
+    // // 2. 할 일 입력 받기
+    // let list3 = `,` + prompt(`새로운 할 일을 입력하세요.`);
+    // // 3. 할 일 마지막에 추가하기
+    // todoList.push(list3);   // .push() 배열에 요소 추가할 때 사용하는 메소드
+    // console.log(todoList);
+
+// 문제10: 대기열의 마지막 사람 확인하기
+    // 1. 대기자 명단 배열 만들기
+    let waitingList = [`김민준`, `이서연`, `박도윤`, `최지우`];
+    // 2. 마지막 사람 찾기
+    let lastone = waitingList[waitingList.length - 1];
+    console.log(`마지막 대기자는 [${lastone}]입니다.`);
