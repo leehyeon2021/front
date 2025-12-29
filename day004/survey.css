@@ -2,6 +2,14 @@
     color: rgb(167, 114, 16);
 }
 
+.center{
+    text-align: center;
+}
+
 .option{
     color: #af3939;
+}
+
+.qna{
+    font-size: 30px;
 }
