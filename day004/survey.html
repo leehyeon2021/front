@@ -1,55 +1,136 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>메머드 카페 만족도 조사 (명학역점)</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
-    <link rel="stylesheet" href="survey.css"/>
+
+    <link rel="stylesheet" href="survey.css" />
 </head>
+
 <body>
-    <table border="1" style="border-collapse: collapse;">
+    <img src="./매머드커피로고.jpg" /> <br />
 
-        <!-- 6번 -->
-        <tr>
-            <td> <div class="subtitle"> 6. 상품에 만족하셨나요? </div> </td>
-            <td div class="center"> <input type="radio" name="six"> </td>
-            <td div class="center"> <input type="radio" name="six"> </td>
-            <td div class="center"> <input type="radio" name="six"> </td>
-            <td div class="center"> <input type="radio" name="six"> </td>
-            <td div class="center"> <input type="radio" name="six"> </td>
-        </tr>
+    <h3 class="title"> 카페 만족도 조사(명학역점) </h3>
+    <hr />
+    <div class="content">
+        매머드 커피에서는 고객의 만족도 향상을 위해서 여러분의 의견을 수집하고자 합니다. <br />
+        본 설문지는 오로지 고객 서비스 향상만을 위해서만 사용하겠습니다. <br />
+        언제나 고객님을 위한 최고의 카페가 되겠습니다.
+    </div>
+    <hr />
+
+    <h4 class="title2">설문자 정보</h4>
+
+    <h5 class="writer">
+        이름: <input type="text" /> <br />성별: <input type="text" />
+    </h5>
+    <hr />
+
+    <form>
+        <table border="1" style="border-collapse: collapse;">
+            
+            <!-- 1번 -->
+            <tr>
+                <td>
+                    <div class="writer4"> 1. 연령대 </div>
+                </td>
+                <td div class="center"> <input type="radio" name="연령대"> 10대 </td>
+                <td div class="center"> <input type="radio" name="연령대"> 20대 </td>
+                <td div class="center"> <input type="radio" name="연령대"> 30대 </td>
+                <td div class="center"> <input type="radio" name="연령대"> 40대 </td>
+                <td div class="center"> <input type="radio" name="연령대"> 50대 이상 </td>
+            </tr>
+
+            <!-- 구분 -->
+            <tr class="cheak">
+                <th>구분</th>
+                <th>매우 만족</th>
+                <th>만족</th>
+                <th>보통</th>
+                <th>불만족</th>
+                <th>매우 불만족</th>
+            </tr>
+
+            <!-- 2번 -->
+            <tr>
+                <td>
+                    <div class="writer4"> 2. 청결만족도 </div>
+                </td>
+                <td div class="center"> <input type="radio" name="청결만족도"> </td>
+                <td div class="center"> <input type="radio" name="청결만족도"> </td>
+                <td div class="center"> <input type="radio" name="청결만족도"> </td>
+                <td div class="center"> <input type="radio" name="청결만족도"> </td>
+                <td div class="center"> <input type="radio" name="청결만족도"> </td>
+            </tr>
+
+            <!-- 3번 -->
+            <tr>
+                <td>
+                    <div class="writer4"> 3. 직원 서비스 만족도 </div>
+                </td>
+                <td div class="center"> <input type="radio" name="직원 서비스 만족도"> </td>
+                <td div class="center"> <input type="radio" name="직원 서비스 만족도"> </td>
+                <td div class="center"> <input type="radio" name="직원 서비스 만족도"> </td>
+                <td div class="center"> <input type="radio" name="직원 서비스 만족도"> </td>
+                <td div class="center"> <input type="radio" name="직원 서비스 만족도"> </td>
+            </tr>
         
-        <!-- 7번 -->
-         <tr>
-            <td> <div class="subtitle"> 7. 무엇이 만족스러우셨나요? </div> </td>
-            <td colspan="5"> <div class="option"> <input type="checkbox"/> 디자인 
-            <input type="checkbox"/>맛  
-            <input type="checkbox"/>제공 MD 
-            <input type="checkbox"/>매장 분위기 </div> </td>
-        </tr>
-        
-        <!-- 8번 -->
-        <tr>
-            <td> <div class="subtitle"> 8. 즐겨 마시는 음료는 무엇인가요? </div> </td>
-            <td colspan="5"> <div class="option"> <input type="radio" name="8">  커피 
-            <input type="radio" name="eig"> 스무디 
-            <input type="radio" name="eig"> 차 
-            <input type="radio" name="eig"> 에이드 
-            <input type="radio" name="eig"> 기타 </div> </td>
-        </tr>
+            <!-- 4번 -->
+            <tr>
+                <td>
+                    <div class="subtitle"> 4. 상품에 만족하셨나요? </div>
+                </td>
+                <td div class="center"> <input type="radio" name="six"> </td>
+                <td div class="center"> <input type="radio" name="six"> </td>
+                <td div class="center"> <input type="radio" name="six"> </td>
+                <td div class="center"> <input type="radio" name="six"> </td>
+                <td div class="center"> <input type="radio" name="six"> </td>
+            </tr>
 
-    </table>
-    <br/>
+            <!-- 5번 -->
+            <tr>
+                <td>
+                    <div class="subtitle"> 5. 무엇이 만족스러우셨나요? </div>
+                </td>
+                <td colspan="5">
+                    <div class="option"> <input type="checkbox" /> 디자인
+                        <input type="checkbox" />맛
+                        <input type="checkbox" />제공 MD
+                        <input type="checkbox" />매장 분위기
+                    </div>
+                </td>
+            </tr>
 
-    <!-- 건의 사항-->
-    <div class="qna"> 건의사항 </div>
-    <textarea cols="78" rows="20" placeholder="기타 요청사항이 있다면 적어주세요."></textarea>
-    <br/>
+            <!-- 6번 -->
+            <tr>
+                <td>
+                    <div class="subtitle"> 6. 즐겨 마시는 음료는 무엇인가요? </div>
+                </td>
+                <td colspan="5">
+                    <div class="option"> <input type="radio" name="8"> 커피
+                        <input type="radio" name="eig"> 스무디
+                        <input type="radio" name="eig"> 차
+                        <input type="radio" name="eig"> 에이드
+                        <input type="radio" name="eig"> 기타
+                    </div>
+                </td>
+            </tr>
 
-    <!-- 제출 버튼 / 다시 쓰기-->
-    <input type="submit" value="제출하기">
-    <input type="reset" value="다시 쓰기">
+        </table>
+        <br />
+
+        <!-- 건의 사항-->
+        <div class="qna"> 건의사항 </div>
+        <textarea cols="78" rows="20" placeholder="기타 요청사항이 있다면 적어주세요."></textarea>
+        <br />
+
+        <!-- 제출 버튼 / 다시 쓰기-->
+        <input type="submit" value="제출하기" class="button">
+        <input type="reset" value="다시 쓰기" class="button">
+    </form>
 </body>
+
 </html>

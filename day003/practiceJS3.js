@@ -76,12 +76,14 @@
     // // 2. 할 일 입력 받기
     // let list3 = `,` + prompt(`새로운 할 일을 입력하세요.`);
     // // 3. 할 일 마지막에 추가하기
-    // todoList.push(list3);   // .push() 배열에 요소 추가할 때 사용하는 메소드
-    // console.log(todoList);
+    // todoList.push(list3);   // 변수명.push(새로운값) 배열에 요소 추가. 변수명 = 새로운값 ->이건 수정(덮어쓰기).
+    // console.log(`결과: ${todoList}`);
 
 // 문제10: 대기열의 마지막 사람 확인하기
     // // 1. 대기자 명단 배열 만들기
     // let waitingList = [`김민준`, `이서연`, `박도윤`, `최지우`];
     // // 2. 마지막 사람 찾기
     // let lastone = waitingList[waitingList.length - 1];
+        // // 배열명.length ->총길이. 배열명.length-1 ->마지막인덱스.
+    // // 3. 출력하기
     // console.log(`마지막 대기자는 [${lastone}]입니다.`);
