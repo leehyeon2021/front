@@ -47,11 +47,11 @@
 // 문제6: 학점 변환기 (HTML 출력)
     // // 1. 100점 만점 점수 입력 받기
     // let int1 = Number(prompt(`점수를 입력하시오. (숫자만 입력)`));
-    // // 2. 등급 부여
+    // // 2. 등급 부여 (중첩 삼황연산자)
     // let result1 = int1 >= 90 ? `A` : int1 >= 80 && int1 <= 90 ? `B` : `C`;
     // // 3. HTMl 문서에 <h2> 태그로 출력
     // console.log(`등급: ${result1}`);
-    // document.write(`<h2>등급: ${result1}</h2>`);
+    // document.querySelector("h2").innerHTML = `등급: ` + result1;
 
 // 문제7: 청년 이벤트 대상 확인
     // // 1. 나이 입력 받기
@@ -60,14 +60,15 @@
     // let result2 = age >= 20 && age <= 29 ? `이벤트 대상입니다.` : `이벤트 대상이 아닙니다.`;
     // console.log( result2 );
 
-
 // 문제8: '좋아요' 카운터 만들기
     // // 1. 좋아요 수 저장 변수 3 선언
     // let likeCount = 3;
     // // 2. 증강 연산자 사용 변수 값 1 증가
-    // ++likeCount
+    // ++likeCount; // 혼자 있으면 선후 의미 없음. 세미콜론 기준으로 증강변산자가 유일하면 선위/후위 의미가 없음.
     // // 3. 콘솔 출력
     // console.log(`좋아요: ${likeCount}`);
+        // // console.log(`좋아요: ${++likeCount}`); 출력 전에 (1 증가 후) 4 출력
+        // // console.log(`좋아요: ${likeCount++}`); 출력 후에 증가하므로 3 출력 (후 1 증가)
 
 // 문제9: 할 일 목록에 항목 추가하기
     // // 1. 배열 만들기
@@ -79,8 +80,8 @@
     // console.log(todoList);
 
 // 문제10: 대기열의 마지막 사람 확인하기
-    // 1. 대기자 명단 배열 만들기
-    let waitingList = [`김민준`, `이서연`, `박도윤`, `최지우`];
-    // 2. 마지막 사람 찾기
-    let lastone = waitingList[waitingList.length - 1];
-    console.log(`마지막 대기자는 [${lastone}]입니다.`);
+    // // 1. 대기자 명단 배열 만들기
+    // let waitingList = [`김민준`, `이서연`, `박도윤`, `최지우`];
+    // // 2. 마지막 사람 찾기
+    // let lastone = waitingList[waitingList.length - 1];
+    // console.log(`마지막 대기자는 [${lastone}]입니다.`);
