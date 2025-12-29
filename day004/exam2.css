@@ -1,0 +1,37 @@
+
+.title{
+    font-family: 'SchoolSafetyStarrySky'; /* 글자 모양 (글꼴) */
+    font-size: 40px; /* 글자 크기 */
+    font-weight: bold; /* 글자 진하게*/
+    font-style: italic; /* 글자 기울기 */
+    text-align: left;
+    color: orange;
+}
+
+/* 외부폰트 적용: 구글폰트(영문), 눈누(국문) */
+    /* 웹 폰트 복사 */
+@font-face {
+    font-family: 'SchoolSafetyStarrySky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimByeolbichhaneulTTF-L.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+.content{ 
+    font-family: 'SchoolSafetyStarrySky';
+    color: brown;
+    word-spacing: 10px; /* 단어간격: 어간... 내가 아는 어간 아니고, 단어 사이의 간격 말하는 것. */
+    letter-spacing: 10px; /* 글자간격: 자간. 음운 사이의 간격*/
+    line-height: 150%; /* 줄간격: %백분률. 150이 평균이래.*/
+}
+
+.writer{
+    font-family: 'SchoolSafetyStarrySky';
+    text-align: right; /* 마크업 안에 있는 content 내용물 정렬. '강아지는 강아지' 이걸 정렬.*/
+    text-decoration: underline; /* 선긋기: underline(밑줄), overline(윗줄), line-through(취소선) */
+    text-shadow: 10px 5px 10px gray ; /* 그림자 넣기: x축(양수 오른쪽, 음수 왼쪽) y축(양수 윗쪽, 음수 아랫쪽) */
+        /* 글자에 테두리 넣을 때 사용. 입체느낌. */
+    color: violet; /* 방법1 */
+    color: rgb(233, 126, 233); /* 방법2 */
+    color: #d85ec8 ;/* 헥사코드: 16진수(0~15)(6자리). 어도비(https://color.adobe.com/ko/create/color-wheel)*/
+}

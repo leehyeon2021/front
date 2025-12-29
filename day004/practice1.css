@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'YeogiOttaeJalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+.title{
+    font-family: 궁서;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: #000000;
+}
+
+.main{
+    font-family: 'YeogiOttaeJalnan';
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: blue;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+.name{
+    font-family: 고딕;
+    font-size: 8px;
+    text-align: center;
+    text-decoration: underline overline line-through; /* 쉼표 넣으면 안 되고 띄어쓰기로 구분 */
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 3px gray;
+}
+
+.assis{
+    font-family: 고딕;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: overline underline line-through;
+    color: red;
+    text-shadow: 1px 1px 5px gray
+}
+
+.main2{
+    font-family: 'YeogiOttaeJalnan';
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: blue;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+.fin{
+    font-family: 고딕;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: underline overline line-through;
+    color: rgb(255, 000, 000);
+    text-shadow: 1px 1px 3px #000000
+}

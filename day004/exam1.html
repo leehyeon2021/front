@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    <!-- 방법2 -->
+    <!-- head 마크업 안에 style-->
+    <style>
+        /* css 주석. 슬래시 하나는 안 됨. */
+        /* 선택자(누구를/대상) {속성명(무엇을) : 값(어떻게);}*/
+        /* 주의할 점: 속성 하나당 ;세미콜론 마침*/
+
+        h4{ color : blue; }
+    </style>
+
+
+    <!--방법3. 하이퍼링크로 넣어버리기. (빈도가 가장 높음. 재사용성 때문.)-->
+    <link rel="stylesheet" href="exam1.css"/> <!-- css 파일 불러오기 -->
+
+
+</head>
+<body>
+    <!-- 집중 안 되기 때문에 다시 들어보기. -->
+    <!-- cSS는 객체 x. 프로퍼티로 들어감. -->
+    <!-- 선택자{속성명:값;}-->
+    
+    <!-- 방법1 -->
+    <h3 style="color: red;"> CSS 적용하는 법 </h2>
+    <h4> CSS 적용하는 법 </h4>
+    <h5> CSS 적용하는 법 </h5> <!-- exam1.css 안에 속성값 넣음-->
+
+    <p> 김초엽 </p>
+    <h6> 촘스키 </h6>
+    <p class="시인"> 허난설헌 </p> <!-- 클래스 선택자. class 이름 지정해서 설정.-->
+    <p id="홍길동전"> 허균 </p>
+
+
+        <div> <!-- 부모: body, 자식: h3 -->
+            <h3> 주문 목록 </h3> <!-- 부모: div, 자식: 없음 -->
+            <ol> <!-- 부: div, 자식: li -->
+                <li> <!-- 부모: ol, 자식: h4-->
+                    <h4> 초코라테 </h4> 
+                </li> 
+                <li> 
+                    <h4> 들여쓰기 꼭 하기 </h4>
+                </li>
+                <li> 
+                    DOM트리. 계층관계. 상위 하위 판단. 
+                </li>
+            </ol>
+        </div>
+
+</body>
+</html>
