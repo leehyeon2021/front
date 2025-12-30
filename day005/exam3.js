@@ -78,11 +78,11 @@
 
 // 10. 음료 자판기
 // 조건: 음료0 음료1 음료2, 참1: 출력, 그외: '없는 상품입니다.'
-// let drinkNames = ['콜라', '사이다', '커피'];
-// let drinkPrices = ['1000', '1000', '1500'];
-// let drink = Number(prompt(`음료 제품 번호 선택 : 콜라(0), 사이다(1) 커피(2) `));
-// // 문자열과 변수를 함께 출력하는 방법: 1. + 연결 연산자 2. 백틱${}
+let drinkNames = ['콜라', '사이다', '커피'];
+let drinkPrices = ['1000', '1000', '1500'];
+let drink = Number(prompt(`음료 제품 번호 선택 : 콜라(0), 사이다(1) 커피(2) `));
+// 문자열과 변수를 함께 출력하는 방법: 1. + 연결 연산자 2. 백틱${}
 
-// if(drink >= 0 && drink <=2 ){console.log(`선택하신 음료는 ${ drinkNames[drink] }입니다. 가격은 ${drinkPrices[drink]}입니다.`);}
-// else{console.log(`없는 상품입니다.`);}
+if(drink >= 0 && drink <=2 ){console.log(`선택하신 음료는 ${ drinkNames[drink] }입니다. 가격은 ${drinkPrices[drink]}입니다.`);}
+else{console.log(`없는 상품입니다.`);}
 
