@@ -5,15 +5,19 @@
 
 .로그인구역{
     color: white;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 0px 3px 10px rgba(255, 151, 151, 0.712);
     box-sizing: border-box;
     border-radius: 10px;
-    width: 300px;
+    padding-top: 35px;
+    width: 450px;
+    height: 350px;
 
 }
 
 .title{
     margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .black{
@@ -21,15 +25,21 @@
 }
 
 .login{
-
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 35px;
 }
 
 .idpwd{
-    border: solid 1px gray;
+    border: solid 1px rgb(184, 184, 184);
     box-sizing: border-box;
     border-radius: 10px;
-    width: 200px;
-    height: 25px;
+    width: 220px;
+    height: 20px;
     margin: 5px;
     padding: 20px 10px;
     text-align: left;
@@ -40,5 +50,7 @@
 }
 
 .서브제목{
-    
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: bold;
 }
