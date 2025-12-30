@@ -4,7 +4,7 @@
 
 /* 1. 이미지 */
 .사진구역 > img{ 
-    width: 250px; /* 가로 사이즈 */
+    width: 400px; /* 가로 사이즈 */
     margin-bottom: 20px;
 }
 
