@@ -1,0 +1,84 @@
+
+/* 전체 선택자 */
+*{
+    /* border는 테두리. solid는 선. 선 종류 선 굵기 선 색상 */
+    border: solid 3px red;  
+    /* 안쪽 여백 */
+    padding: 10px;  
+}
+
+/* 클래스 선택자 */
+.경기도{
+    /* 테두리-윗쪽 */
+    border-top: solid 5px orange; 
+    /* 테두리-오른쪽. dotted 다트(점선)*/
+    border-right: dotted 2px blue; 
+    /* 테두리-아랫쪽. 파선(직선 점선)*/
+    border-bottom: dashed 3px green; 
+    /* 테두리-왼쪽. 이중선*/
+    border-left: double 4px pink; 
+
+    /* 둥근 모서리. 왼쪽 상단부터 시계방향으로 값 줄 수 있음. 하나만 쓰면 전체 통일. px 많이 넣으면 많이 둥글어짐. */
+    border-radius: 100px 15px 50px 150px; 
+
+    /* text-shadow랑 동일하게 x y 흐림정도 색상 들어감. 박스에 그림자 넣어줌.*/
+    box-shadow: 10px 10px 15px rgb(129, 1, 1); 
+
+    /* (박스의) 가로 사이즈 */
+    width: 500px; 
+    /* (박스의) 세로 사이즈 */
+    height: 500px; 
+    
+    /*구역을 정렬하는 게 아니라 구역 내 content(내용물)를 가로 정렬. (박스 아니고 '경기도' 안의 텍스트만) */
+    text-align: center; 
+}
+
+
+.안양시{
+
+    /* 여백 사용이 중요. (안쪽/바깥쪽 구분 기준은 border(테두리).*/
+    
+    /* (테두리)안쪽 여백 */
+    padding-top: 20px; 
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+    /* (테두리)바깥 여백. */
+    margin-right: 40px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+    border-radius: 50px 10px 0px 0px;
+}
+
+.만안구{
+    /* 가로 사이즈 고정, 만일 생략 시 100%(부모크기). // 해석: 부모 사이즈를 따라가기 때문에 사이즈 고저을 안 하면 부모 크기만큼 늘어난다. */
+    width: 200px;
+    padding: 10px; margin: 10px;
+
+    /* 박스 사이징 기준 잡기 (당연하지만 둘 다 margin은 뺌.) */
+    box-sizing: border-box; /* 여백 포함 사이즈 잡음. 구역 크기 계산법: content+border+padding (제일 많이 사용)*/
+    box-sizing: content-box; /* 여백 빼고 사이즈 잡음. 구역 크기 계산법: content */
+    
+    /* (바깥 여백 이용한) 구역 가로 가운데 정렬 */
+    margin: 0 auto; /* 0: 위아래 여백 없음, auto: 왼쪽오른쪽 자동. 마진 0 오토 세트로 많이 씀. 가운데로 옴.*/
+    /* 주의할 점: width가 100%(사이즈안정해서부모따라서100%된경우도) 이거나 생략 시 불가능.*/
+    
+    /* 배경색. 안쪽 여백. */
+    background-color: greenyellow; 
+}
+
+
+/* input 박스, img 등 정렬 주의: 상위요소에 정렬을 넣어야 함. */
+.사진{
+    width: 50px;
+    text-align: center; /* 불가능. 사진에는 해도 안 됨. 부모(경기도, 안산?)를 센터로 만들어야 함.*/
+    /* img 선택자로 직접 text-align 적용 안 됨. */
+    /* 주로 img에 바로 안 넣고 div로 한 번 감싸서 div를 움직이는 것이 관례적.*/
+}
+.input{
+    width: 100px;
+    margin: 0 auto; /* 불가능. input도 margin이 안 들어감.*/
+}

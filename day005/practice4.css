@@ -1,0 +1,33 @@
+*{
+    border: solid 0px rgb(74, 41, 105);
+    text-align: center;
+}
+
+.로그인구역{
+    color: white;
+    box-shadow: 2px 2px 5px red;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+.title{
+    margin-top: 10px;
+}
+
+.black{
+    color: black;
+}
+
+.login{
+
+}
+
+.blue{
+    color: blue;
+}
+
+.서브제목{
+    
+}

@@ -1,0 +1,38 @@
+*{
+    border: solid 0px rgb(255, 184, 194);
+}
+
+/* 1. 이미지 */
+.사진구역 > img{ 
+    width: 250px; /* 가로 사이즈 */
+    margin-bottom: 20px;
+}
+
+/* 2. 제목 */
+.제목구역{
+    font-weight: bold; /* 한 번에 굵기 주기 */
+}
+/* 제목 안에 있는 오렌지색상 특정 */
+.번호색상{
+    color: #689ca5; /* 색상 */   
+}
+.제목강조{
+    display: inline; /* 한 줄에 표시 */
+    font-size: 30px; /* 글꼴 크기 */
+    margin-right: 5px; /* 오른쪽 바깥여백*/ 
+}
+
+/* 3. 내용 */
+.내용구역{
+    width: 400px;
+    background-color: #fadcdde3; /* 배경색 */
+    color: #817172;
+    padding: 23px 20px; /*위아래 23, 왼오 20*/
+    margin: 20px 0px;
+}
+
+/* span과 div를 제외한 마크업들은 기본 CSS를 제거해야 한다.*/
+.내용 > p{ 
+    margin: 0px; padding: 0px; /* 피테그 안 비우기 */
+}
+
