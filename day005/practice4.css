@@ -24,6 +24,17 @@
 
 }
 
+.idpwd{
+    border: solid 1px gray;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+    padding: 20px 10px;
+    text-align: left;
+}
+
 .blue{
     color: blue;
 }
