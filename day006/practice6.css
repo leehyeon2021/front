@@ -1,0 +1,60 @@
+
+/* body 하려면 . 찍으면 안 됨*/
+body{
+    background-color: gray;
+    text-align: center; /* 하위 요소들의 내용물만 가로 가운데 정렬할 떄 사용*/
+    display: flex;/* 하위 요소들의 배치 방법*/
+    justify-content: center; /*flex 요소(박스)들을 가로 정렬 방법 */
+}
+
+*{
+    background-color: rgb(33, 73, 0);
+}
+
+.title{
+    border: 5px solid orange;
+    border-radius: 10px;
+    color: yellow;
+    text-shadow: 2px 2px 5px orange;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0px;
+    margin: 20px;
+}
+
+.imgArea{
+
+}
+
+.imgArea > img{
+    border: solid 5px orange;
+    width: 200px; height: 200px; /* 정사각형 */
+    border-radius: 200px; /* 정사각형에 최대로 radius 넣어주면 된다. */
+    margin: 20px;
+}
+
+.intro{
+    color:yellow;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px orange;
+}
+
+.linkArea{
+    margin: 20px 0px;
+}
+
+.linkArea > div{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 100px;
+    background-color: orange;
+}
+
+/* a마크업은 기본값으로 밑줄과 파랑색 글꼴이 들어간다.*/
+a{ 
+    color: yellow;
+    font-weight: bold;
+    background-color: orange;
+    text-decoration: none;
+    border: none;
+}

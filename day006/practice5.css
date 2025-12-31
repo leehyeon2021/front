@@ -1,0 +1,54 @@
+.all{
+    border: 1px solid gray;
+    width: 300px;
+}
+
+.img > img{
+    width: 295px; /* heigh 넣으면 사진 깨짐 */
+    /* object-fit: cover; 이미지가 부모 요소보다 커지면 자동 크기맞춤. */
+
+}
+
+.content{
+    border-top: 1px solid gray; /* 보더 위에 넣ㄱ*/
+    padding: 5px 10px;
+}
+
+.title{
+    
+    margin-top: 20px;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.price{
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.내용{
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.review{
+    padding: 10px 0px;
+    font-size: 12px;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.orange{
+    color: orange;
+}
+
+/*
+나중에 JS로 반복문을 만들어 상품 여러 개 나오게 하고 가로 정렬하게 할 수 있음.
+.body > div{
+    display: flex;
+}
+*/

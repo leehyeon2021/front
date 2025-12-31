@@ -108,8 +108,10 @@ let fruitList = [ '사과', '바나나' ];
 let courseList = ['수학', '영어', '과학', '국어'];
 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.*/
 // 조건: 제외하고 싶은 과목명 존재, 참1: 목록삭제 변경배열전체출력, 거짓: '해당 과목은 신청 목록에 없습니다.'
-let courseList = ['수학', '영어', '과학', '국어'];
-let sub = prompt(`제외하고 싶은 과목명: `)
-if(courseList.indexOf(sub)!==-1){courseList.indexOf(sub)}
+// let courseList = ['수학', '영어', '과학', '국어'];
+// let sub = prompt(`제외하고 싶은 과목명: `)
+// if(courseList.indexOf(sub)!==-1){courseList.splice([courseList.indexOf(sub)], 1); console.log(courseList);}
+// else{console.log('해당 과목은 신청 목록에 없습니다.');}
+
 
 
