@@ -87,8 +87,8 @@ let fruitList = [ '사과', '바나나' ];
 // let player2 = prompt(`플레이어2: 0(가위), 1(바위), 2(보)`);
 // if(player1-player2==-2 || player1-player2==1){console.log(`플레이어1 승리`);}
 // else if(player2-player1==-2 || player2-player1==1){console.log(`플레이어2 승리`);}
-// else{console.log(`무승부`);}
-
+// else{console.log(`무승부`);} 
+ 
 /*문제 9: 주차 차량 위치 검색
 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다. 두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
 차량 번호 목록: let carArray = [ '250어7142', '142가7415', '888호8888' ];

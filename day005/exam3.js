@@ -63,11 +63,11 @@
 // 8. 나이에 따른 놀이공원 입장료 계산
 // 조건: 사용자 나이가 8세미만 8세이상19세이하 20세이상65세미만 65세이상
 // let age = Number(prompt(`사용자 나이: `));
-// if(age<8){console.log(`무료`);}
+// if(age<8){console.log(`무료`);} 
 // else if(age<=19){console.log(`5,000원`);}
 // else if(age<=65){console.log(`10,000원`);}
 // else{console.log(`3,000원`);}
-
+ 
 // 9. 성적 등급 계산
 // 조건: 점수 90이상 80점이상90점미만 70점이상80점미만 70점미만(그외)
 // let score1 = Number(prompt(`성적: `));

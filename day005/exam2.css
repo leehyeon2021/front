@@ -12,7 +12,7 @@
     width: 100px; height: 100px; 
     /* inline은 사이즈 적용 불가능. 바깥/안쪽 여백의 왼쪽/오른쪽만 가능. */
     margin: 20px; padding: 20px;
-}
+} 
 
 .s2{
     display: block;
