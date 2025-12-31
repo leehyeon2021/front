@@ -1,37 +1,32 @@
+/*
 *{
-    border: solid 0px rgb(74, 41, 105);
-    text-align: center;
-}
+    border: solid 1px rgb(74, 41, 105);
+    text-decoration: none; --> 밑줄 췻
+}*/
 
 .로그인구역{
     color: white;
-    box-shadow: 0px 3px 10px rgba(255, 151, 151, 0.712);
+    box-shadow: 1px 3px 10px rgba(255, 151, 151, 0.712);
     box-sizing: border-box;
+    text-align: center;
     border-radius: 10px;
-    padding-top: 35px;
-    width: 450px;
-    height: 350px;
+    padding: 35px;
+    width: 450px; /* 구역 가로 사이즈 */
+    /* 일반적으로 높이는 내용물 만큼 자동으로 사용한다. */
+    margin: 0 auto; /* 해당 구역 가로 가운데 배치*/
+    
 
 }
 
 .title{
-    margin-top: 10px;
     font-size: 22px; 
     font-weight: bold;
+    margin: 10px;
+    padding: 10px;
 }
 
 .black{
     color: black;
-}
-
-.login{
-    background-color: blue;
-    color: white;
-    border-radius: 10px;
-    margin-top: 8px;
-    box-sizing: border-box;
-    width: 80px;
-    height: 35px;
 }
 
 .idpwd{
@@ -40,9 +35,21 @@
     border-radius: 10px;
     width: 220px;
     height: 20px;
-    margin: 5px;
+    margin-bottom: 5px;
     padding: 20px 10px;
     text-align: left;
+}
+
+.login{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin: 8px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 35px;
+    /* 아니면 padding: 8px 20px; 이렇게 해도 됨 */
+    border: none;
 }
 
 .blue{
@@ -50,7 +57,13 @@
 }
 
 .서브제목{
-    margin-top: 25px;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin: 10px;
     font-size: 15px;
     font-weight: bold;
+}
+
+.서브제목 > a{
+    text-decoration: none;
 }
