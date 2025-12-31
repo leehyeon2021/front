@@ -12,3 +12,4 @@ console.log( "이름:", name );
 console.log( "메뉴:", drink );
 console.log( "수량:", quantity );
 
+ 

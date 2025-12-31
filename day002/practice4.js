@@ -14,4 +14,4 @@ console.log( "운동 시간:", time );
 // 3. 분당 소모 칼로리를 곱해서 총 소모 칼로리를 계산하고 함께 출력
 // 분당 소모 칼로리 1분당 7칼로리
 let calorie = time * 7;
-console.log( "칼로리:", calorie );
+console.log( "칼로리:", calorie ); 
