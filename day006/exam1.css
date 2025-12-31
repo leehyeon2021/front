@@ -1,5 +1,15 @@
 /*
 ctrl + spacebar = 코드 자동 완성
+
+
+flex-wrap: nowrap;
+검은 박스가 부모. 분홍색 상자가 자식들.
+rap 랩으로 묶으면
+flex-wrap: wrap; 자동 크기 맞춤. 자동 줄바꿈.
+
+flex-direction: row; 
+원래 div는 세로(column) 배치라서 거의 가로(row) 배치하려고 사용.
+
 */
 
 
