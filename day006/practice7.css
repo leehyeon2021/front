@@ -12,17 +12,17 @@
 .language{
     display: flex;
     flex-wrap: wrap;
-    font-size: 10px;
+    font-size: 12px;
     color: #8a8d91;
-    font-weight: bold;
+    font-weight: 450;
+    align-items: flex-end;
 }
 
 .language > a{
     padding-left: 8px;
+    font-size: 11px;
     text-decoration: none;
     color: #8a8d91;
-    font-weight: 500;
-    align-content: center;
 }
 
 .language > button{
@@ -30,7 +30,6 @@
     margin: 2px 10px;
     font-size: 10px;
 }
-
 .language > button > a{
     text-decoration: none;
 }
@@ -48,13 +47,12 @@
 .etcMenu{
     display: flex;
     flex-wrap: wrap;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .etcMenu > a{
     text-decoration: none;
-    padding-left: 2px;
-    padding-right: 10px;
+    padding-right: 20px;
     color: #8a8d91;
 }
 
