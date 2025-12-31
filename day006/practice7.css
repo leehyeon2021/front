@@ -1,3 +1,4 @@
+/* 전체 */
 .Footer{
     background-color: #ffffff;
     justify-content: center;
@@ -6,6 +7,8 @@
     padding-top: 20px;
 }
 
+
+/* 언어 선택 */
 .language{
     display: flex;
     flex-wrap: wrap;
@@ -32,12 +35,16 @@
     text-decoration: none;
 }
 
+
+/* 회색 선 */
 .centerline{
     border-bottom: solid 1px #dddfe2;
     height: 8px;
     margin-bottom: 8px;
 }
 
+
+/* 기타 메뉴 */
 .etcMenu{
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +58,12 @@
     color: #8a8d91;
 }
 
+.etcMenu > a > img{
+    width: 10px;
+}
+
+
+/* Meta 로고 */
 .logo{
     margin: 20px 0px;
     font-size: 10px;
