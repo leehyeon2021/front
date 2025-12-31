@@ -1,0 +1,88 @@
+/*
+ctrl + spacebar = 코드 자동 완성
+*/
+
+
+.box{
+    border: solid 1px red;
+    width: 100px;
+    padding: 10px;
+}
+
+.flexbox1{
+    display: flex; /* 하위 요소를 배치. flex 안 하면 기본은 세로 배치.*/
+    border: 1px solid blue; /* 부모 확인 */
+    width: 200px; /* 각 자식들이 100px인데 * 3개 = 300개. 부모(200px)보다 넘침. */
+    flex-wrap: nowrap; /*-> (기본값임.) 하위 요소가 넘치면 자동으로 하위 요소들 크기 조정. */
+    /* chrome브라우저에서 개발자 도구로 flex 등 미리보기 및 코드복사 가능. */
+}
+
+.flexbox2{
+    border: 1px solid blue;
+    width: 250px;
+    /* wrap: 하위 요소가 넘치면 자동 줄바꿈 */
+    display: flex; 
+    flex-wrap: wrap; /* 웬만하면 flex로 구조 잡기 */
+}
+
+/*리버스 연습 생략*/
+
+.flexbox3{
+    border: solid 1px blue;
+    display: flex;
+    /* row는 기본값. 하위 요소 가로 배치.*/
+    flex-direction: row; /* 세로 배치는 column*/
+}
+
+.flexbox4{
+    border: solid 1px blue;
+    display: flex;
+    flex-direction: column;
+    /* 하위 요소 정렬 편하게 하기 위함. */
+        /* margin0auto나 text-align으로 정렬해도 되긴 함. */
+}
+
+.flexbox5{
+    border: solid 1px blue;
+    display: flex;
+    justify-content: flex-start; /* 조정하다-내용물을. */
+    /* flex-start는 왼쪽(start)에 붙음. text-align 안 써도 되게 됨*/
+}
+
+.flexbox6{
+    border: solid 1px blue;
+    display: flex;
+    justify-content: flex-end; 
+    /* flex-end는 오른쪽(end)에 붙음. */
+}
+
+.flexbox7{
+    border: solid 1px blue;
+    display: flex;
+    justify-content: center; 
+    /* flex-end는 오른쪽(end)에 붙음. */
+}
+
+/* marin0auto 말고 flex justify-content 사용하기 */
+
+.flexbox8{
+    border: solid 1px blue;
+    display: flex;
+    justify-content: space-between;
+    /* 양끝쪽에 여백없이 사이여백 자동으로 균등하게 넣어주는 가로정렬. */
+}
+
+.flexbox9{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-around;
+    /* 양끝여백(50%) 사이여백(100%). 사이여백의 50%를 양끝 여백으로 자동균등 가로정렬. */
+}
+
+.flexbox10{
+    border: solid 1px blue;
+    display: flex;
+    justify-content: space-evenly;
+    /* 양끝여백과 사이여백을 (자동) 균등 가로 정렬. */
+}
+
