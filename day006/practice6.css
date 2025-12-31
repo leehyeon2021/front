@@ -21,10 +21,6 @@ body{
     margin: 20px;
 }
 
-.imgArea{
-
-}
-
 .imgArea > img{
     border: solid 5px orange;
     width: 200px; height: 200px; /* 정사각형 */
