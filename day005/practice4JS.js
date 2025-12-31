@@ -74,6 +74,7 @@ let fruitList = [ '사과', '바나나' ];
 let A1 = Number(prompt(`A: `));
 let B1 = Number(prompt(`B: `));
 let C1 = Number(prompt(`C: `));
+let 
 
 /*문제 8: 가위바위보 게임
 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
