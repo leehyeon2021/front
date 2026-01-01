@@ -1,0 +1,435 @@
+.grayback {
+    background-color: #f0f2f5;
+}
+
+body,
+button,
+label,
+select {
+    background-color: #fff;
+    color: #1c1e21;
+    direction: ltr;
+    line-height: 1.34;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+
+}
+
+
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* 로고 영역 */
+.A1 {
+    padding-top: 5px;
+    text-align: center;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.T1 {
+    height: 100px;
+    border: 0px;
+    text-align: center;
+}
+
+.img {
+
+    height: 100px;
+    border: 0px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+
+/* 로고 아래 영역 */
+.R1 {
+    background-color: #f0f2f5;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 60px;
+}
+
+/* 메인 컨테이너 */
+.H1 {
+    width: 432px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px #0000001a, 0 8px 16px #0000001a;
+    border-radius: 8px;
+}
+
+
+/* 헤더 */
+.C1 {
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    text-align: center;
+
+}
+
+.c1 {
+    font-size: 25px;
+    line-height: 32px;
+    color: #1c1e21;
+    margin-bottom: 0;
+    font-weight: 600;
+
+
+}
+
+.c2 {
+    color: #606770;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* 폼 영역 */
+.Q1 {
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #DADDE1;
+    box-sizing: border-box;
+    padding: 16px;
+    position: relative;
+    width: 432px;
+}
+
+input {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 11px;
+    border-radius: 5px;
+    color: #1c1e21;
+    display: block;
+    border: 1px solid #ccd0d5;
+    height: 16px;
+    box-sizing: content-box;
+}
+
+/* 이름 (성, 이름) */
+.V1 {
+    margin-top: 0px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 6px;
+    width: 399px;
+    border-color: #ccd0d5;
+
+}
+
+.v1,
+.v2 {
+    width: 170px;
+}
+
+/* 휴대폰/이메일 */
+.V2 {
+    margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+.v3 {
+    width: 375px;
+    margin-bottom: 11px;
+}
+
+/* 비밀번호 */
+.V3 {
+    margin-bottom: 6px;
+    
+}
+
+.v4 {
+    width: 375px;
+}
+
+/* 생일 라벨 */
+.V4 {
+    margin: 2px 0 4px;
+}
+
+.v5 {
+    color: #606770;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    display: inline-block;
+
+}
+
+.v7 {
+    color: #606770;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    display: inline-block;
+
+}
+
+/* 생일 셀렉트 */
+.V5 {
+    margin-bottom: 6px;
+}
+
+.v6 {
+    width: 14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.v8 {
+    width: 14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.G1 {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 11px;
+}
+
+.g1,
+.g2,
+.g3 {
+    flex: 1;
+    padding: 0 20px 0 8px;
+    font-size: 15px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    height: 36px;
+    background-color: #fff;
+    color: #1c1e21;
+}
+
+/* 성별 라벨 */
+.V6 {
+    margin: 2px 0 4px;
+}
+
+.v7 {
+    font-size: 12px;
+}
+
+/* 성별 라디오 */
+.V7 {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #1c1e21;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 36px;
+    margin-bottom: 6px;
+    width: 100%;
+
+}
+
+.K1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px -6px -1px;
+    width: 411px;
+
+}
+
+.k1,
+.k2,
+.k3 {
+    background-color: #fff;
+    border: 1px solid #CCD0D5;
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1 0 auto;
+    font-weight: 400;
+    height: 36px;
+    margin: 8px 6px 6px;
+    padding: 0 28px 0 10px;
+    position: relative;
+    width: auto;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 36px;
+    vertical-align: middle;
+}
+
+
+.n1 {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    width: 13px;
+    height: 36px;
+}
+
+/* 약관 */
+.V8 {
+    width: auto;
+    color: #777;
+    font-size: 11px;
+    margin: 0;
+    display: block;
+    margin-top: 20px;
+    
+}
+
+.v9 {
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    color: #606770;
+}
+
+.v10,
+.v12,
+.v13 {
+    color: #1877f2;
+}
+
+.v11 {
+    font-size: 11px;
+    line-height: 14px;
+    color: #606770;
+    margin-bottom: 25px;
+}
+
+/* 가입하기 버튼 */
+.V9 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Y1 {
+    background: none;
+    background-color: #00a400;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 36px;
+    line-height: 23px;
+    padding: 0 32px;
+    margin: 10px 0;
+    text-shadow: none;
+    width: 200px;
+}
+
+.Y1:hover {
+    background-color: #42b72a;
+}
+
+/* 이미 계정이 있으신가요 */
+.V10 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.P1 {
+    padding: 0;
+    position: relative;
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+
+/* 전체 */
+.Footer{
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: left;
+    margin: 0px 100px;
+    padding-top: 20px;
+}
+
+
+/* 언어 선택 */
+.language{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #8a8d91;
+    font-weight: 450;
+    align-items: center;
+}
+
+.language > a{
+    padding-left: 8px;
+    font-size: 11px;
+    text-decoration: none;
+    color: #8a8d91;
+}
+
+.language > button{
+    padding: 0px 8px;
+    margin: 0px 8px;
+    font-size: 15px;
+    color: #f5f6f7;
+    border: solid 1px #ccd0d5;
+    border-radius: 2px;
+}
+.language > button > a{
+    text-decoration: none;
+    color: #676e7d;
+    font-weight: bold;
+}
+
+
+/* 회색 선 */
+.centerline{
+    border-bottom: solid 1px #dddfe2;
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+
+/* 기타 메뉴 */
+.etcMenu{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    align-items: center;
+}
+
+.etcMenu > a{
+    text-decoration: none;
+    padding-right: 20px;
+    color: #8a8d91;
+}
+
+.etcMenu > a > img{
+    width: 10px;
+}
+
+
+/* Meta 로고 */
+.logo{
+    margin: 20px 0px;
+    font-size: 10px;
+    font-weight: 570;
+    color: #8a8d91;
+}

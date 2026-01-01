@@ -1,0 +1,204 @@
+
+.block{
+    
+    display: block;
+}
+
+
+.all{ background-color: #f2f4f7;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+}
+.title{ padding-right: 32px;
+
+}
+.text{
+    padding: 0px 0px 20px;
+}
+
+.logo > img{
+    width: 295px;
+    padding: 112px 0px 16px;
+    margin: -28px;
+}
+    
+
+.login{ border: 1px solid #eeeeee;
+    border-radius: 5px;
+    width: 396px;
+    text-align: center;
+    padding: 10px 0px 24px;
+    margin-bottom: 20ps;
+    margin: 40px 0px 0px;
+    box-shadow: 2px 2px 5px gray;
+    background-color: white;
+    
+}
+
+.login1{
+    text-decoration: none;
+    color: white;
+}
+
+.id{
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 14px 16px;
+    width: 330px;
+    margin: 7px;
+}
+
+.password{
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 14px 16px;
+    width: 330px;
+    margin: 7px;
+}
+
+.loginbutton{
+    background-color: #0866ff;
+    border: none;
+    border-radius: 6px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 365px;
+    margin: 10px;
+
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.text2{
+    font-size: 14px;
+    font-weight: 500;
+    color: #0866ff;
+    font-family: bold;
+    margin-top: 0px;
+}
+
+.joinbutton{
+    border: 1px solid #42b72a;
+    background-color: #42b72a;
+    border-radius: 3px;
+    color: white;
+    padding: 0px 16px;
+    width: 120px;
+    height: 48px;
+}
+
+.join{
+    color: white;
+    text-decoration: none;
+}
+
+.rightall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line{
+        align-items: center;
+    border-bottom: 1px solid #DADDE1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.text3{
+    font-size: x-small;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.textbold{
+    font-weight: bold;
+    font-size: x-small;
+}
+
+
+
+/* 전체 */
+.Footer{
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: left;
+    margin: 0px 100px;
+    padding-top: 20px;
+}
+
+
+/* 언어 선택 */
+.language{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #8a8d91;
+    font-weight: 450;
+    align-items: center;
+}
+
+.language > a{
+    padding-left: 8px;
+    font-size: 11px;
+    text-decoration: none;
+    color: #8a8d91;
+}
+
+.language > button{
+    padding: 0px 8px;
+    margin: 0px 8px;
+    font-size: 15px;
+    color: #f5f6f7;
+    border: solid 1px #ccd0d5;
+    border-radius: 2px;
+}
+.language > button > a{
+    text-decoration: none;
+    color: #676e7d;
+    font-weight: bold;
+}
+
+
+/* 회색 선 */
+.centerline{
+    border-bottom: solid 1px #dddfe2;
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+
+/* 기타 메뉴 */
+.etcMenu{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    align-items: center;
+}
+
+.etcMenu > a{
+    text-decoration: none;
+    padding-right: 20px;
+    color: #8a8d91;
+}
+
+.etcMenu > a > img{
+    width: 10px;
+}
+
+
+/* Meta 로고 */
+.logo{
+    margin: 20px 0px;
+    font-size: 10px;
+    font-weight: 570;
+    color: #8a8d91;
+}
