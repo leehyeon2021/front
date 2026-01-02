@@ -3,16 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>RUBATO</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href="practice6.css"/>
 </head>
 <body>
+
+    <!-- 웹 전체를 감싼 구역: 주로 id -->
     <div id="wrap">
 
         <div id="header">
             <div id="header-left">
-                <img src="img01/logo.png"/>
+                <img src="img/logo.png"/>
             </div>
             <div class="header-right">
                 <ol class="top-menu">
@@ -31,29 +33,50 @@
         </div>
 
         <div id="main-img"> <!-- 띄어쓰기 안 됨 -->
-            <img src=""/>
+            <img src="img/main_img.png"/>
         </div> 
-        <div id="content">
+
+        <div id="main">
             <div id="sidebar">
-
+                <h3>사진이론</h3>
+                <ol class="main-meun">
+                    <li><a href="">카메라 동작 원리</a></li>
+                    <li><a href="">무조건 찍어보자</a></li>
+                    <li><a href="">피사체의 배경</a></li>
+                    <li><a href="">조리개와 심도</a></li>
+                    <li><a href="">카메라 촬영 모드</a></li>
+                </ol>
             </div>
-
-            <div id="content-right">
-                <img src=""/>
-            </div>
-        </div>
-    </div>
+            <div id="content"> <!-- 오른쪽 본문 내용 구역 -->
+                <h3> 카메라 동작 원리 </h3>
+                <p> DSLR 카메라에서 DSLR은 “Digital Single Reflex”의 약어로써 우리말로는 디지털 일안 반사식 카메라을 의미합니다. DSLR은 디지털 카메라로써 카메라 내부에 들어온 빛이 상단의 펜타프리즘을 통하여 뷰파인더에 맺히게 되어 셔터를 누르기 전에 뷰 파인더를 통하여 피사체를 확인할 수 있게 됩니다. </p>
     
-    <div id="footer"> <!-- 검은색 길게 넣고 -->
-        <div id="footer-inner"> <!-- 중앙 내용물 -->
-            <div id="footer-left">
+                <img src="img/dslr.png" />
 
+                <p> [그림 1]은 DSLR 카메라에서 셔터를 누르기 전의 상태를 보여주는데 렌즈를 통해 들어오는 빛은 카메라 내부에서 다음과 같은 과정을 거치게 됩니다. </p>
+                <ul>
+                    <li> ① 빛이 카메라 렌즈를 통과합니다. </li>
+                    <li> ② 빛이 반사 거울에 반사되어 위쪽으로 향합니다.</li>
+                    <li> ③ 빛이 펜타프리즘 거울에 반사되어 뷰파인더로 향합니다.</li>
+                    <li> ④ 들어온 빛에 의해 뷰파인터들 통하여 피사체를 볼 수 있습니다.</li>
+                </ul>
             </div>
-            <div id="footer-right">
-                
+            </div>
+        </div>
+    
+    
+        <div id="footer"> <!-- 배경색 검은색 길게 넣고 -->
+            <div id="footer-inner"> <!-- 중앙 내용물 -->
+                <div class="footer-left">
+                    <img src="img/footer_logo.png"/>
+                </div>
+                <ol class="footer-right">
+                    <li> 주소: 어쩌고저쩌고어쩌고저쩌고 </li>
+                    <li> TEL: 010-0101-0101 </li>
+                    <li> COPYRIGHT (c) 0000000000 </li>
+                </ol>
             </div>
         </div>
     </div>
-
 </body>
 </html>

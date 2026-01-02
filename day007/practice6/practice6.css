@@ -17,10 +17,11 @@ li{
 
 /* 이제 시작 ~~ */
 
-*{ /* 작업용 */
+/* 작업용
+*{  
     border: 1px solid red;
     padding: 2px;
-}
+}*/
 
 /* ===== [1] 헤더 ===== */
     /* div, li 등: block 이라서 한 줄에 하나 씩 표기된다.*/
@@ -30,29 +31,87 @@ li{
     align-items: center;
     width: 1280px; margin: 0 auto;
 }
-#header .top-menu{ /* 선택자A  선택자B: 자손선택자 (띄어쓰기) (꺽쇠는 자식만 가능함.) */
+#header .top-menu{ /* 선택자A 선택자B: 자손선택자 (띄어쓰기) (꺽쇠는 자식만 가능함.) */
     display: flex;
     justify-content: flex-end;
     margin: 10px 0px;
 }
 #header .top-menu li a{
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 #header .main-meun{
     display: flex;
     justify-content: flex-end;
     margin: 20px 0px;
-    font-weight: bold;
 }
-#header .main-menu li a{
+#header .main-meun li a{
     margin-left: 30px; /* 오른쪽 정렬 맞추려고 왼쪽 바깥여백 줌.*/
     font-size: 20px;
     font-weight: bold;
 }
 
+
 /* ===== [2] 대표 이미지 ===== */
+#main-img > img{
+    width: 100%; /* 전체 이미지(100%). 늘였다 줄였다 해도 잘 보임. */
+}
+
 
 /* ===== [3] 본문 ===== */
+#main{
+    display: flex; justify-content: space-between;
+    width: 1280px; 
+    margin: 20px auto; /* margin 위아래 20px, 왼오 auto. */
+}
+
+/* 3-1 사이드바 */
+#sidebar{
+    width: 220px; /*계산...*/
+}
+#sidebar > h3{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+#sidebar > ol > li{
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee; /* 많이 쓰는 색이래 */
+}
+
+/* 3-2 본문 */
+#content{
+    width: 1030px;
+}
+#content > h3{
+    font-size: 18px;
+    border-bottom: 1px solid #eeeeee; /* padding까지가 border 상자. */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#content > img{
+    display: block; /* 이미지 하나 덜렁 있을 때 div 굳이 안 하고 설정하는 법 */
+    /* 이미지 혼자 있을 떄 img{} 안에 margin: 0 auto; 넣으면 안 먹힘. display: block; 적용하면 margin: 0 auto; 먹힘 */
+    margin: 0 auto;
+}
 
 /* ===== [4] 푸터 ===== */
+#footer{
+    background-color: #2c2a29;
+    color: white;
+}
+#footer-inner{
+    display: flex;
+    justify-content: space-between; /* 양끝에 붙이기 */
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.footer-left{
+    margin-top: 10px;
+}
+.footer-right{
+    display: block;
+    margin-top: 10px;
+}
