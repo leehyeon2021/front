@@ -1,0 +1,58 @@
+
+/* 공통 css이면서 관례적인 기본 css*/
+*{
+    box-sizing: content-box; /* content + padding + border */
+    font-family: 굴림 나눔고딕;
+    font-size: 12px; /* 12px ~ 15px (고정적인 것은 없음) */
+    padding: 0px; margin: 0px; /* 기본 css 여백 제거. a마크업도. */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{ 
+    list-style: none; /* 목록 글머리 제거하고 시작함 */ 
+}
+
+
+/* 이제 시작 ~~ */
+
+*{ /* 작업용 */
+    border: 1px solid red;
+    padding: 2px;
+}
+
+/* ===== [1] 헤더 ===== */
+    /* div, li 등: block 이라서 한 줄에 하나 씩 표기된다.*/
+#header{
+    display: flex;
+    justify-content: space-between; /* 양끝에 */
+    align-items: center;
+    width: 1280px; margin: 0 auto;
+}
+#header .top-menu{ /* 선택자A  선택자B: 자손선택자 (띄어쓰기) (꺽쇠는 자식만 가능함.) */
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px;
+}
+#header .top-menu li a{
+    margin-left: 5px;
+}
+
+#header .main-meun{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+#header .main-menu li a{
+    margin-left: 30px; /* 오른쪽 정렬 맞추려고 왼쪽 바깥여백 줌.*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ===== [2] 대표 이미지 ===== */
+
+/* ===== [3] 본문 ===== */
+
+/* ===== [4] 푸터 ===== */

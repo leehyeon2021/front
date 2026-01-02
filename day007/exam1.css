@@ -1,0 +1,33 @@
+/* 확인용
+*{
+    border: 1px solid red;
+    padding: 10px;
+} */
+
+
+/* 복수 선택은 쉼표 */
+#header, #main, #footer{
+    width: 1280px; /* pc기준: 1000 ~ 1400px (가로) 많이 사용함. */
+    margin: 0 auto;
+}
+
+/* 본문 메인 */
+#main{
+    display: flex; /* 하위 요소들을 배치하는 방법: flex*/
+    flex-direction: row; /*가로 배치가 (기본값)*/
+    flex-wrap: nowrap; /*줄바꿈처리없음 (기본값)*/
+    justify-content: space-between; /*본문 사이드바 양끝에 붙음*/
+}
+
+#content{ /* 일반적으로 높이는 내용물 만큼 자동 크기 100%. 가로 사이즈만 정하면 됨. */
+    /* 아래로 스크롤하는 사이트가 많음. 옆으로 넘기는 게 아니라서 가로 사이즈만 정하는 것. */
+    width: 830px; /*픽셀(고정사이즈): px, 비율(반응형): % */
+}
+
+#sidebar{
+    width: 420px; /*네이버 보면서 하는 중. */
+}
+
+#footer{
+    background-color: black; /* 검은색이나 회색 많이 사용함. */
+}
