@@ -34,9 +34,12 @@ a{text-decoration: none; color: black;}
 
 /* 푸터 */
 #footer{ background-color: #292c32;}
-#footer-inner{width: 1280px; margin: 0px auto; padding-top: 50px; color: white;
-                display: flex; justify-content: space-between;
-}
-.footer-center > .add{ display: flex; margin-bottom: 10px;}
-.footer-center > .add > li > a{color: white; font-size: 20px; padding: 0px 10px; border-right: solid 1px white ;}
+#footer-inner{width: 1280px; margin: 0px auto; padding: 50px 0; color: white;
+                display: flex; justify-content: space-between;}
+#footer-inner li{font-size: 15px;}
+#footer-inner h2{font-size: 30px;}
+.footer-center{width: 450px; letter-spacing: 2px;}
+.footer-center > .add{ display: flex; margin-bottom: 10px; align-content: center;}
+.footer-center > .add > li > a{color: white; font-size: 15px; padding: 0px 10px; border-right: solid 1px white;}
 .etc{padding: 0px 10px;}
+.sns{width: 140px; display: flex; justify-content: space-between;}
