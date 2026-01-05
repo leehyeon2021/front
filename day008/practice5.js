@@ -99,6 +99,15 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 let products = ['볼펜', '노트', '지우개'];
 let stock = [10, 5, 20]; 
 
+let name = prompt(`구매할 상품명: `); 
+let num = Number(prompt(`상품 수량: `));
+
+for( let i = 0 ; i <= products.length-1 ; i++){
+    let what = products.indexOf(name);
+    if(stock[what] >= num){stock[what] -= num; console.log(`구매 완료!`)}
+    else{console.log(`재고가 부족합니다.`);}
+}
+console.log(stock) //왜 세 번 되는지 찾기
 
 /*문제 8: 영화 평점 시각화하기
 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★)로 시각화하여 HTML에 출력하는 프로그램을 작성하시오.
