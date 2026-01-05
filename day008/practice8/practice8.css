@@ -1,0 +1,42 @@
+/* 기본 */
+li{list-style-type: none;}
+*{padding: 0px; margin: 0px; box-sizing: border-box;}
+a{text-decoration: none; color: black;}
+
+/* 헤더 */
+#header{ width: 1280px; margin: 0 auto; background-color: white;
+         display: flex; justify-content: space-between; align-items: center;
+         padding: 40px 0px;}
+
+#header > h2 { font-size: 40px; font-weight: 440;}
+#header > h2 > span{ color: blue; font-weight: bold;}
+
+.header-right{ display: flex; font-size: 18px;}
+.header-right > li{ margin-left: 20px;}
+
+
+/* 메인 이미지 */
+#main-img > img{ width: 100%;}
+
+
+/* 중간 메뉴 두 개 */
+#top-menu{ width: 1280px; margin: 40px auto; display: flex; justify-content: space-between;}
+#top-button{ display: flex; width: 600px;}
+#top-button > img{margin-right: 20px;}
+
+
+/* 밑 메뉴 네 개 */
+#bottom{background-color: #eeeeee; }
+#bottom-inner{width: 1280px; margin: 20px auto; padding: 50px 0px;
+              display: flex; justify-content: space-between;}
+#bottom img{width: 300px;}
+
+
+/* 푸터 */
+#footer{ background-color: #292c32;}
+#footer-inner{width: 1280px; margin: 0px auto; padding-top: 50px; color: white;
+                display: flex; justify-content: space-between;
+}
+.footer-center > .add{ display: flex; margin-bottom: 10px;}
+.footer-center > .add > li > a{color: white; font-size: 20px; padding: 0px 10px; border-right: solid 1px white ;}
+.etc{padding: 0px 10px;}
