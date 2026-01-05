@@ -1,4 +1,81 @@
+/* 공통 css */
+*{padding: 0px; margin: 0px;} /* 1. 기본 여백 제거 */
+*{box-sizing: border-box; } /* 2. 사이즈 안쪽 여백까지 사이즈로 계산 */
+a{text-decoration: none; color: black;} /* 3. a 마크업 기본 제거 */
+li{list-style-type: none;} /*4. 글머리 제거 */
+
+
+/* 작업용 
 *{
-    box-sizing: content-box;
-    font-family: ;
+    border: solid 1px red;
+    padding: 10px;
+}*/
+
+/* 헤더 */
+#header{
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#header > .header-right > ul{
+    display: flex; justify-content: flex-end;
+}
+.top-menu > li{
+    font-size: 12px; margin: 10px 3px;
+}
+.main-meun > li{
+    font-size: 20px; font-weight: bold;
+    margin: 10px 0px 10px 10px;
+}
+
+/* 대표 이미지 */
+#main-img > img{
+    width: 100%;
+}
+
+/* 본문 */
+#main{
+    width: 1280px; margin: 20px auto;
+    display: flex; justify-content: space-between;
+}
+#main > .sidebar{width: 250px;} /* 본문 왼쪽 */
+#main > .content{width: 1000px;} /* 본문 오른쪽 */
+
+/* 본문 사이드 바 css */
+.sidebar > .title{ background-color: #0ca9a2; color: white; font-size: 20px; padding: 10px;}
+.sidebar > .comment{ padding: 5px 0px; line-height: 150%;}
+.sidebar > .searchbox{ border-radius: 10px; padding: 5px; width: 180px;}
+.sidebar > .searchbox > button{ padding: 4px;}
+.sidebar > .sub-title{ border-top: solid 2px black; border-bottom: 1px solid #eeeeee; 
+                        margin-top: 30px; padding: 10px 0px; font-size: 18px;}
+.sidebar > .sub-menu > li{ padding: 5px 2px;}
+
+/* 본문 콘텐츠 바 css */
+.content h4{ border-bottom: solid 2px black; 
+            margin-bottom: 10px; padding: 10px 0px; font-size: 20px;}
+.content li{ padding: 5px 2px;}
+
+.content{ display: flex; flex-wrap: wrap; }
+.content > .center-bar, .left-bar{ width: 490px;}
+.content > .center-bar{ margin-right: 20px; font-size: 18px; word-spacing: 2px;}
+.notice-menu > li { display: flex; justify-content: space-between;}
+.notice-menu{margin-bottom: 50px;}
+.left-bar > .class-menu{ display: flex; flex-wrap: wrap; justify-content: flex-start;}
+.left-bar > .class-menu > li > a{ display: flex; flex-direction: column; 
+                              margin-bottom: 20px; margin-right: 40px;}
+.left-bar > .class-menu > li > a > img{ width: 200px;}
+
+/* 푸터 */
+#footer{ background-color: #05344e; color: #e6f5fd; padding: 10px 0px;}
+#footer > #footer-inner{width: 1280px; margin: 0 auto; }
+#footer-inner > li > h3{ font-size: 10px;}
+#footer-inner > .footer-top{ margin-bottom: 30px;}
+.footer-top > a{ margin-right: 30px; font-size: 18px; color: #e6f5fd;}
+#footer-inner > .footer-bottom{ display: flex; justify-content: space-between; margin-bottom: 30px;}
+#footer-inner > .footer-bottom h3 { font-size: 17px ; font-weight: bold;}
+#footer-inner > .footer-bottom li{margin-bottom: 8px; font-size: 15px; letter-spacing: 1px;}
+
+

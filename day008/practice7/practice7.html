@@ -1,15 +1,159 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>The 베이킹</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href="practice7.css"/>
+    <link rel='stylesheet' href="practice7.css" />
 </head>
-<body>
-    <div id="">
 
-    </div>
+<body>
+    <div id="wrap">
+
+        <div id="header">
+            <div id="header-left">
+                <img src="img02/logo.png" />
+            </div>
+            <div class="header-right">
+                <ul class="top-menu">
+                    <li>user님</li>
+                    <li><a href="">로그아웃</a></li>
+                    <li><a href="">정보수정</a></li>
+                </ul>
+                <ul class="main-meun">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">출석부</a></li>
+                    <li><a href="">작품갤러리</a></li>
+                    <li><a href="">게시판</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="main-img">
+            <img src="img02/main_bg.png" />
+        </div>
+
+        <!-- 사이드 바의 메뉴를 클릭했을 때 사이드바, 알림바, 클래스바, 따로 바뀌는 것이 아님. 그래서 세 개로 나누는 것이 아니라 그냥 왼쪽 오른쪽 세트로 잡음.-->
+        <div id="main">
+            <div class="sidebar">
+
+                <h3 class="title">The 베이킹</h3>
+                <p class="comment">안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.</p>
+                <input type="text" class="searchbox" />
+                <button class="btn" type="button"><a href="">검색</a></button>
+
+                <h4 class="sub-title">베이킹 요리</h4>
+                <ul class="sub-menu">
+                    <li><a href="">쿠키 만들기</a></li>
+                    <li><a href="">빵 만들기</a></li>
+                    <li><a href="">마카롱 만들기</a></li>
+                </ul>
+
+                <h4 class="sub-title">최근 댓글</h4>
+                <ul class="sub-menu">
+                    <li><a href="">쿠키 재미있어요.</a></li>
+                    <li><a href="">빵 좋아요!</a></li>
+                    <li><a href="">마카롱 만들기 추천~</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="center-bar">
+                    <h4 class="notice">공지사항</h4>
+                    <ul class="notice-menu">
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                    </ul>
+                    <h4 class="notice">게시판</h4>
+                    <ul class="notice-menu">
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                        <li>
+                            <div> <a href="">우리 클래스 연기합니다.</a></div>
+                            <div> 09.30 </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="left-bar">
+                    <h4 class="bread-class">제빵 클래스</h4>
+                    <ul class="class-menu">
+                        <!-- li 이미지 도너츠 날짜 각각 만들어서 ul 네 개 만들어도 됨... 이러면 css 만들기 편한가봐 ㅠㅠ -->
+                        <li><a href=""><img src="img02/bread1.png" />도너츠 만들기 [3]<div>24.11.18</div></a></li>
+                        <li><a href=""><img src="img02/bread2.png" />도너츠 만들기 [3]<div>24.11.18</div></a></li>
+                        <li><a href=""><img src="img02/bread3.png" />도너츠 만들기 [3]<div>24.11.18</div></a></li>
+                        <li><a href=""><img src="img02/bread4.png" />도너츠 만들기 [3]<div>24.11.18</div></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footer-inner">
+                <div class="footer-top">
+                    <a href="">The베이킹 소개</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">저작권 소개</a>
+                    <a href="">이용안내</a>
+                </div>
+                <div class="footer-bottom">
+                    <ul>
+                        <li><h3>문의전화</h3></li>
+                        <li>123-1234</li>
+                        <li>10:00 ~ 18:00 (launch 12:00 ~ 13:00)</li>
+                    </ul>
+                    <ul>
+                        <li><h3>The베이킹</h3></li>
+                        <li>주소: 인천광역시 부평구 부펴역 123-1234</li>
+                        <li>전화: 031-123-1234</li>
+                        <li>팩스: 031-123-1234</li>
+                        <li>이메일: qweqwe@qeqwe.com</li>
+                    </ul>
+                    <ul>
+                        <li><h3>입금정보</h3></li>
+                        <li>농협 123-123-12345</li>
+                        <li>The베이킹</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
 </body>
+
 </html>
