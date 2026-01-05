@@ -16,7 +16,6 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 ***         3       123         전체줄수(5) - 현재줄수(3) + 1
 **          4       12          전체줄수(5) - 현재줄수(4) + 1
 *           5       1           전체줄수(5) - 현재줄수(5) + 1      */
-
 // 1. 줄
 // 1부터 5까지 1씩 증가한다. 
 // 2. 별
@@ -96,18 +95,16 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 /*문제 7: 재고 관리 시스템
 두 개의 배열 products(상품 목록)와 stock(재고 수량)이 있습니다. 사용자로부터 구매할 상품명과 수량을 입력받아, 
 재고가 충분하면 "구매 완료!"를 출력하고 재고를 차감하세요. 재고가 부족하면 "재고가 부족합니다."를 출력합니다.*/
-let products = ['볼펜', '노트', '지우개'];
-let stock = [10, 5, 20]; 
-
-let name = prompt(`구매할 상품명: `); 
-let num = Number(prompt(`상품 수량: `));
-
-for( let i = 0 ; i <= products.length-1 ; i++){
-    let what = products.indexOf(name);
-    if(stock[what] >= num){stock[what] -= num; console.log(`구매 완료!`)}
-    else{console.log(`재고가 부족합니다.`);}
-}
-console.log(stock) //왜 세 번 되는지 찾기
+// let products = ['볼펜', '노트', '지우개'];
+// let stock = [10, 5, 20]; 
+// let name1 = prompt(`구매할 상품명: `); 
+// let num = Number(prompt(`상품 수량: `));
+// for( let i = 0 ; i <= products.length-1 ; i++){
+//     let what = products.indexOf(name1);
+//     if(what != -1 && stock[what] >= num){stock[what] = stock[what] - num; console.log(`구매 완료!`)}
+//     if(what == -1 || stock[what] < num){console.log(`재고가 부족합니다.`);}
+// }
+// console.log(stock)
 
 /*문제 8: 영화 평점 시각화하기
 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★)로 시각화하여 HTML에 출력하는 프로그램을 작성하시오.
@@ -126,6 +123,20 @@ for 반복문을 사용하여 모든 영화를 순회합니다.
 글래디에이터2   ★★★★★★★☆☆☆
 청설            ★★★★★★☆☆☆☆
 */
+// let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
+// let movieRatings = [8, 4, 7, 6];
+// let html = '';
+// for( let index = 0 ; index <= movieNames.length-1 ; index++){
+//     html = html + movieNames[index];
+//     for(let star = 1 ; star <= 10 ; star++){
+//         if(star <= movieRatings[index]){html = html + "★"}
+//         else(html = html + "☆")
+//     }
+//     html = html + "<br/>"
+// }
+// console.log(html)
+// document.write(html)
+
 /*문제 9: 좌석 예약 상태 표시하기
 총 6개의 좌석 상태 정보가 담긴 배열을 이용하여, 좌석 배치도와 상태를 HTML에 출력하는 프로그램을 작성하시오.
 (1). 초기 데이터
@@ -137,13 +148,23 @@ for 반복문을 사용하여 6개의 좌석을 모두 출력합니다.
 좌석 상태에 따라 <div> 태그에 CSS 색상을 다르게 적용합니다.
 '빈좌석': color: blue;
 '예약석': color: red;
-좌석은 2칸씩 3줄 형태로 배치합니다.
+좌석은 2칸씩 3줄 형태로 배치합니다.  //허걱...
+12 <br/> 34 <br/> 56
 (3). 출력 예시 (HTML)
-빈좌석 예약석 
-예약석 빈좌석
-예약석 빈좌석
+빈좌석 예약석 <br/>
+예약석 빈좌석 <br/>
+예약석 빈좌석 <br/> */
+let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+let html = '';
+for( let index = 0 ; index <= seatStatus.length-1 ; index++){
 
-*/
+    if(seatStatus[index] == '빈좌석'){
+        html = html + '<div class="blue">빈좌석</div>';}
+    if(seatStatus[index] == '예약석'){
+        html = html + '<div class="red">예약석</div>';}
+    
+}
+document.write(html);
 
 /*문제 10: 주차 요금 정산하기
 차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
@@ -169,5 +190,4 @@ HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니�
 기본 시간(30분)을 초과한 시간을 계산하고, parseInt() 함수를 사용하여 10분 단위로 버림 처리하면 추가 요금 단위를 쉽게 계산할 수 있습니다.
 추가 요금 단위 계산식:parseInt( (총 주차시간 - 30) / 10 )
 계산 예시:65분 주차 시 parseInt( (65 - 30) / 10 )는 parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
-
 */
