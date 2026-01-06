@@ -140,7 +140,7 @@ for 반복문을 사용하여 모든 영화를 순회합니다.
 위키드          ★★★★☆☆☆☆☆☆
 글래디에이터2   ★★★★★★★☆☆☆
 청설            ★★★★★★☆☆☆☆
-*/
+*/      // 나
         // let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
         // let movieRatings = [8, 4, 7, 6];
         // let html = '';
@@ -235,35 +235,35 @@ HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니�
 추가 요금 단위 계산식:parseInt( (총 주차시간 - 30) / 10 )
 계산 예시:65분 주차 시 parseInt( (65 - 30) / 10 )는 parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
 */
-let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];  // JS는 브라우저에서 원본 볼 수 있기 때문에 중요한 정보는 백엔드에서 정리해서 보내줌.
-let usageMinutes = [65, 30, 140, 420];
+// let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];  // JS는 브라우저에서 원본 볼 수 있기 때문에 중요한 정보는 백엔드에서 정리해서 보내줌.
+// let usageMinutes = [65, 30, 140, 420];
 
-let html = '';
+// let html = '';
 
-for(let index = 0 ; index <= carNumbers.length-1 ; index++){
+// for(let index = 0 ; index <= carNumbers.length-1 ; index++){
 
-    // [1] 차량번호 출력
+//     // [1] 차량번호 출력
     
-    let number = carNumbers[index]; // i번째 차량번호 꺼내기
-    html = html +  `<div> <span> ${number} </span>`
+//     let number = carNumbers[index]; // i번째 차량번호 꺼내기
+//     html = html +  `<div> <span> ${number} </span>`
     
-    // [2] 시간 출력
-    let min = usageMinutes[index]; // i번째 이용시간[분] 꺼내기
-    html = html + `<span> ${min} 분 주차 </span>`;
+//     // [2] 시간 출력
+//     let min = usageMinutes[index]; // i번째 이용시간[분] 꺼내기
+//     html = html + `<span> ${min} 분 주차 </span>`;
     
-    // [3] 요금 출력
-    let money = 0 ; // 요금 저장하는 변수
-    if( min >= 0 && min <= 30){money = 1000;} //만약에 사용시간이 30분 이하이면 요금 1000원
-    else{       //아니면 (30분 초과이면 )
-        money = parseInt( (min - 30)/10 ) * 500 + 1000 ; //10분 단위이므로 일의 자릿수 제거 + 10분마다*500원 + 기본요금1000
-    }
+//     // [3] 요금 출력
+//     let money = 0 ; // 요금 저장하는 변수
+//     if( min >= 0 && min <= 30){money = 1000;} //만약에 사용시간이 30분 이하이면 요금 1000원
+//     else{       //아니면 (30분 초과이면 )
+//         money = parseInt( (min - 30)/10 ) * 500 + 1000 ; //10분 단위이므로 일의 자릿수 제거 + 10분마다*500원 + 기본요금1000
+//     }
 
-    // [4] 최댓값 고정
-    if( money > 20000){ money = 20000 ;} // 만일 요금이 2만원 초과하면 2만원으로 고정
+//     // [4] 최댓값 고정
+//     if( money > 20000){ money = 20000 ;} // 만일 요금이 2만원 초과하면 2만원으로 고정
 
-    html+= `<span>${money.toLocaleString()}원</span>` // 변수.toLocaleString(): 천 단위로 구분하는 쉼표를 출력해주는 함수
-    html = html + `</div>`;
-}
-document.write(html);
+//     html+= `<span>${money.toLocaleString()}원</span>` // 변수.toLocaleString(): 천 단위로 구분하는 쉼표를 출력해주는 함수
+//     html = html + `</div>`;
+// }
+// document.write(html);
 
 
