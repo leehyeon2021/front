@@ -164,7 +164,7 @@ for( let index = 0 ; index <= seatStatus.length-1 ; index++){
         html = html + '<div class="red">예약석</div>';}
     
 }
-document.write(html);
+document.write(html); // 안 됨...
 
 /*문제 10: 주차 요금 정산하기
 차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
@@ -191,3 +191,8 @@ HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니�
 추가 요금 단위 계산식:parseInt( (총 주차시간 - 30) / 10 )
 계산 예시:65분 주차 시 parseInt( (65 - 30) / 10 )는 parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
 */
+let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
+let usageMinutes = [65, 30, 140, 420];
+for(let index = 0 ; index <= carNumbers.length-1 ; index++){
+    if(usageMinutes[index] > 30){parseInt(usageMinutes)}
+}

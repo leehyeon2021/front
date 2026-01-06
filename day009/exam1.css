@@ -1,0 +1,77 @@
+/* Position
+Static: 입력 순서 기준.
+Relative: 자기 기준.
+Absolute 부모 기준. 부모 없으면 body 기준 이동.
+Fixed: 화면상 보이는 위치에 따라 고정.
+Sticky: 상위 요소가 스크롤 내릴 때 고정.
+*/
+
+.box{
+    width: 100px; height: 100px;
+    background-color: yellow;
+    border: 1px solid red;
+}
+
+.box2{
+    /* Static: HTML 작성 순서대로 배치. */
+    position: static; /* 포지션 기본값. (입력 생략가능) */
+    left: 50px; /* 위치 이동 불가능하다. */
+    background-color: red;
+}
+
+.box3{
+    /* Relative: 본래 위치로 부터 상대 위치. 위치 이동 가능.*/
+    position: relative; /* 원래 있던 위치로부터 이동.*/
+    top: 50px; left: 200px; /*다른 요소와 겹칠 수 있다.*/
+    background-color: orange;
+    /* 자리를 비워도 빈자리 남아있음. */
+}
+
+.box4{
+    /* Absolute: 가장 가까운 상위요소의 position 기준으로 절대위치 잡음 */
+    position: absolute;
+    top: 50px ; left: 200px;
+    background-color: green;
+    /* 자리를 비우면 빈자리 없어짐. */
+}
+
+.box5{
+    /* Fixed: 디바이스(크롬) 화면 위치 고정 */
+    position: fixed;
+    right: 50px; bottom: 10px;
+    background-color: blue;
+    /* 자리를 비우면 빈자리 없어짐. */
+}
+
+/* 웬만하면 부모에 relative 주고 자식에 absolute 줌. 특정 범위 안에서만 절대 위치 지정*/
+.parent{
+    position: relative;
+    border: solid 1px pink;
+}
+.box6{
+    position: absolute;
+    top: 50px ; left: 200px;
+    background-color: purple;
+    z-index: 7;
+}
+/* 열렸다 닫히는 메뉴 만들 때도 사용. left: -200px 했다가 버튼 누르면 left 200px... */
+
+
+.header{
+    display: flex; background-color: powderblue;
+    /* Sticky: 만약 화면에서 벗어나면 위치 고정이 가능하다. (안 사라지고 화면에 보임.)*/
+    position: sticky;
+    top: 0px; /* == 화면에서 벗어나면 top:0px에 고정되어 따라온다.*/
+    
+    /* z-index: 겹침 우선순위. fixed보다 더 우선인지 아닌지. position 속성이 있어야 동작.*/
+    z-index: 5; /* 겹침 우선순위 5. 숫자가 클수록 위에 표시. ==후에 만들어진 게 위로. */
+    /*opacity: 50%;*/
+}
+.header > ul{
+    display: flex;
+}
+
+
+.item{
+    position: static;
+}
