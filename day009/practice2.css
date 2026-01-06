@@ -15,6 +15,7 @@ body{ background-color: #eeeeee;}
     bottom: 10px; right: 10px;
 }
 
+/* 2. 서브메뉴 */
 .submenu > li{
     width: 40px; height: 40px;
     display: none;
@@ -28,4 +29,5 @@ body{ background-color: #eeeeee;}
 .submenu > li:nth-of-type(3){background-color: #e9fff0; bottom: 170px; right: 15px;}
 .submenu > li:nth-of-type(4){background-color: #e7f0ff; bottom: 220px; right: 15px;}
 
+/* 3. 서브메뉴 나오게 만들기 */
 #menu:hover .submenu > li{display: block;}
