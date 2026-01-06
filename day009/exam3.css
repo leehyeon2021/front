@@ -1,0 +1,47 @@
+*{padding: 0px; margin: 0;} /* 기본 여백 제거 */
+li{ list-style-type: none;}
+a{text-decoration: none; color: black;}
+
+/* =============[ 드롭다운 메뉴1: 호버한 것만 보여줌 ]============= */
+
+#header{ background-color: beige;}
+#header > ul{ display: flex; justify-content: center; }
+.menu{ 
+    padding: 10px 20px; 
+    position: relative; /* 하위 요소의 위치 기준점 설정*/
+}
+
+.submenu{
+    position: absolute; /* 상위 요소가 relative 설정 되어서 body 아니고 부모 따라감. */
+    top: 40px; left: 10px;
+    padding: 5px;
+    background-color: beige;
+
+    display: none; /* 배치 방법: 보이지 않게 한다. none은 숨기기. */
+}
+
+/* 만일 menu에 hover(마우스 올렸을 때) 했을 때 드러나는 submenu */
+.menu:hover .submenu{ display: block; }
+
+
+/* =============[ 드롭다운 메뉴2: 호버하면 전체를 보여줌 ]============= */
+
+#header2{ background-color: skyblue;}
+#header2 > ul{ 
+    display: flex; justify-content: center;
+    position: relative;
+}
+#header2 > ul > li{ padding: 10px; }
+.submenu2{
+    position: absolute;
+    top: 40px;
+
+    width: 100%;
+    background-color: skyblue;
+    display: none;
+}
+#header2 > ul:hover .submenu2{
+    display: block;
+}
+.submenu2 > ul{display: flex; justify-content: center; align-content: space-between;}
+.submenu2 > ul > li{padding: 5px;}
