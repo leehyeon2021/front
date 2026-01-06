@@ -95,16 +95,34 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 /*문제 7: 재고 관리 시스템
 두 개의 배열 products(상품 목록)와 stock(재고 수량)이 있습니다. 사용자로부터 구매할 상품명과 수량을 입력받아, 
 재고가 충분하면 "구매 완료!"를 출력하고 재고를 차감하세요. 재고가 부족하면 "재고가 부족합니다."를 출력합니다.*/
+                // let products = ['볼펜', '노트', '지우개'];
+                // let stock = [10, 5, 20]; 
+                // let name1 = prompt(`구매할 상품명: `); 
+                // let num = Number(prompt(`상품 수량: `));
+    // 안 됨!    // for( let i = 0 ; i <= products.length-1 ; i++){
+//indexOf 써서   // let what = products.indexOf(name1);
+//한 번 더 해보기 //     if(what != -1 && stock[what] >= num){stock[what] = stock[what] - num; console.log(`구매 완료!`)}
+                //     if(what == -1 || stock[what] < num){console.log(`재고가 부족합니다.`);}
+                // }
+                // console.log(stock)
 // let products = ['볼펜', '노트', '지우개'];
 // let stock = [10, 5, 20]; 
-// let name1 = prompt(`구매할 상품명: `); 
-// let num = Number(prompt(`상품 수량: `));
+// // 배열 내 입력받은 값과 동일한 값 찾기: [1] indexOf [2] for문
+// let name = prompt("제품명: ");
+// let find = -1 ; // 찬은 인덱스 저장하는 변수, -1 못 찾았다.
 // for( let i = 0 ; i <= products.length-1 ; i++){
-//     let what = products.indexOf(name1);
-//     if(what != -1 && stock[what] >= num){stock[what] = stock[what] - num; console.log(`구매 완료!`)}
-//     if(what == -1 || stock[what] < num){console.log(`재고가 부족합니다.`);}
-// }
-// console.log(stock)
+//     if( products[i] == name ){  // 만약에 i번째 제품명과 입력 받은 값이 같으면
+//         find = i ;              // 찾은 i번째 인덱스 대입/기억
+//         break;                  // 찾았으면 뒤에 있는 값은 확인할 필요 없음. 반복문 탈출.
+//     } //if end
+// } //for end      // 주의할 점!!! 모든 {} 괄호들은 {지역특징}을 갖는다. 
+//                         // 즉] {} 안에서 선언(let/const)한 변수들은 }중괄호 끝나면 사라진다.
+// if (find == -1){ console.log("없는 제품명 입니다.");}
+// else{ 
+//     let count = Number(prompt("수량: "));
+//     if( stock[find] >= count ){stock[find] -= count, console.log("구매 완료!");}
+//     else(console.log("재고가 부족합니다."))}
+// console.log(stock);
 
 /*문제 8: 영화 평점 시각화하기
 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★)로 시각화하여 HTML에 출력하는 프로그램을 작성하시오.
@@ -123,19 +141,36 @@ for 반복문을 사용하여 모든 영화를 순회합니다.
 글래디에이터2   ★★★★★★★☆☆☆
 청설            ★★★★★★☆☆☆☆
 */
+        // let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
+        // let movieRatings = [8, 4, 7, 6];
+        // let html = '';
+        // for( let index = 0 ; index <= movieNames.length-1 ; index++){
+        //     html = html + movieNames[index];
+        //     for(let star = 1 ; star <= 10 ; star++){
+        //         if(star <= movieRatings[index]){html = html + "★"}
+        //         else(html = html + "☆")
+        //     }
+        //     html = html + "<br/>"
+        // }
+        // console.log(html)
+        // document.write(html)
+/* 교수님 풀이 */
 // let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
 // let movieRatings = [8, 4, 7, 6];
-// let html = '';
+// // 순회: 배열 내 첫 인덱스(0번)부터 마지막 인덱스(length-1) 까지
+// // 누적합계/누계/추가: 변수 += 새로운값 , 변수 = 변수 + 새로운 값
+// let html = ''; // 빈 변수 선언
 // for( let index = 0 ; index <= movieNames.length-1 ; index++){
-//     html = html + movieNames[index];
-//     for(let star = 1 ; star <= 10 ; star++){
-//         if(star <= movieRatings[index]){html = html + "★"}
-//         else(html = html + "☆")
+//     let movie = movieNames[index] ; //index번째 영화명 가져오기
+//     html = html + `<div> ${ movie } `;      // html 만들 땐 `${`백`틱`}` `사용하기!`
+//     let rating = movieRatings[index]; //i번째 평점 가져오기
+//     for( let r = 0 ; r <= 10 ; r++){
+//         if( rating >= r){ html = html + `<span> ★ </span>`}
+//         else{ html = html + `<span> ☆ </span>`}
 //     }
-//     html = html + "<br/>"
+//     html = html + '</div>'
 // }
-// console.log(html)
-// document.write(html)
+// document.write(html);
 
 /*문제 9: 좌석 예약 상태 표시하기
 총 6개의 좌석 상태 정보가 담긴 배열을 이용하여, 좌석 배치도와 상태를 HTML에 출력하는 프로그램을 작성하시오.
@@ -154,17 +189,26 @@ for 반복문을 사용하여 6개의 좌석을 모두 출력합니다.
 빈좌석 예약석 <br/>
 예약석 빈좌석 <br/>
 예약석 빈좌석 <br/> */
-let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
-let html = '';
-for( let index = 0 ; index <= seatStatus.length-1 ; index++){
-
-    if(seatStatus[index] == '빈좌석'){
-        html = html + '<div class="blue">빈좌석</div>';}
-    if(seatStatus[index] == '예약석'){
-        html = html + '<div class="red">예약석</div>';}
-    
-}
-document.write(html); // 안 됨...
+        // let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+        // let html = '';
+        // for( let index = 0 ; index <= seatStatus.length-1 ; index++){
+        //     if(seatStatus[index] == `빈좌석`){
+//안 됨! //         html = html + `<div class="blue">빈좌석</div>`;} // css 만듦
+        //     if(seatStatus[index] == `예약석`){
+        //         html = html + `<div class="red">예약석</div>`;}
+        // }
+        // document.write(html);   
+/* 교수님 풀이 */
+// let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+// let html = '';
+// for( let index = 0 ; index <= seatStatus.length-1 ; index++){ //밑에 삼항연산자. 조건 ? 참 : 거짓
+//     html += `<span style="color: ${seatStatus[index] == '빈좌석' ? "blue" : "red"};">
+//                  ${seatStatus[index]}
+//              </span>
+//                  ${(index+1) % 2 == 0 ? `<br/>` : ``}
+//              `; //백틱`은 엔터 됨. style="" 넣으면 간단한 건 css 대신 사용 가능.
+// }               // 종요!!!  ${} 안은 JS, `` 안은 html. ${} 넣으려면 `백틱`에 넣기.
+// document.write(html);
 
 /*문제 10: 주차 요금 정산하기
 차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
@@ -191,8 +235,35 @@ HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니�
 추가 요금 단위 계산식:parseInt( (총 주차시간 - 30) / 10 )
 계산 예시:65분 주차 시 parseInt( (65 - 30) / 10 )는 parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
 */
-let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
+let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];  // JS는 브라우저에서 원본 볼 수 있기 때문에 중요한 정보는 백엔드에서 정리해서 보내줌.
 let usageMinutes = [65, 30, 140, 420];
+
+let html = '';
+
 for(let index = 0 ; index <= carNumbers.length-1 ; index++){
-    if(usageMinutes[index] > 30){parseInt(usageMinutes)}
+
+    // [1] 차량번호 출력
+    
+    let number = carNumbers[index]; // i번째 차량번호 꺼내기
+    html = html +  `<div> <span> ${number} </span>`
+    
+    // [2] 시간 출력
+    let min = usageMinutes[index]; // i번째 이용시간[분] 꺼내기
+    html = html + `<span> ${min} 분 주차 </span>`;
+    
+    // [3] 요금 출력
+    let money = 0 ; // 요금 저장하는 변수
+    if( min >= 0 && min <= 30){money = 1000;} //만약에 사용시간이 30분 이하이면 요금 1000원
+    else{       //아니면 (30분 초과이면 )
+        money = parseInt( (min - 30)/10 ) * 500 + 1000 ; //10분 단위이므로 일의 자릿수 제거 + 10분마다*500원 + 기본요금1000
+    }
+
+    // [4] 최댓값 고정
+    if( money > 20000){ money = 20000 ;} // 만일 요금이 2만원 초과하면 2만원으로 고정
+
+    html+= `<span>${money.toLocaleString()}원</span>` // 변수.toLocaleString(): 천 단위로 구분하는 쉼표를 출력해주는 함수
+    html = html + `</div>`;
 }
+document.write(html);
+
+
