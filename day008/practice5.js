@@ -36,7 +36,7 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 // 힌트: 문자열의 .indexOf() 메소드를 사용하세요.
 //for(let index = 0 ; index<=userNames.length-1 ; index++ ){ // 1. 배열 내 모든 이름 하나씩 꺼내기
 //    let name = userNames[index]; // 2. index번째 이름 꺼내기
-//    if(name.indexOf("솔") > 0 ){ // 3. 문자열은 배열이다. 김[0] 하[1] 준[2]
+//    if(name.indexOf("솔") >= 0 ){ // 3. 문자열은 배열이다. 김[0] 하[1] 준[2]
 //        console.log( name ); // 4. 이름 출력
 //        break; // 5. 가장 가까운 반복문 탈출
 //    }
@@ -73,12 +73,11 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 /*문제 6: 버블 정렬 (Bubble Sort) 구현하기
 주어진 숫자 배열을 '버블 정렬'(인접한 애 모두 비교) 알고리즘을 이용하여 오름차순으로 정렬하고, 최종 정렬된 배열을 출력하시오.
 힌트: 중첩 for 반복문을 사용하며, 이웃한 두 요소를 비교하여 위치를 바꿉니다.*/
-//let numbers = [5, 3, 4, 1, 2];
+// let numbers = [5, 3, 4, 1, 2];
 // 1번째 회전: (1) 5>3 (2) 3>4 (3) 4>1 (4) 1 2  (5) 2 > ? 5까지 가면 안 됨. (j)
 // 2번째 회전: (1) 5>3 (2) 3>4 (3) 4>1
 // 3번째 회전: (1) 5>3 (2) 3>4
 // 4번째 회전: (1) 5>3
-// [1]
 //for( let i = 0 ; i <= numbers.length-1 ; i++ ){ // 마지막 인덱스는 인접한 인덱스(+1) 없기 때문에 생략.
 //    for(let j = 0 ; j < numbers.length-1 ; j++){
 //        //console.log(j);               // j는 마지막 인덱스까지 갈 필요가 없다. 
@@ -105,24 +104,24 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
                 //     if(what == -1 || stock[what] < num){console.log(`재고가 부족합니다.`);}
                 // }
                 // console.log(stock)
-// let products = ['볼펜', '노트', '지우개'];
-// let stock = [10, 5, 20]; 
-// // 배열 내 입력받은 값과 동일한 값 찾기: [1] indexOf [2] for문
-// let name = prompt("제품명: ");
-// let find = -1 ; // 찬은 인덱스 저장하는 변수, -1 못 찾았다.
-// for( let i = 0 ; i <= products.length-1 ; i++){
-//     if( products[i] == name ){  // 만약에 i번째 제품명과 입력 받은 값이 같으면
-//         find = i ;              // 찾은 i번째 인덱스 대입/기억
-//         break;                  // 찾았으면 뒤에 있는 값은 확인할 필요 없음. 반복문 탈출.
-//     } //if end
-// } //for end      // 주의할 점!!! 모든 {} 괄호들은 {지역특징}을 갖는다. 
-//                         // 즉] {} 안에서 선언(let/const)한 변수들은 }중괄호 끝나면 사라진다.
-// if (find == -1){ console.log("없는 제품명 입니다.");}
-// else{ 
-//     let count = Number(prompt("수량: "));
-//     if( stock[find] >= count ){stock[find] -= count, console.log("구매 완료!");}
-//     else(console.log("재고가 부족합니다."))}
-// console.log(stock);
+let products = ['볼펜', '노트', '지우개'];
+let stock = [10, 5, 20]; 
+// 배열 내 입력받은 값과 동일한 값 찾기: [1] indexOf [2] for문
+let name = prompt("제품명: ");
+let find = -1 ; // 찾은 인덱스 저장하는 변수, -1, 못 찾았다.
+for( let i = 0 ; i <= products.length-1 ; i++){
+    if( products[i] == name ){  // 만약에 i번째 제품명과 입력 받은 값이 같으면
+        find = i ;              // 찾은 i번째 인덱스 대입/기억
+        break;                  // 찾았으면 뒤에 있는 값은 확인할 필요 없음. 반복문 탈출.
+    } //if end
+} //for end      // 주의할 점!!! 모든 {} 괄호들은 {지역특징}을 갖는다. 
+                        // 즉] {} 안에서 선언(let/const)한 변수들은 }중괄호 끝나면 사라진다.
+if (find == -1){ console.log("없는 제품명 입니다.");}
+else{ 
+    let count = Number(prompt("수량: "));
+    if( stock[find] >= count ){stock[find] -= count, console.log("구매 완료!");}
+    else(console.log("재고가 부족합니다."))}
+console.log(stock);
 
 /*문제 8: 영화 평점 시각화하기
 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★)로 시각화하여 HTML에 출력하는 프로그램을 작성하시오.
