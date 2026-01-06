@@ -38,3 +38,6 @@ a:active{color: yellow; font-size: 30px;}
     color: palevioletred;
 }
 
+.box2 > li:nth-of-type(odd){color: aqua;} 
+.box2 > li:nth-of-type(even){color: purple;}
+.box2 > li:nth-of-type(1){color: palevioletred;}
