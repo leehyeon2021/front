@@ -8,14 +8,14 @@ body{ background-color: #eeeeee;}
 #menu > h1{
     background-color: black; color: white;
     width: 50px; height: 50px;
-    display: flex; justify-content: center;
+    display: flex; justify-content: center; align-items: center;
     border-radius: 25px; box-shadow: 2px 2px 10px gray;
 
     position: fixed;
     bottom: 10px; right: 10px;
 }
 
-/* 2. 서브메뉴 */
+/* 2. 서브메뉴 */       /* 겹치는 거는 그냥 클래스 하나 더 만들어도 될 듯...*/
 .submenu > li{
     width: 40px; height: 40px;
     display: none;

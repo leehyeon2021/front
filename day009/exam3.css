@@ -17,6 +17,8 @@ a{text-decoration: none; color: black;}
     padding: 5px;
     background-color: beige;
 
+    z-index: 5; /* 이건 그냥 내가 한 거... */
+
     display: none; /* 배치 방법: 보이지 않게 한다. none은 숨기기. */
 }
 
