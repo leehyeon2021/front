@@ -22,23 +22,23 @@ a{ text-decoration: none; color: black;}
 .head-top > ul> li > a{ padding: 0px 20px; border-right: solid 1px #dbdbdb; font-size: 10px;}
 
 .head-main{
-    display: flex; width: 100%; justify-content: space-between;
+    display: flex; width: 100%; justify-content: space-between; align-items: center;
     position: sticky; top: 0px;
     background-color: #ffffffcc; opacity: 60%; border-top: solid 1px #dbdbdb;
     padding: 0px 40px; 
 }
-.head-main > ul > a > img{ width: 150px; margin-right: 10px;}
+.head-main > ul > a > img{ width: 100px; margin-right: 10px;}
 .head-main > .head-menu{
     display: flex; justify-content: start; width: 100%;
-    align-items: center; font-size: 13px ; 
+    align-items: center; font-size: 12px ; 
 }
-.head-main > .head-menu > li{ margin: 20px;}
+.head-main > .head-menu > li{ padding: 15px 8px;}
 
 .head-menu-MADE{ position: relative; justify-content: center;}
 .head-menu-MADE .head-submenu-MADE{ 
-    position: absolute; top: 39px; 
+    position: absolute; top: 45px; /* 왜 가운데 안 맞는 거지 ㅠ.ㅠ*/
     background-color: #ffffffcc;
-    text-align: center; padding: 5px 0px;
+    text-align: center; padding: 5px 0px; 
     display: none; width: 60px; }
 
 .head-submenu-MADE > li{ padding: 5px;}
@@ -63,3 +63,23 @@ a{ text-decoration: none; color: black;}
 .line-through{ text-decoration: line-through ;}
 
 .main-img{ width: 100%; }
+#main > .main-content{
+    width: 1280px; margin: 0 auto;
+    display: block;;
+}
+.main-items{
+    display: flex; flex-wrap: wrap;
+}
+.main-content-head{ margin-top: 40px; display: block; text-align: center; }
+.main-content-head > li{ padding: 5px; }
+.main-items > .item{
+    width: 300px; margin: 35px 5px;
+}
+.item-img{ width: 300px; }
+.item-padding{  }
+.item-info > .item-top{ display: flex; justify-content: space-between; margin: 0px 2px;}
+.item-title > div{ padding-bottom: 4px;}
+.item-info > .item-price{ display: block;}
+
+
+/* footer */
