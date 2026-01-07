@@ -25,23 +25,27 @@ a{ text-decoration: none; color: black;}
     display: flex; width: 100%; justify-content: space-between;
     position: sticky; top: 0px;
     background-color: #ffffffcc; opacity: 60%; border-top: solid 1px #dbdbdb;
-    padding: 30px 40px; 
+    padding: 0px 40px; 
 }
-.head-main > ul > a > img{ width: 150px;}
+.head-main > ul > a > img{ width: 150px; margin-right: 10px;}
 .head-main > .head-menu{
-    display: flex; flex-wrap: wrap; justify-content: start; width: 100%;
-    align-items: center;
+    display: flex; justify-content: start; width: 100%;
+    align-items: center; font-size: 13px ; 
 }
-.head-main > .head-menu > li{ margin: 50px;}
-.head-main > .head-menu > .head-menu-MADE > .head-submenu-MADE{ 
-    position: absolute;
-    top: 80px;
-    background-color: white;
-    width: 130%;
-    text-align: center;
-    display: none;}
+.head-main > .head-menu > li{ margin: 20px;}
+
+.head-menu-MADE{ position: relative; justify-content: center;}
+.head-menu-MADE .head-submenu-MADE{ 
+    position: absolute; top: 39px; 
+    background-color: #ffffffcc;
+    text-align: center; padding: 5px 0px;
+    display: none; width: 60px; }
+
+.head-submenu-MADE > li{ padding: 5px;}
 .head-menu-MADE:hover .head-submenu-MADE{ display: block;}
 
+.head-main > .search{ display: flex; width: 200px; height: 30px; align-items: center;}
+.head-main > .search > input{  border-bottom: solid 1px gray; }
 .head-main > .search > button > img{ width: 15px; }
 
 
