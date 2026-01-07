@@ -17,6 +17,8 @@ a{text-decoration: none; color: black;}
     padding: 5px;
     background-color: beige;
 
+    z-index: 5; /* 이건 그냥 내가 한 거... */
+
     display: none; /* 배치 방법: 보이지 않게 한다. none은 숨기기. */
     /* 메뉴와 서브메뉴 사이에 접점이 없다면 서브메뉴를 클릭할 수 없음.  
        그래서 사이에 접점을 만들어야 함. */
