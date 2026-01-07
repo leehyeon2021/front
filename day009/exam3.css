@@ -18,6 +18,8 @@ a{text-decoration: none; color: black;}
     background-color: beige;
 
     display: none; /* 배치 방법: 보이지 않게 한다. none은 숨기기. */
+    /* 메뉴와 서브메뉴 사이에 접점이 없다면 서브메뉴를 클릭할 수 없음.  
+       그래서 사이에 접점을 만들어야 함. */
 }
 
 /* 만일 menu에 hover(마우스 올렸을 때) 했을 때 드러나는 submenu */

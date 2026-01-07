@@ -4,30 +4,32 @@ li{list-style-type: none;}
 body{ background-color: #eeeeee;}
 
 /* 1. 검은 동그라미 메뉴 */
-#menu{ }
-#menu > h1{
-    background-color: black; color: white;
+#menu{ position: fixed;
+    bottom: 10px; right: 10px;}
+.main-menu{
+    background-color: black; color: white; line-height: 155%; text-align: center; font-size: 30px;
     width: 50px; height: 50px;
-    display: flex; justify-content: center;
     border-radius: 25px; box-shadow: 2px 2px 10px gray;
-
-    position: fixed;
-    bottom: 10px; right: 10px;
 }
 
 /* 2. 서브메뉴 */
-.submenu > li{
-    width: 40px; height: 40px;
-    display: none;
-    border-radius: 25px; box-shadow: 2px 2px 10px gray;
+/* 1번이랑 이어져야 커서로 선택 가능. */
+.sub-menu{
+    display: none; position: absolute;
+    bottom: 50px;
+    padding: 5px 5px;
+}
+.sub-menu > li{
     font-size: 10px; font-weight: bold;
     text-align: center; align-content: center;
-    position: absolute;
+    border-radius: 25px; box-shadow: 2px 2px 10px gray;
+    width: 40px; height: 40px;
+    margin: 10px 0;
 }
-.submenu > li:nth-of-type(1){background-color: #f3e9ff; bottom: 70px; right: 15px;}
-.submenu > li:nth-of-type(2){background-color: #fff2e9; bottom: 120px; right: 15px;}
-.submenu > li:nth-of-type(3){background-color: #e9fff0; bottom: 170px; right: 15px;}
-.submenu > li:nth-of-type(4){background-color: #e7f0ff; bottom: 220px; right: 15px;}
+.sub-menu > li:nth-of-type(1){background-color: #f3e9ff;}
+.sub-menu > li:nth-of-type(2){background-color: #fff2e9;}
+.sub-menu > li:nth-of-type(3){background-color: #e9fff0;}
+.sub-menu > li:nth-of-type(4){background-color: #e7f0ff;}
 
 /* 3. 서브메뉴 나오게 만들기 */
-#menu:hover .submenu > li{display: block;}
+#menu:hover .sub-menu{display: block;}
