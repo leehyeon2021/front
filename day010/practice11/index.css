@@ -1,0 +1,61 @@
+/* 1. 기본 설정 */
+*{ padding: 0px; margin: 0px; box-sizing: border-box;}
+li{ list-style-type: none;}
+a{ text-decoration: none; color: black;}
+
+.button{border: none;}
+.box-black{ 
+    background-color: black; border: solid 1px gray;
+    display: inline-flex; width: 10px; height: 10px;}
+.box-white{ 
+    background-color: white; border: solid 1px gray;
+    display: inline-flex; width: 10px; height: 10px;}
+.red{ color: red;}
+.gray-text{ color: gray;}
+.size{ font-size: 12px ;}
+.line-through{ text-decoration: line-through ;}
+
+
+/* 2. HEADER */
+.head-top{ width: 1280px; padding: 10px; justify-self: end; line-height: 100%;}
+.head-top > ul{ display: flex; justify-content: end;}
+.head-top > ul> li > a{ padding: 0px 20px; border-right: solid 1px #dbdbdb; font-size: 10px;}
+
+.head-main{
+    display: flex; width: 100%; justify-content: space-between;
+    position: sticky; top: 0px;
+    background-color: #ffffffcc; opacity: 60%; border-top: solid 1px #dbdbdb;
+    padding: 30px 40px; 
+}
+.head-main > ul > a > img{ width: 150px;}
+.head-main > .head-menu{
+    display: flex; flex-wrap: wrap; justify-content: start; width: 100%;
+    align-items: center;
+}
+.head-main > .head-menu > li{ margin: 50px;}
+.head-main > .head-menu > .head-menu-MADE > .head-submenu-MADE{ 
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    width: 130%;
+    text-align: center;
+    display: none;}
+.head-menu-MADE:hover .head-submenu-MADE{ display: block;}
+
+.head-main > .search > button > img{ width: 15px; }
+
+
+
+/* 3. 본문 */
+.box-black{ 
+    background-color: black; border: solid 1px gray;
+    display: inline-flex; width: 10px; height: 10px;}
+.box-white{ 
+    background-color: white; border: solid 1px gray;
+    display: inline-flex; width: 10px; height: 10px;}
+.red{ color: red;}
+.gray-text{ color: gray;}
+.size{ font-size: 12px ;}
+.line-through{ text-decoration: line-through ;}
+
+.main-img{ width: 100%; }
