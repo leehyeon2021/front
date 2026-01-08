@@ -90,7 +90,7 @@ a{ text-decoration: none; color: black;}
 #footer{ width: 100%; background-color: #f7f7f7; margin-top: 20px; padding-bottom: 50px;}
 #footer-inner{ 
     display: flex; width: 1280px; 
-    justify-content: space-evenly; margin: 0 auto; padding: 50px 20px; 
+    justify-content: space-between; margin: 0 auto; padding: 50px 20px; 
 }
 .footer-infor h3{ padding-bottom: 10px; }
 .footer-infor div{ padding-top: 15px; letter-spacing: 1px;}
