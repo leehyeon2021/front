@@ -1,0 +1,45 @@
+.box{
+    border: 2px solid lightgreen;
+    padding: 30px; 
+}
+/* 배경 종류 */
+.back1{
+    background-color: rgb(0, 128, 0);
+    background-color: #008000;
+    background-color: rgb(0, 128, 0);
+    /* rgba( 0~ 255, 0~255, 0~255, 0~1) */
+    background-color: rgba(0, 128, 0, 0.5); /* alpha: 투명도. 0.5 == 50%*/
+}
+
+/* [1] 이미지 삽입할 때 img 대신에 배경으로 가능. 이미지 위에 텍스트 표현할 때 */
+.back2{
+    /* background-image: url("배경.png"); */
+    background-image: url("img.jpg");
+    /* background-repeat: no-repeat; 채우기 없음 */
+    background-repeat: no-repeat;
+    /* background-position: center; 배경 이미지 위치 */
+    background-position: left;
+
+    background-size: cover;
+}
+
+.back3{
+    background-image: url("img.jpg");
+    background-repeat: repeat; /* 기본값: 만일 비어있는 공간을 반복 채움(패턴)*/
+
+    background-size: cover;
+}
+.back4{
+    background-image: url("img.jpg");
+    background-repeat: no-repeat; /* 채우기: 없음. 비율 유지, 잘림 생길 수 있음. */
+    background-size: cover;
+    background-attachment: fixed; /* 패럴렉스: 스크롤 이동해도 배경 이미지는 고정된다. */
+}
+
+.box2{
+    width: 80px; height: 80px;
+    background-image: url("naver.png");
+    background-size: 480px;
+    background-repeat: no-repeat;
+    background-position: -1px 12px; /* 위치: left , top. 왼쪽으로 10, 위로 10.*/
+}

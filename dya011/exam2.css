@@ -1,0 +1,65 @@
+/*
+반응형
+- PC: 1280px
+- 모바일: 200~400px.
+- 폴더폰: 400~600px
+- 태블릿: 엇
+*/
+
+
+/* [1] 만약에 width, height 생략 시 상위 요소 크기를 따라간다. 전체100%가 아니라 상위요소(부모)의 100%. */
+.box{
+    border: 1px solid red;
+    padding: 10px; margin-bottom: 100px;
+}
+.size1{
+    width: 200px; height: 200px;
+}
+
+/* [2] 최소 사이즈 정할 수 있음. */
+/* min */
+.size2{ /* 화면이 600px 보다 커지면 -> 100%. 작으면 -> 600px 고정. */
+    min-width: 600px; /* 600px 보다 작아질 수 없다는 뜻. */
+}
+.size3{ /* 내용의 높이가 100px 보다 크면 -> 100%. 작으면 -> 100px. */
+    min-height: 100px;
+    width: 200px;
+}
+
+/* [3] 최대 사이즈 정할 수 있음. */
+/* max */
+.size4{ /* 화면이 600px 보다 크면 -> 600px 고정. 작으면 -> 100% */
+    max-width: 600px; /* 600px 보다 커질 수 없다는 뜻. */
+}
+.size5{ /* 내용의 높이가 100px 보다 크면 100px(넘으면 넘침) 고정. 작으면 -> 100%*/
+    max-height: 100px; 
+}
+
+
+/* [4] 만약에 하위 요소의 컨텐츠/내용이 부모 요소의 크기가 크면/넘치면 */
+/* overflow (게시판 만들 때 자주 사용) */
+.size6{
+    width: 200px; height: 100px;
+    overflow: visible; 
+    /* visible: (기본값) 넘치면 넘친대로 그대로 보여준다. */
+}
+.size7{
+    width: 200px; height: 100px;
+    overflow: hidden; /* 넘치면: 히든; 넘친 것을 가린다. */
+    /* hidden: 내용이 넘치면 숨긴다. */
+}
+.size8{
+    width: 200px; height: 100px;
+    overflow: scroll; /* 내용이 넘쳤을 때 스크롤을 만들어준다. */
+    /* scroll: 항상 스크롤 생성. */
+}
+.size9{
+    width: 200px; height: 100px;
+    overflow: auto;
+    /* auto: 내용이 넘쳤을 때만 스크롤 생성. */
+}
+.size10{
+    width: 200px; height: 100px;
+    overflow-x: hidden; overflow-y: scroll;
+    /* overflow-x: 가로축 설정. overflow-y: 세로축 설정. */
+}

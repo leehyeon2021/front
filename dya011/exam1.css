@@ -1,0 +1,55 @@
+/*
+
+th랑 td는 따로 스타일링해야 한다. 
+
+
+*/
+
+
+
+
+.basicTable{
+    width: 500px; /* table도 사이즈가 존재한다. */
+    border: 1px solid palevioletred;
+}
+.basicTable th, .basicTable td{
+    border: 1px solid lightpink;
+    padding: 5px; /* padding도 들어간다. */
+}
+
+/* 형제 선택자 */
+.basicTable td:nth-child(1){ 
+    background-color: aqua;
+}
+.basicTable td:nth-child(2){
+    text-align: center; background-color: blueviolet;
+}
+.basicTable td:nth-child(3){
+    background-color: tomato;
+}
+
+/* 속성 선택자: 선택자[속성명] : 해당 속성명을 갖는 선택자를 모두 선택. */
+.basicTable td[colspan]{ text-align: right;}
+    /* input text="어쩌고"를 가져와서 td[text="어쩌고"] 이런 방식으로 주로 사용한다. */
+
+.styleTable{
+    width: 500px; margin: 10px 0;
+    border-collapse: collapse; /* 이중 테두리를 하나의 테두리로 병합해준다. */
+}
+.styleTable th, .styleTable td{
+    border: 1px solid black;
+}
+
+/* 표에서 많이 사용하는 거 : 홀짝구분(odd), 커서닿으면색깔변함(hover) */
+.styleTable > tbody > tr:nth-of-type(odd){ /* 행끼리 구분할 때 색으로 구분하고는 한다. */
+    background-color: #eeeeee;
+}
+.styleTable > tbody > tr:hover{
+    background-color: gray; color: white;
+}
+
+
+/* 
+표 같은 건 일반인이 보려는 게 아니라 관리자가 보기 편하려고 짜는 것,,,,
+고객이 보는 페이지보단 관리자가 보는 페이지. 업체에 도움이 되는 것,,,, 
+*/

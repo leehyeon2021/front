@@ -23,23 +23,27 @@ a{ text-decoration: none; color: black;}
 
 .head-main{
     display: flex; width: 100%; justify-content: space-between; align-items: center;
-    position: sticky; top: 0px;
+    position: sticky; top: 0px; 
     background-color: #ffffffcc; opacity: 60%; border-top: solid 1px #dbdbdb;
     padding: 0px 40px; 
 }
 .head-main > ul > a > img{ width: 100px; margin-right: 10px;}
 .head-main > .head-menu{
-    display: flex; justify-content: start; width: 100%;
+    display: flex; flex-wrap: wrap; justify-content: start; width: 100%;
     align-items: center; font-size: 12px ; 
 }
-.head-main > .head-menu > li{ padding: 15px 8px;}
+.head-main > .head-menu > li{ padding: 15px 8px; }
 
-.head-menu-MADE{ position: relative; justify-content: center;}
+.head-menu-MADE{ 
+    position: relative; 
+    display: flex; justify-content: center; 
+}
+
 .head-menu-MADE .head-submenu-MADE{ 
-    position: absolute; top: 45px; /* 왜 가운데 안 맞는 거지 ㅠ.ㅠ*/
+    position: absolute; top: 47px;
     background-color: #ffffffcc;
     text-align: center; padding: 5px 0px; 
-    display: none; width: 60px; }
+    display: none; width: 100%; }
 
 .head-submenu-MADE > li{ padding: 5px;}
 .head-menu-MADE:hover .head-submenu-MADE{ display: block;}
@@ -82,4 +86,39 @@ a{ text-decoration: none; color: black;}
 .item-info > .item-price{ display: block;}
 
 
-/* footer */
+/* 4. footer */
+#footer{ width: 100%; background-color: #f7f7f7; margin-top: 20px; padding-bottom: 50px;}
+#footer-inner{ 
+    display: flex; width: 1280px; 
+    justify-content: space-evenly; margin: 0 auto; padding: 50px 20px; 
+}
+.footer-infor h3{ padding-bottom: 10px; }
+.footer-infor div{ padding-top: 15px; letter-spacing: 1px;}
+
+
+/* 5. popup */
+#popup{
+    position: fixed; right: 0px; top: 30%;
+    display: block; background-color: #f7f7f7; 
+    
+}
+#popup > ul{
+}
+#popup > ul > li{ 
+    position: relative; padding: 10px;
+    border: solid 1px #dbdbdb;
+}
+#popup > ul > li .popup-sub{ 
+    display: none;
+    position: absolute; right: 35px; top: 10px;
+    background-color: black; color: white;
+    width: 80px; padding: 1px;  border-radius: 4px;
+    font-size: 10px; text-align: center; line-height: 160%;
+}
+
+#popup > ul > li:nth-of-type(1):hover .popup-sub{ display: block;}
+#popup > ul > li:nth-of-type(2):hover .popup-sub{ display: block;}
+
+#popup > ul > li img{ width: 20px;}
+
+
