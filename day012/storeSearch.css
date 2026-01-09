@@ -54,13 +54,13 @@ a{ text-decoration: none; color: black; }
 }
 #search_header_inner > .h_right > .h_bottom > .h_bottom_sub{ /* 메뉴 창 서브 */
     position: absolute; left: -1px; padding: 10px; 
-    display: none; justify-content: space-evenly; text-align: center; line-height: 220%;
+    display: none; justify-content: right; text-align: center; line-height: 220%;
     width: 100%;
     background-color: white;
     z-index: 99;
 }
 #search_header_inner > .h_right > .h_bottom > table{ justify-content: right;}
-.h_bottom_subli{ display:  block;}
+.h_bottom_subli{ display:  block; padding-left: 53px; padding-right: 10px;}
 #search_header_inner > .h_right > .h_bottom:hover .h_bottom_sub{ display: flex;}
 
 
@@ -190,9 +190,8 @@ a{ text-decoration: none; color: black; }
    5. Footer Section (하단 구역) - 공통 구역 (강병모 님)
    ============================================================ */
 #footer {
-    position: static; bottom: 0;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
     padding: 40px 0px 60px;
@@ -203,6 +202,7 @@ a{ text-decoration: none; color: black; }
 
 /* 5-1. Footer Logo */
 .footlogo {
+    margin-left: 200px;
     padding-top: 20px;
     width: 200px;
 }
