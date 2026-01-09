@@ -3,3 +3,194 @@
 li{ list-style-type: none; }
 a{ text-decoration: none; color: black; }
 
+
+.text_gray{color: #919191;}
+.text_red{color: #de1d24;}
+
+/* 헤더 */
+#search_header{ /* 헤더 전체 */
+    width: 100%; background-color: white;
+    min-width: 1280px;
+    border-top: solid 2px #de1d24; border-bottom: solid 2px #dddddd;
+    display: flex; position: sticky; top: 0px;
+    z-index: 9999;
+}
+#search_header_inner{ /* 헤더 안쪽 */
+    width: 1280px; margin: 0 auto; position: relative;
+    display: flex; justify-content: space-between;
+}
+#search_header_inner > a > img{ /* 로고 */
+    width: 150px; margin: 20px;
+}
+#search_header_inner > .h_right{ /* 헤더 오른쪽 부분 */
+    display: block;
+}
+#search_header_inner > .h_right > .h_right_top{ /* 헤더 top */
+    display: flex; justify-content: right;
+    margin: 15px 0; align-items: center;
+}
+#search_header_inner > .h_right > .h_right_top >.h_sns{ /* sns 묶음 */
+    display: flex; margin-top: 5px; margin-right: 20px;
+}
+.h_sns > li > a > img{ /* sns 사진 */
+    width: 25px; margin-left: 10px;
+}
+#search_header_inner > .h_right > .h_right_top > span{ /* 중간 선 */
+    background-color: #c9c9c9;
+    width: 1px; height: 10px; margin-left: 20px;
+}
+#search_header_inner > .h_right > .h_right_top > .h_top_text{ /* login signup */
+    padding: 2px; margin-left: 20px;
+}
+
+#search_header_inner > .h_right > .h_bottom{ /* 메뉴 창 */
+    display: block; align-items: end; z-index: 999;
+}
+#search_header_inner > .h_right > .h_bottom > .h_bottom_main{ /* 메뉴 창 본문 */
+    position: relative; margin-top: 30px; font-size: 15px; font-weight: bold;
+    display: flex; justify-content: space-around;
+    width: 1000px;
+    
+}
+#search_header_inner > .h_right > .h_bottom > .h_bottom_sub{ /* 메뉴 창 서브 */
+    position: absolute; left: -1px; padding: 10px; 
+    display: none; justify-content: space-evenly; text-align: center; line-height: 220%;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+}
+#search_header_inner > .h_right > .h_bottom > table{ justify-content: right;}
+.h_bottom_subli{ display:  block;}
+#search_header_inner > .h_right > .h_bottom:hover .h_bottom_sub{ display: flex;}
+
+
+/* 메인 */
+
+#search_main{ /* 메인 */
+    display: block;
+    width: 1280px; margin: 70px auto;
+
+}
+#search_main > .m_top{ /* 메인 문구 */
+    display: flex; justify-content: space-between;
+    margin: 0 70px; margin-bottom: 30px; align-items: center;
+    word-spacing: 5px;
+}
+#search_main > .m_top > h3{ font-size: 38px ;} /* 매장찾기 */
+#search_main > .m_top > span{ font-size: 15px; } /* 메뉴 경로 */
+
+#search_main > .m_content{ /* 지도창과 지역명검색창 */
+    display: flex; justify-content: space-between;
+    padding: 20px 30px;
+}
+#search_main > .m_content > .m_mapbox{ /* 지도 박스 */
+    min-width: 600px; min-height: 650px;
+    position: relative;
+    background-image: url(img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#search_main > .m_content > .m_mapbox > .m_map_point{
+    position: absolute; top: 300px; left: 250px;
+    width: 50px;
+}
+#search_main > .m_content > .m_mapbox > .m_map_infor{
+    position: absolute; top: 100px; left: 110px;
+    width: 320px; 
+    display: block;
+    background-color: white; padding: 30px 20px;
+    box-shadow: 1px 1px 10px #b6b6b6; border-radius: 25px;
+}
+.m_map_infor > ul{
+    padding-bottom: 20px; margin-bottom: 15px;
+}
+.m_map_infor > div > .m_map_infor_button{
+    color: white; background-color: #de1d24; border: #de1d24;
+    padding: 8px 88px; border-radius: 10px;
+}
+.m_map_infor > div > .m_map_infor_button:hover{
+    box-shadow: 3px 3px 5px rgb(201, 113, 113);
+}
+#search_main > .m_content > .m_mapbox > .m_map_bottom{
+    display: flex; justify-content: space-between;
+    width: 130px; align-items: center;
+    position: absolute; bottom: 4px;
+}
+.m_map_bottom > .m_map_distance{
+    border-bottom: solid 1px black; border-right: solid 1px black;  border-left: solid 1px black;
+    width: 60px; height: 8px;
+}
+
+#search_main > .m_content > .m_search{ /* 오른쪽 찾기 바 */
+    width: 600px; height: 650px;
+    overflow: auto ;
+}
+
+#search_main > .m_content > .m_search > .m_searchbox{ /* 검색 */
+    background-color: #f8f8f8; border: solid 1px #dddddd;
+    width: 570px; padding: 20px 30px; margin: 5px 0;
+    display: block; 
+}
+.m_searchbox > div > button{ 
+    border: none; background-color: #f8f8f8; 
+    font-size: 15px; font-weight: bold;
+    margin-right: 20px;
+}
+.m_searchbox > div > button:hover{ color: black;}
+.m_searchbox > select{ /* 선택 */
+    border: solid 1px #dddddd; 
+    width: 220px; margin: 15px 1px; padding: 10px;
+    font-size: 15px;
+}
+.m_searchbox > span > img{ /* 돋보기 */
+    background-color: black; width: 40px; 
+    padding: 10px; position: relative; top: 15px;
+}
+.m_searchbox > .m_searchbox_bottom{
+    display: flex; align-items: center; color: #3f3f3f;
+}
+.m_searchbox > .m_searchbox_bottom > img{
+    width: 18px; margin: 1px 0 ; margin-right: 10px;
+}
+
+.m_search > .m_stores{ /* 가게 목록 */
+    background-color: white; border: solid 1px #de1d24; border-radius: 20px;
+    width: 570px; height: 150px; padding: 20px 35px; margin: 15px 0;
+    display: flex; justify-content: space-between;
+}
+.m_search > .m_stores li{
+    margin-bottom: 10px;
+}
+.m_search > .m_stores li:nth-of-type(1){ display: flex; align-items: center; font-size: 15px;}
+.m_search > .m_stores h3{ margin-right: 10px;}
+.m_search > .m_stores li:nth-of-type(2){color: #919191;}
+.m_search > .m_stores li:nth-of-type(3){
+    margin-top: 25px; align-items: center;
+}
+.m_search > .m_stores > ul> li > span{
+    border: 1px solid black; border-radius: 15px;
+    padding: 2px 10px;
+}
+.m_search > .m_stores > div{
+    background-color: #de1d24; color: white; 
+    width: 50px; height: 50px; padding: 15px 2px; padding-left: 9px;
+    font-size: 12px; border-radius: 50px; 
+}
+.m_stores:hover{background-color: #de1d24; color: white;}
+.m_stores_more{
+    background-color: #232323; border-radius: 20px;
+    padding: 20px 200px; margin: 10px 1px; text-align: center;
+}
+.m_stores_more>a{ color: white; font-weight: bold; letter-spacing: 1px;}
+
+
+
+
+
+
+
+#p_up{
+    border: none; 
+    position: fixed; bottom: 100px; right: 100px;
+}

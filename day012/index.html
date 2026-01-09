@@ -13,86 +13,182 @@
 
         <!-- 헤더 -->
         <div id="search_header">
-            <img src="img/logo.png"/>
-            <div class="h_right">
-                <div class="h_right_top">
-                    <ul class="h_top">
-                        <li> <a href="#"><img src="img/sns_kakaotalk.png"/></a></li>
-                        <li> <a href="#"><img src="img/sns_naverblog.png"/></a></li>
-                        <li> <a href="#"><img src="img/sns_instagram.png"/></a></li>
-                        <li> <a href="#"><img src="img/sns_facebook.png"/></a></li>
-                        <li> <a href="#"><img src="img/sns_twitter.png"/></a></li>
-                        <li> <a href="#"><img src="img/sns_youtube.png"/></a></li>
-                    </ul>
-                    <a class="h_top_text" href="">로그인</a>            
-                    <span></span>
-                    <a class="h_top_text" href="">회원가입</a>
-                </div>
-                <ul class="h_bottom">
-                    <li><a href="">핫시즈너</a></li>
-                    <li><a href="">메뉴 안내</a></li>
-                    <li><a href="">이벤트&안내</a></li>
-                    <li><a href="">매장 찾기</a></li>
-                    <li><a href="">상품권</a></li>
-                    <li><a href="">고객 안내</a></li>
-                    <li><a href="">가맹문의</a></li>
-                    <div class="h_bottom_sub">
-                        <ul class="h_bottom_subli">
-                            <li><a href="">회사소개</a></li>
-                            <li><a href="">동대문엽기떡볶이</a></li>
-                            <li><a href="">보끔당</a></li>
-                            <li><a href="">BI·캐릭터 소개</a></li>
-                            <li><a href="">엽떡앱 소개</a></li>
+            <div id="search_header_inner">
+                <a href=""><img src="img/header/logo.png"/></a>
+                <div class="h_right">
+                    <div class="h_right_top">
+                        <ul class="h_sns">
+                            <li> <a href="https://pf.kakao.com/_xlxgBxjC"><img src="img/header/sns_kakaotalk.png"/></a></li>
+                            <li> <a href="https://blog.naver.com/ddm_yupdduk"><img src="img/header/sns_naverblog.png"/></a></li>
+                            <li> <a href="https://www.instagram.com/yupdduk_official/"><img src="img/header/sns_instagram.png"/></a></li>
+                            <li> <a href="https://www.facebook.com/ddmyupdduk"><img src="img/header/sns_facebook.png"/></a></li>
+                            <li> <a href="twitter.com/Yupdduk_twt"><img src="img/header/sns_twitter.png"/></a></li>
+                            <li> <a href="https://www.youtube.com/channel/UC6n3KHZx7bs5dK1fSVqWLvw"><img src="img/header/sns_youtube.png"/></a></li>
                         </ul>
-                        <ul class="h_bottom_subli">
-                            <li><a href="">전체메뉴</a></li>
-                            <li><a href="">메인메뉴</a></li>
-                            <li><a href="">닭발메뉴</a></li>
-                            <li><a href="">세트메뉴</a></li>
-                            <li><a href="">사이트/음료</a></li>
-                            <li><a href="">토핑</a></li>
-                            <li><a href="">밀키트</a></li>
-                        </ul>
-                        <ul class="h_bottom_subli">
+                        <a class="h_top_text" href="https://id.yupdduk.com/oauth2/authorize-with-sns?redirect_uri=https%3A%2F%2Fwww.yupdduk.com%2Fsub%2Fmember%2Flogin_payco_callback&state=yupdduk&appYn=&logoYn=&titleYn=&loginExtraJson=">로그인</a>            
+                        <span></span>
+                        <a class="h_top_text" href="https://id.yupdduk.com/join?callbackUrl=https%3A%2F%2Fwww.yupdduk.com%2Fsub%2Fmember%2Fjoin_payco_callback">회원가입</a>
+                    </div>
+                    <div class="h_bottom">
+                        <ul class="h_bottom_main">
+                            <li><a href="">핫시즈너</a></li>
+                            <li><a href="">메뉴 안내</a></li>
                             <li><a href="">이벤트&안내</a></li>
-                            <li><a href="">미디어</a></li>                                                       
-                        </ul>
-                        <ul class="h_bottom_subli">
                             <li><a href="">매장 찾기</a></li>
-                        </ul>
-                        <ul class="h_bottom_subli">
-                            <li><a href="">상품권 구매</a></li>
-                            <li><a href="">상품권 연장</a></li>
-                            <li><a href="">상품권 환불</a></li>
-                            <li><a href="">상품권 재발급</a></li>                            
-                        </ul>
-                        <ul class="h_bottom_subli">
-                            <li><a href="">공지사항</a></li>
-                            <li><a href="">자주하는 질문</a></li>
-                            <li><a href="">고객의소리</a></li>
-                        </ul>
-                        <ul class="h_bottom_subli">
-                            <li><a href="">인테리어</a></li>
-                            <li><a href="">창업절차</a></li>
-                            <li><a href="">개설비용</a></li>
-                            <li><a href="">창업 FAQ</a></li>
+                            <li><a href="">상품권</a></li>
+                            <li><a href="">고객 안내</a></li>
                             <li><a href="">가맹문의</a></li>
                         </ul>
-                    </div>                    
-                </ul>
+                        <div class="h_bottom_sub">
+                            <table>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">회사소개</a></li>
+                                    <li><a href="">동대문엽기떡볶이</a></li>
+                                    <li><a href="">보끔당</a></li>
+                                    <li><a href="">BI·캐릭터 소개</a></li>
+                                    <li><a href="">엽떡앱 소개</a></li>
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">전체메뉴</a></li>
+                                    <li><a href="">메인메뉴</a></li>
+                                    <li><a href="">닭발메뉴</a></li>
+                                    <li><a href="">세트메뉴</a></li>
+                                    <li><a href="">사이트/음료</a></li>
+                                    <li><a href="">토핑</a></li>
+                                    <li><a href="">밀키트</a></li>
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">이벤트&안내</a></li>
+                                    <li><a href="">미디어</a></li>                                                       
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">매장 찾기</a></li>
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">상품권 구매</a></li>
+                                    <li><a href="">상품권 연장</a></li>
+                                    <li><a href="">상품권 환불</a></li>
+                                    <li><a href="">상품권 재발급</a></li>                            
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">자주하는 질문</a></li>
+                                    <li><a href="">고객의소리</a></li>
+                                </ul>
+                                <ul class="h_bottom_subli">
+                                    <li><a href="">인테리어</a></li>
+                                    <li><a href="">창업절차</a></li>
+                                    <li><a href="">개설비용</a></li>
+                                    <li><a href="">창업 FAQ</a></li>
+                                    <li><a href="">가맹문의</a></li>
+                                </ul>
+                            </table>
+                        </div>                    
+                    </div>
+                </div>
             </div>
         </div> <!-- 헤더 end -->
 
 
         <!-- 메인 화면 -->
         <div id="search_main">
-            
-
-
+            <div class="m_top">
+                <h3 class="m_title"> 매장찾기 </h3>
+                <span style="color: #919191;"> HOME > 매장찾기 > <span style="color: black;"> 매장찾기 </span></span>
+            </div>
+            <div class="m_content">
+                <div class="m_mapbox">
+                    <img class="m_map_point" src="img/main/yupmap_marker.png"/>
+                    <div class="m_map_infor">
+                        <ul>
+                            <li><h3>가락점</h3></li>
+                            <li style="color: #696969; font-size: 14px;">서울특별시 송파구 양재대로62길 16 (가락동) 1층</li>
+                        </ul>
+                        <div><a class="m_map_infor_button" href="">+ READ MORE</a></div>
+                    </div>
+                    <div class="m_map_bottom">
+                        <div class="m_map_distance"></div>
+                        <h5> 50m </h5>
+                        <img class="m_map_kakao" src="img/main/m_bi_b.png"/>
+                    </div>
+                </div>
+                <div class="m_search">
+                    <div class="m_searchbox"> <!-- 지역 검색 -->
+                        <div>
+                            <button type="button" class="text_red"> 지역명 검색 </button> 
+                            <button type="button" class="text_gray"> 매장명 검색</button>
+                        </div>
+                        <select>
+                            <option>시/도</option>
+                            <option>강원특별자치도</option>
+                            <option>경기도</option>
+                        </select>
+                        <select>
+                            <option>전체</option>                            
+                        </select>
+                        <span><img src="img/main/searchicon_w.png"/></span>
+                        <div class="m_searchbox_bottom">
+                            <img src="img/main/icon_location.png"/> 현재 위치로 매장 찾기
+                        </div>
+                    </div>
+                    <div class="m_stores"> <!-- 지점1 -->
+                        <ul>
+                            <li> <h3>가락점</h3> 02-402-8592 </li>
+                            <li style="font-size: 12px;"> 서울특별시 송파구 양제대로62길 16 (가락동) 1층</li>
+                            <li> <span>홀</span> <span>포장</span> <span>배달</span> </li>
+                        </ul>
+                        <div>영업중</div>
+                    </div>
+                    <div class="m_stores"> <!-- 지점2 -->
+                        <ul>
+                            <li> <h3>가리봉점</h3> 02-402-8592 </li>
+                            <li style="font-size: 12px;"> 서울특별시 송파구 양제대로62길 16 (가락동) 1층</li>
+                            <li> <span>홀</span> <span>포장</span> <span>배달</span> </li>
+                        </ul>
+                        <div>영업중</div>
+                    </div>
+                    <div class="m_stores"> <!-- 지점3 -->
+                        <ul>
+                            <li> <h3>가양점</h3> 02-402-8592 </li>
+                            <li style="font-size: 12px;"> 서울특별시 송파구 양제대로62길 16 (가락동) 1층</li>
+                            <li> <span>홀</span> <span>포장</span> <span>배달</span> </li>
+                        </ul>
+                        <div>영업중</div>
+                    </div>
+                    <div class="m_stores"> <!-- 지점4 -->
+                        <ul>
+                            <li> <h3>가재울점</h3> 02-402-8592 </li>
+                            <li style="font-size: 12px;"> 서울특별시 송파구 양제대로62길 16 (가락동) 1층</li>
+                            <li> <span>홀</span> <span>포장</span> <span>배달</span> </li>
+                        </ul>
+                        <div>영업중</div>
+                    </div>
+                    <div class="m_stores"> <!-- 지점5 -->
+                        <ul>
+                            <li> <h3>가평점</h3> 02-402-8592 </li>
+                            <li style="font-size: 12px;"> 서울특별시 송파구 양제대로62길 16 (가락동) 1층</li>
+                            <li> <span>홀</span> <span>포장</span> <span>배달</span> </li>
+                        </ul>
+                        <div>영업중</div>
+                    </div>
+                    <div class="m_stores_more"><a href="">+ READ MORE</a></div>
+                </div>
+            </div>
         </div> <!-- 메인 화면 end -->
 
 
+        <!-- 푸터 -->
+        <div id="footer"> 
+            <div id="footer-inner">
+                
+            </div>
+        </div> <!-- 푸터 end -->
 
+        <!-- (고정 팝업) 올리기 아이콘 -->
+        <button type="button" id="p_up">
+            <img src="img/pop/icon_movetop.png"/>
+
+        </button>
 
 
     </div> <!-- 매장 찾기 페이지 end -->
