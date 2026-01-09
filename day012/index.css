@@ -1,0 +1,5 @@
+/* 공통 CSS */
+*{ padding: 0px; margin: 0px; box-sizing: border-box; }
+li{ list-style-type: none; }
+a{ text-decoration: none; color: black; }
+
