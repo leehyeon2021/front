@@ -8,9 +8,9 @@
 // let price = prompt(`가격: `);
 // let maker = prompt(`제조사: `);
 //          // const product = { };
-//          // product.Names = name;
-//          // product.Prices = price;
-//          // product.Makers = maker;
+// 너무      // product.Names = name;
+// 복잡하게   // product.Prices = price;
+// 했다!!    // product.Makers = maker;
 //          // console.log(product);
 // /* 교수님 풀이 */
 // // 각 입력받은 값들이 저장되 변수들을 속성값에 대입하여 객체 선언 { "속성명" : 변수값}
@@ -79,7 +79,7 @@
    let ary = [ 3, 4, 5];
    let value = ary[0];      // 중간저장소 만들기
    let result = value + 10; // value는 3이다.
-      ⬆️ 변수 만들었느냐 아니냐만 다르고 같은 거다. ⬇️
+⬆️ 변수 만들었느냐 아니냐만 다르고 같은 거다. ⬇️
    let ary = [3, 4, 5];
    let result = ary[0] + 10;
 
