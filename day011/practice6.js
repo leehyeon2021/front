@@ -120,17 +120,7 @@
 // const team = [  { name: '철수', department: '개발팀' },  { name: '영희', department: '기획팀' },  { name: '민수', department: '개발팀' },  { name: '지혜', department: '기획팀' }];
 // 최종 결과 형태 (result)
 // { '개발팀': ['철수', '민수'], '기획팀': ['영희', '지혜'] }
-               // const newteam = [];
-               // for(let index = 0 ; index <= team.length-1 ; index++){
-               //    if(team.indexOf(team[index].department) == -1 ){
-               //       newteam.push(team[index].department);
-               //    }
-               //    if(team[index].department)
-               //    team[index].nameㅠㅠ
-                  
-// 어 떻 게 해 !!
-               // }
-               // console.log(newteam);
+
 
 // 문제 8: 장바구니 총액 계산하기
 // 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
