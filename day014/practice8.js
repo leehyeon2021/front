@@ -48,14 +48,54 @@ let 항목목록 = [{코드: 1 , "날짜": "2026-01-26", "항목": "점심 식�
     참고2: 배열에 전역변수를 사용한 이유는 서로 다른 함수들 간의 공유(같은 배열) 사용하기 위해. */
 
 // [3] 구현
-// 3-1] 등록함수
-function 등록변수(){
+// 3-1] 등록함수                            // 🚨오류날 때! 한 줄 한 줄 console.log().
+function 등록함수( ){                     //  console.log( "등록함수()" ); 함수 실행 문제. 함수를 호출했던 위치 문제.
+  // 1. 입력받은 값 가져오기
+    // 1) document.querySelector() 이용하여 dom 가져오기
+      let dateDom = document.querySelector(".날짜입력")
+       // console.log(dateDom);  하나하나 출력해보기. 포폴엔 넣으면 안 됨
+      let date = dateDom.value;
+      let contentDom = document.querySelector(".항목입력")
+      let content = contentDom.value;
+      let moneyDom = document.querySelector(".금액입력")
+      let money = moneyDom.value;
 
+    // 2) .value() 이용하여 dom의 value 값 가져오기
+        // 식별코드는 자동부여, 마지막 객체 내 코드의 + 1
+        let code = 항목목록[항목목록.length-1].코드 + 1; // 항목목록.length -1 : 마지막인덱스.    항목목록[항목목록.length-1].코드  == 2 (코드:2)
+      let obj = {코드: code , "날짜": date, "항목": content, "금액": money} ;
+
+  // 2. 입력받은 값들을 객체 구성
+    // { 속성명: 값 , 속성명: 값 }
+
+  // 3. (전역) 배열에 저장
+    // 배열변수명.push()
+  항목목록.push( obj );   // 배열변수명.push( )
+  alert("등록성공");      // *추가코드1) 안내문구
+  contentDom.value = ""; // *추가코드2) 입력받은값 초기화
+  // 4. 즉시 테이블에 반영
+  출력함수();
 }
 
 // 3-2] 출력함수
-function 출력변수(){
-  
+function 출력함수( ){ 
+  // 1. 어디에: tbody
+  let 테이블본문 = document.querySelector(".테이블본문");
+  // 2. 무엇을: 입력받은 배열 내 객체들을 <tr>구성으로 출력
+  let html = ``;
+  for( let index = 0 ; index <= 항목목록.length-1 ; index++){
+    let obj = 항목목록[index];
+    html += `<tr>
+                  <td>${obj.날짜}</td>
+                  <td>${obj.항목}</td>
+                  <td>${Number(obj.금액).toLocaleString()} 원</td>                
+                  <td><button>삭제</button></td>
+              </tr>`
+  }
+  // 3. 출력: 구성된 html 출력함
+  테이블본문.innerHTML = html;
 }
 
 // [4] 테스트
+
+

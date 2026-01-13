@@ -1,0 +1,61 @@
+/* ============== 전체 구역 ============== */
+#wrap{
+    margin: 0 auto; width: 960px; padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px #eeeeee;
+}
+
+#header{
+    display: flex; justify-content: space-around; align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 50px; padding: 50px 0px;
+}
+#header > input, #header > select{
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+}
+#header > button{
+    background-color: rgb(75, 43, 255); color: white;
+    border: none; border-radius: 7px;
+    padding: 9px 20px; line-height: 140%;
+}
+
+/* ============== 메인/테이블 ============== */
+
+#main{
+    display: flex; justify-content: space-around;
+}
+#main > table{
+    width: 940px;
+    border-collapse: collapse; /*3주차 때 했던 것. collapse로 테두리 선 없애기.*/
+}
+#main > table > thead{ 
+    background-color: #f8f9fa;
+    border-bottom: solid 1px #e9ebee ;
+}
+thead > tr > th{
+    padding: 20px 0px;
+}
+.tbody > tr > td{
+    text-align: center;    
+    padding: 20px 0;
+    border-bottom: solid 1px #e9ebee;
+}
+.tbody tr:hover{
+    background-color: #f8f9fa; color: black;
+}
+.tbody > tr > td > img{
+    border-radius: 10px; width: 100px; height: 100px;
+    
+}
+#main > table > tbody .del{
+    border: 1px solid rgb(255, 178, 178); color: red; background-color: rgb(255, 238, 241);
+    border-radius: 5px; padding: 5px 10px; margin: 3px;
+    font-size: 15px; font-weight: bold;
+}
+#main > table > tbody .add{
+    border: 1px solid rgb(159, 159, 255); color: rgb(56, 56, 255); background-color: rgb(235, 235, 255);
+    border-radius: 5px; padding: 5px 10px; margin: 3px;
+    font-size: 15px; font-weight: bold;
+}

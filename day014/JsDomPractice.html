@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>제품 관리 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="JsDomPractice.css"/>
+
+</head>
+<body>
+    
+    <div id="wrap">
+
+        <!-- 제품 등록 영역 -->
+        <div id="header">
+            <select> <!-- 카테고리 선택 -->
+                <option value="disabled">카테고리를 선택하세요.</option>
+                <option value="1">음료(1)</option>
+                <option value="2">과자(2)</option>
+            </select>
+            <input class="name" type="text" placeholder="제품명"/> <!-- 제품명 입력 -->
+            <input class="price" type="text" placeholder="제품가격"/> <!-- 제품 가격 입력 -->
+            <input class="img" type="file"/> <!-- 제품 이미지 입력 -->
+            <button class="upload" type="button"> 등록 </button>
+        </div>
+
+        <!-- 제품 목록 영역 -->
+        <div id="main">
+            <table>
+                <thead>
+                    <tr> 
+                        <th>이미지</th> <th>카테고리명</th> <th>상품명</th> <th>가격</th> <th>등록일</th> <th>비고</th> 
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr>
+                        <td><img src="https://placehold.co/100"/></td>
+                        <td>음료</td> <td>코카콜라</td> <td>1000</td> <td>2026-01-13</td>
+                        <td><button class="del" type="button">삭제</button> <button class="add" type="button">수정</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="JsDomPractice.js"></script>
+</body>
+</html>

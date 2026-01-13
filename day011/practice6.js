@@ -117,11 +117,18 @@
 
 // 문제 7: 데이터 그룹화하기
 // 다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오.
-// const team = [  { name: '철수', department: '개발팀' },  { name: '영희', department: '기획팀' },  { name: '민수', department: '개발팀' },  { name: '지혜', department: '기획팀' }];
+const team = [  { name: '철수', department: '개발팀' },  { name: '영희', department: '기획팀' },  { name: '민수', department: '개발팀' },  { name: '지혜', department: '기획팀' }];
 // 최종 결과 형태 (result)
 // { '개발팀': ['철수', '민수'], '기획팀': ['영희', '지혜'] }
-
-
+let result = {}; // 앞으로 결과 저장할 객체 생성
+for( let i = 0 ; i <= team.length-1 ; i++){
+   let dept = team[i].department;
+   let name = team[i].name;
+   if(result[dept] === undefined){  // `result객체 안의 현재 부서명`이 키로 존재하지 않는다면   
+      result[dept] = [];            // 해당 부서명을 키로 사용하여 빈 배열 새로 생성.           ⭐ 이런 방식으로 변수 활용~~ 아하
+   }
+   result[dept]
+}
 // 문제 8: 장바구니 총액 계산하기
 // 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
 // cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
