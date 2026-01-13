@@ -6,10 +6,71 @@
     <title>Practice8</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <!-- <style>    이거 아닌가봄 
+        li{list-style-type: none;}
+        h1{width: 100%; display: flex; justify-content: center;}
+        table{border: solid 1px black;}
+        td, th {border: solid 1px black;}
+    </style> -->
 </head>
 <body>
-    
-    <>
+    <!--
+    <h1> 미니 가계부 </h1>
+
+    <h3> 등록 영역 </h3>
+        
+        날짜 선택: <input id="date" type="date"/> <br/>
+        항목 입력: <input id="infor" type="text"/> <br/>
+        금액 입력: <input id="money" type="text"/> <br/>
+        <button id="button" type="button" onclick="func1()">등록 버튼</button> <br/>
+        
+
+    <h3> 목록 영역 </h3>  예시 -->
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>날짜</th><th>항목</th><th>금액</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyDelete">
+            <tr>
+                <td>2025-06-19</td><td>점심 식사</td><td>9,000</td>                
+            </tr>
+            <tr>
+                <td>2025-06-19</td><td>교통비</td><td>1,500</td>
+            </tr>
+        </tbody>
+        <tbody id="tbodyAdd">
+            
+        </tbody>
+    </table> -->
+    <div id="wrap">
+        <h1> 미니 가계부 </h1>
+
+        <h3> 등록 영역 </h3>
+            
+            <div>날짜 선택: <input class="날짜입력" type="date"/></div>
+            <div>항목 입력: <input class="항목입력" type="text"/></div>
+            <div>금액 입력: <input class="금액입력" type="text"/></div>
+            <button>등록 버튼</button>
+            
+        <h3> 목록 영역 </h3>
+        <table border="1">
+            <thead> <tr> <th>날짜</th> <th>항목</th> <th>금액</th> </tr> </thead>
+            <tbody class="테이블본문">
+                <tr>
+                    <td>2025-06-19</td>
+                    <td>점심 식사</td>
+                    <td>9,000</td>                
+                </tr>
+                <tr>
+                    <td>2025-06-19</td>
+                    <td>교통비</td>
+                    <td>1,500</td>
+                </tr>
+        </table>
+    </div>
+
 
     <script src="practice8.js"></script>
 </body>
