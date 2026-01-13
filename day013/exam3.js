@@ -1,4 +1,5 @@
-/* DOM
+/* DOM(Document Object Model) Html 객체 표준.
+== 문서객체표준, HTML 마크업들을 객체처럼 다루기.
 <document> -> <html> -> <body> <head> ---...
 */
 
