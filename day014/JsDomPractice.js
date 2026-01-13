@@ -52,3 +52,24 @@
         정보를 수정하고 목록을 즉시 갱신해야 합니다.    */ // 번호를 하나씩 매겨서 그 번호의 '삭제/수정' 누르면 해당 객체 삭제/수정.
 
 
+// [1] 메모리 설계
+let productList = [{ code: 1 , '이미지': 'img' ,'카테고리명': '음료', '제품명': '코카콜라', '가격': 1000, '등록일': '2026-06-17'}]
+
+// [2] 기능 설계
+// 1. 등록 처리 기능. 2. 표에 출력 기능. 3. 수정 기능. 4. 삭제 기능. (CRUD)
+
+// [3] 구현 (등록함수, 출력함수, 수정함수, 삭제함수)
+// 3-1] 등록함수
+function Create(){
+    //1) 입력받은 값 가져오기   
+        let kategoriDom = document.querySelector(".kategori");
+        let kategori = kategoriDom.value;   // value 설정했으니 번호로 들어올 것임
+        let nameDom = document.querySelector(".name");
+        let name = nameDom.value;
+        let priceDom = document.querySelector(".price");
+        let price = priceDom.value;
+        let imgDom = document.querySelector(".img");
+        let img = imgDom.value;
+    //2) 코드
+        let Code = productList[productList.length-1]
+}        

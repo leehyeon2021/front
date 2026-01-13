@@ -14,7 +14,7 @@
 
         <!-- 제품 등록 영역 -->
         <div id="header">
-            <select> <!-- 카테고리 선택 -->
+            <select class="kategori"> <!-- 카테고리 선택 -->
                 <option value="disabled">카테고리를 선택하세요.</option>
                 <option value="1">음료(1)</option>
                 <option value="2">과자(2)</option>
@@ -22,7 +22,7 @@
             <input class="name" type="text" placeholder="제품명"/> <!-- 제품명 입력 -->
             <input class="price" type="text" placeholder="제품가격"/> <!-- 제품 가격 입력 -->
             <input class="img" type="file"/> <!-- 제품 이미지 입력 -->
-            <button class="upload" type="button"> 등록 </button>
+            <button class="upload" onclick="Create()" type="button"> 등록 </button>
         </div>
 
         <!-- 제품 목록 영역 -->

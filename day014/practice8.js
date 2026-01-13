@@ -52,16 +52,15 @@ let 항목목록 = [{코드: 1 , "날짜": "2026-01-26", "항목": "점심 식�
 function 등록함수( ){                     //  console.log( "등록함수()" ); 함수 실행 문제. 함수를 호출했던 위치 문제.
   // 1. 입력받은 값 가져오기
     // 1) document.querySelector() 이용하여 dom 가져오기
-      let dateDom = document.querySelector(".날짜입력")
-       // console.log(dateDom);  하나하나 출력해보기. 포폴엔 넣으면 안 됨
+      let dateDom = document.querySelector(".날짜입력")   // console.log(dateDom);  하나하나 출력해보기. 포폴엔 넣으면 안 됨
+      // 2) .value() 이용하여 dom의 value 값 가져오기
       let date = dateDom.value;
       let contentDom = document.querySelector(".항목입력")
       let content = contentDom.value;
       let moneyDom = document.querySelector(".금액입력")
       let money = moneyDom.value;
 
-    // 2) .value() 이용하여 dom의 value 값 가져오기
-        // 식별코드는 자동부여, 마지막 객체 내 코드의 + 1
+       // 식별코드는 자동부여, 마지막 객체 내 코드의 + 1
         let code = 항목목록[항목목록.length-1].코드 + 1; // 항목목록.length -1 : 마지막인덱스.    항목목록[항목목록.length-1].코드  == 2 (코드:2)
       let obj = {코드: code , "날짜": date, "항목": content, "금액": money} ;
 
