@@ -45,15 +45,19 @@ function sumArray(배열){  // 매개변수: 함수호출시 전달되는 인자
 /*실습 3: 가장 긴 단어 찾기
 문자열로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 
 가장 긴 단어를 찾아 반환하는 findLongestWord 함수를 만드세요. 아래 words 배열로 테스트해 보세요.*/
-const words = ['apple', 'banana', 'kiwi', 'strawberry'];
-// 매개변수: 배열, 반환값: 가장 긴 단어, 처리: 첫번째 인덱스를 가장 큰 것으로 가정, for반복문 사용, if문 비교.
-function findLongestWord( ){
-
-}
-
+// const words = ['apple', 'banana', 'kiwi', 'strawberry'];
+// // 매개변수: 배열, 반환값: 가장 긴 단어, 처리: 첫번째 인덱스를 가장 큰 것으로 가정, for반복문 사용, if문 비교.
+// function findLongestWord( array ){
+//   let longword = array[0];
+//   for(let index = 0 ; index <= array.length-1 ; index++){
+//     if( array[index].length > longword.length){ longword = array[index]}
+//   }
+//   return console.log(longword);
+// } findLongestWord(words)
+/* 교수님 풀이 */
 /* 매개변수: 문자열 배열. 리턴값: 가장 긴 단어 반환, 처리: 첫 인덱스를 가장 큰 것으로 가정, if문으로 가장 긴 단어 찾기.
 function findLongestWord( array ){
-  let long = words[0]; // 첫 번째 인덱스 값을 가장 큰 단어로 가정하고 시작       ⭐ 꼭 다시 풀어보기
+  let long = words[0]; // 첫 번째 인덱스 값을 가장 큰 단어로 가정하고 시작 
   for( let index = 1; index <= array.length-1 ; index++){
     // 만약에 가장 긴 단어가 저장된 변수보다 index번째 단어가 더 길면
     if( long.length < array[index].length){long = array[index];} // 가장 긴 단어를 저장하는 변수에 대입
