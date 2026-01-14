@@ -136,7 +136,7 @@ function print(){
 }
 // 3-3] 삭제함수: 해당하는 행의 <삭제> 버튼을 클릭하면 삭제(배열 내 제거 = .splice() )처리.
 function productDelete( pcode ){ // 매개변수로 삭제할 pcode 받았다. [삭제할 대상자]!!
-    for( let index = 0 ; index <= productList.length -1 ; index++){ // 1. pcode의 배열 내 인덱스 찾기.
+    for( let index = 0 ; index <= productList.length -1 ; index++){ // 1. pcode의 배열 내 인덱스 찾기.        
         if(pcode == productList[index].pcode){ // 2. 만약에 삭제할 pcode와 index번째 pcode가 같으면
             productList.splice( index, 1 ); // 3. 배열명.splice( 삭제할 인덱스, 개수 );
             print(); // ⭐ 삭제 성공시 화면 새로고침/렌더링 필요!! [출력함수 재호출] JS에서 삭제하더라도 HTML에서 다시 출력해야하기 때문. JS랑 HTML은 다르니까.
