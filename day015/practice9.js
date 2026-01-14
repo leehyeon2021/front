@@ -105,7 +105,7 @@
     ]
     const staff = [{ "scode": 1, "staffName": "김민준", "staffRank": "선임개발자", "staffImg": "https://placehold.co/100", "dcode": 1 },  { "scode": 2, "staffName": "이서연", "staffRank": "수석 디자이너", "staffImg": "https://placehold.co/100", "dcode": 2 }, { "scode": 3, "staffName": "박도윤", "staffRank": "팀장", "staffImg": "https://placehold.co/100", "dcode": 3 }, { "scode": 4, "staffName": "유재석", "staffRank": "대리", "staffImg": "https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/07/109129807.1.jpg", "dcode": 1 } ]
 
-
+    
 // [2] 기능 설계
 //내가 맡은 곳
 // 부서영역: 부서 등록, 부서 목록.  사원영역: 사원 목록.
@@ -174,15 +174,17 @@ function departmentUpdate( dcode ){
 //3-4] 부서 삭제함수
 function departmentDelete( dcode ){
     for(let index = 0 ; index <= departments.length-1 ; index++){
-        if( dcode == staff[index].dcode){ alert("부서에 소속된 사원이 존재하므로 삭제할 수 없습니다."); return; }
-        if( dcode == departments[index].dcode){
+        for(let index = 0 ; index <= staff.length-1 ; index++){
+            if( dcode == staff[index].dcode){ 
+                alert("부서에 소속된 사원이 존재하므로 삭제할 수 없습니다."); 
+                return; }
+            if(dcode == departments[index].dcode){
             departments.splice(index, 1);
-            departmentPrint();               //staff에 하나라도 있으면 삭제 못한다는 경고창 필요
-            return;
+            departmentPrint();               
+            return;}
         }
     }
 }
-
 
 // [4] 사원영역 구현
 //4-1] 사원 등록함수
@@ -202,23 +204,16 @@ function staffAdd( ){
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
     // 2. 객체 구성하기. (입력받은 값 / 식별코드)
     scode += 1;
-
-    // 부서명의 dcode 찾기 (잘 모르겠음)
-    // for( let index = 0 ; index <= departments.length -1 ; index++){
-    //     let dep = departments[index];
-    //     for( let index = 0 ; index <= staff.length-1 ; index++){
-    //         let staffDcode = "";
-    //         if(dep.dcode == staff[index].dcode){staffDcode = staff[index].dcode; break;}         
-    //     }}
     
     // 3. 구성한 객체를 배열에 저장하기.
     let obj = {
          "scode": scode, 
          "staffName": staffNames, 
-         "staffRank": staffDepartment, 
+         "staffRank": staffRanks, 
          "staffImg": staffImgs == undefined ? "https://placehold.co/100" : URL.createObjectURL( staffImgs ), 
-         "dcode": staffDcode // ㅡㅡㅡㅡㅡ
+         "dcode": staffDepartment
     };
+
     // 4. 화면 새로고침/렌더링
     staff.push(obj);
     staffPrint();
