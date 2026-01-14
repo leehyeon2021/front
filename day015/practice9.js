@@ -127,7 +127,7 @@
 let dcode = departments[departments.length-1].dcode;
 function departmentAdd( ){
     // 1. 입력받은 값들을 가져온다.
-    const departmentNameDom = document.querySelector( " 부서명 입력 " );
+    const departmentNameDom = document.querySelector(".department");
     const departmentNames = departmentNameDom.value;
     // 유효성 검사
     if(departmentNames == "" || `${departmentNames}` in departments == false ){ alert("부서명을 확인하십시오."); return;}
@@ -218,3 +218,4 @@ function staffAdd( ){
     staff.push(obj);
     staffPrint();
 }
+

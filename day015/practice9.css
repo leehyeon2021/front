@@ -1,0 +1,209 @@
+/***************************전체************************/
+#wrap{
+    width: 1400px;
+    height: 960px;
+    margin: 0 auto;
+    background-color: #f1f5f9;
+    padding: 50px;
+}
+
+#title , #subtitle{text-align: center;}
+
+
+#all{display: flex;
+justify-content: space-between;
+}
+
+/***************************left************************/
+
+#left{
+    width: 400px;
+    height: 875px;
+    border: 1px solid #eeeeee;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 30px;
+    
+}
+
+#left_title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+#left > input , button{
+    align-items: start;
+}
+#left > table{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#left > table tbody td{
+    text-align: start;
+}
+
+#left > table tbody td > .update , .delete{
+    
+}
+
+#left > input , #left > button{
+    border: 1px solid #eeeeee;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#left > table thead th{
+    text-align: start;
+}
+
+#left > input{
+    background-color: #f8fafc;
+}
+
+#left > button{
+    background-color: #9333ea;
+}
+
+#left > table th{
+    background-color: #f8fafc;
+}
+
+/***************************center************************/
+#center{
+    width: 600px;
+    height: 875px;
+    border: 1px solid #eeeeee;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+
+
+#center_title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+
+#center_line1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#center_line1 .staffName , .staffLank{
+    padding: 10px 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+     background-color: #f8fafc;
+    width: 260px;
+}
+
+#center_line2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#center_line2 select.department{
+    padding: 10px 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+     background-color: #f8fafc;
+     width: 280px;
+    }
+
+
+#center_line3{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#center_line3 button{
+    margin-right: 10px;
+    background-color: #4f47e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    
+
+}
+
+
+/**********center_bottom***********/
+#center_bottom .staffTable{
+    width: 600px;
+}
+
+#center_bottom .staffTable th{
+    background-color: #f8fafc;
+}
+
+#center_bottom > .staffTable thead th{
+    text-align: center;
+}
+
+#center_bottom > .staffTable td img , button{
+    text-align: center;
+    border-radius: 10px;
+}
+
+td button{
+    border: none;
+    background-color: white;
+}
+
+td .update{ color:blue;}
+td .delete{ color: red;}
+
+
+/***************************right************************/
+#right{
+    width: 400px;
+    height: 875px;
+    border: 1px solid #eeeeee;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 30px;
+    
+}
+
+#right_top_title , #right_bottom_title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+#right_top .staffselect{
+    padding: 10px 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+     background-color: #f8fafc;
+    width: 300px;
+}
+
+#right_top .right_topline2{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+
+}
+
+#right_top .right_topline3{
+    display: flex;
+}
+
+#right_top .right_topline3 > input .startdate , .enddate{
+    margin-right: 20px;
+}
