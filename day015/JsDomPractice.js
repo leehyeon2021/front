@@ -67,9 +67,11 @@
         // {'ccode': 1, 'category' : '음료'}
         // {{ pcode: 1, "image": '#', '카테고리명': '1', '제품명': '코카콜라', '가격': 2000, '등록일': '2026-06-17'}
     // 4. 객체가 다수일 때는 배열을 사용한다.
-    const categoryAry = [{"ccode": 1, '카테고리명': '음료'}, {"ccode": 2, "category": '과자'}]
-    const productList = [{ "pcode": 1 , "img": "https://placehold.co/100", "ccode": '1', "name": '코카콜라', 'price': 2000, "date": "2026-01-14"},
-                           { "pcode": 2 , "img": "https://placehold.co/100" ,"ccode": '2', "name": '새우깡', "price": 1000, "date": "2026-01-15"}]
+    const categoryAry = [{"ccode": 1, 'category': '음료'}, {"ccode": 2, "category": '과자'}] 
+                        // 나는 이거 안 만들고 그냥 냅다 카테고리명 넣었는데 이게 더 좋은 것 같음... >> '음료' 보다는 '2'가 데이터 적어서 경제적으로 유리.
+                        // 코드로 입력받아서 카테고리명으로 출력하려면 for문을 사용하면 된다. (찾아서 일치하면 출력.)
+    const productList = [{ "pcode": 1 , "img": "https://placehold.co/100", "ccode": '1', "name": '코카콜라', 'price': 2000, "date": "2026-01-10"},
+                           { "pcode": 2 , "img": "https://placehold.co/100" ,"ccode": '2', "name": '새우깡', "price": 1000, "date": "2026-01-12"}]
 
 // [2] 기능 설계
     // (1) 1. 등록 처리 기능. 2. 표에 출력 기능. 3. 수정 기능. 4. 삭제 기능. (CRUD)
@@ -113,15 +115,24 @@ function print(){
     let html = ``;
     for( let index = 0 ; index <= productList.length -1 ; index++){
         let product = productList[index];
+        // 카테고리명에 숫자가 아니라 문자값으로 나오게 변경. ccode --> category 변경: ccode의 category 배열에서 찾기.
+            let category = "";
+            for(let index = 0 ; index <= categoryAry.length-1 ; index++){ //카테고리 객체 만들었던 거
+                if( product.ccode == categoryAry[index].ccode){ // 만약에 제품의 카테고리코드가 index번째 카테고리코드와 같으면
+                    category = categoryAry[index].category; // 찾은 카테고리명
+                    break;
+                }
+            }
         html += `<tr>
                     <td><img src="${product.img}"/></td>
-                    <td>${product.ccode}</td> <td>${product.name}</td> <td>${product.price}</td> <td>${product.date}</td>
+                    <td>${category}</td> <td>${product.name}</td> <td>${Number(product.price).toLocaleString()}</td> <td>${product.date}</td>
                     <td><button class="del" onclick="productDelete(${product.pcode})">삭제</button>
                     <button class="add" onclick="productUpdate(${product.pcode})">수정</button></td>
                 </tr>` 
     }
     // 3. 출력
     tbody.innerHTML = html; 
+    console.log(productList[productList.length-1].pcode); // 삭제해도 바뀌는지 확인하려고 만듦 -> 안 바뀌네요!! 하긴 안 만들긴 함
 }
 // 3-3] 삭제함수: 해당하는 행의 <삭제> 버튼을 클릭하면 삭제(배열 내 제거 = .splice() )처리.
 function productDelete( pcode ){ // 매개변수로 삭제할 pcode 받았다. [삭제할 대상자]!!
@@ -173,12 +184,21 @@ function productAdd( ){
         const month = new Date().getMonth()+1; // 현재 월. 컴퓨터는 1월 -> 0 취급. 2월 -> 1. 12월 -> 11. => 그래서 +1 필수.
         const day = new Date().getDate(); // getDay 현재 요일 vs. getDate 현재 일
         // [날짜 두자릿수 만들기 - 삼항연산식 사용.] 위를 조합하여 만들기.
-        const date = `${ year } - ${ month < 10 ? "0"+month : month} - ${ day < 10 ? "0"+day : day}`;  // '01'은 문자. 앞의 0은 숫자이면 생략된다.
+        const date = `${ year }-${ month < 10 ? "0"+month : month}-${ day < 10 ? "0"+day : day}`;  // '01'은 문자. 앞의 0은 숫자이면 생략된다.
       // **** pcode는 자동으로 마지막 객체의 pcode + 1 **** 
         pcode += 1; // 다음 객체는 1증가한 식별코드를 갖는다.
 
     // 3. 구성한 객체를 배열에 저장한다.
-    const obj = {"pcode": pcode , "img": imginput ,"ccode": categoryinput, "name": nameinput, "price": priceinput, "date": date};
+    const obj = {
+        "pcode": pcode ,
+        // URL.createObjectURL(이미지객체) : 이미지객체를 http 주소로 변경. 
+        // 만약에 업로드된 이미지가 존재하지 않으면 ? 샘플이미지 : 존재하면 이미지 출력 <미리보기 기능 제공할 때>
+        "img": imginput == undefined ? "https://placehold.co/100" : URL.createObjectURL( imginput ),
+        "ccode": categoryinput, 
+        "name": nameinput, 
+        "price": priceinput, 
+        "date": date
+    };
     
     // 4. 화면 새로고침/렌더링 한다.
     productList.push(obj);

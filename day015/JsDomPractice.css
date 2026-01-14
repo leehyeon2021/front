@@ -45,8 +45,9 @@ tbody > tr > td{
 tbody tr:hover{
     background-color: #f8f9fa; color: black;
 }
-tbody > tr > td > img{
+tbody > tr > td > img{ /* 아니면 #main > table img{} */
     border-radius: 10px; width: 100px; height: 100px;
+    object-fit: cover; /* 교수님은 이렇게 하셨는데 난 contain이 마음에 듦(상품 이미지라서)... 그치만 다 이유가 있어서 하시는 거겠지!! 따라하기~~~ */
 }
 
 #main > table > tbody .del{
