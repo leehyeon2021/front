@@ -24,7 +24,7 @@
 /* ============== 메인/테이블 ============== */
 
 #main{
-    display: flex; justify-content: space-around;
+    display: block; justify-content: space-around;
 }
 #main > table{
     width: 940px;
@@ -37,18 +37,18 @@
 thead > tr > th{
     padding: 20px 0px;
 }
-.tbody > tr > td{
+tbody > tr > td{
     text-align: center;    
     padding: 20px 0;
     border-bottom: solid 1px #e9ebee;
 }
-.tbody tr:hover{
+tbody tr:hover{
     background-color: #f8f9fa; color: black;
 }
-.tbody > tr > td > img{
+tbody > tr > td > img{
     border-radius: 10px; width: 100px; height: 100px;
-    
 }
+
 #main > table > tbody .del{
     border: 1px solid rgb(255, 178, 178); color: red; background-color: rgb(255, 238, 241);
     border-radius: 5px; padding: 5px 10px; margin: 3px;
