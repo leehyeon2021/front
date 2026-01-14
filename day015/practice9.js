@@ -53,13 +53,15 @@ function departmentAdd( ){
 departmentPrint();
 function departmentPrint( ){
     // 1. 어디에
-    const tbody = document.querySelector(" 여기에 부서목록 tbody ");
+    const tbody = document.querySelector("tbody");
     // 2. 무엇을 어떻게. 입력받은 것들을 html의 '어디에'에 tr 출력.
     let html = ``;
     for( let index = 0 ; index <= departments.length-1 ; index++){
         let dep = departments[index];
         html += `<tr>
                     <td>${dep.departmentName}</td>
+                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
+                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>
                 </tr>`
     }
     // 3. 출력
@@ -98,13 +100,13 @@ function departmentDelete( dcode ){
 let scode = staff[staff.length-1].scode;
 function staffAdd( ){
     // 1. 입력받은 것 가져오기
-    const staffNameDom = document.querySelector(" 직원 이름 입력 칸 ");
+    const staffNameDom = document.querySelector(".staffName");
     const staffNames = staffNameDom.value;
-    const staffRankDom = document.querySelector(" 직급 입력 칸 ");
+    const staffRankDom = document.querySelector(".staffLank");
     const staffRanks = staffRankDom.value;
-    const staffDepartmentDom = document.querySelector(" 부서 select 칸 ");
+    const staffDepartmentDom = document.querySelector(".department");
     const staffDepartment = staffDepartmentDom.value;
-    const staffImgDom = document.querySelector(" 이미지 첨부 칸 ");
+    const staffImgDom = document.querySelector(".image");
     const staffImgs = staffImgDom.value;
     // 유효성 검사
     if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}

@@ -19,7 +19,7 @@
 
     <div id="left">
         <h3 id="left_title">부서관리</h3>
-        <input class="department" placeholder="신규 부서명 입력">
+        <input type="text" class="department" placeholder="신규 부서명 입력">
         <button onclick="departmentAdd( )">추가</button>
         
         <table>
@@ -32,27 +32,19 @@
 
             <tbody>
                 <tr>
-                    <td>개발팀</td>
-                    <td>
-                        <button class="update">수정</button>
-                        <button class="delete">삭제</button>
-                    </td>
+                    <td>개발팀</td>                    
+                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
+                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
                 </tr>
-
                 <tr>
-                    <td>디자인팀</td>
-                    <td>
-                        <button class="update">수정</button>
-                        <button class="delete">삭제</button>
-                    </td>
+                    <td>디자인팀</td>                    
+                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
+                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
                 </tr>
-
                 <tr>
-                    <td>기획팀</td>
-                    <td>
-                        <button class="update">수정</button>
-                        <button class="delete">삭제</button>
-                    </td>
+                    <td>기획팀</td>                    
+                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
+                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
                 </tr>
             </tbody>
 
@@ -68,12 +60,12 @@
         <div id="center_line1">
             <div>
                 <h4>이름</h4>
-                <input class="staffName">
+                <input class="staffName"/>
             </div>
 
             <div>
                  <h4>직급</h4>
-                <input class="staffLank">
+                <input class="staffLank"/>
             </div>
         </div> <!--center_line1 END-->
         <div id="center_line2">
@@ -94,7 +86,7 @@
         </div> <!--center_line2 END-->
 
         <div id="center_line3">
-            <button>등록</button>
+            <button onclick="staffAdd( )">등록</button>
         </div> <!--center_line3 END-->
 
         <div id="center_bottom">
