@@ -37,7 +37,7 @@ function departmentAdd( ){
     const departmentNameDom = document.querySelector(".department");
     const departmentNames = departmentNameDom.value;
     // 유효성 검사
-    if(departmentNames == "" || `${departmentNames}` in departments == false ){ alert("부서명을 확인하십시오."); return;}
+    if(departmentNames == "" || `${departmentNames}` in departments == true ){ alert("부서명을 확인하십시오."); return;}
     // 2. 식별코드
     dcode += 1;
     // 3. 구성한 객체를 배열에 저장한다.
