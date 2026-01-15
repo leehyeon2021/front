@@ -1,7 +1,7 @@
 /***************************전체************************/
 #wrap{
     width: 1400px;
-    height: 1000px;
+    height: 1500px;
     margin: 0 auto;
     background-color: #f1f5f9;
     padding: 50px;
@@ -9,6 +9,11 @@
 
 #title , #subtitle{text-align: center;}
 
+
+#subtitle{color: gray;
+font-size: medium;    
+margin-top: -15px;
+margin-bottom: 35px;}
 
 #all{display: flex;
 justify-content: space-between;
@@ -18,7 +23,7 @@ justify-content: space-between;
 
 #left{
     width: 310px;
-    height: 850px;
+    height: 1000px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -115,7 +120,7 @@ justify-content: space-between;
 /***************************center************************/
 #center{
     width: 600px;
-    height: 850px;
+    height: 1000px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -135,11 +140,13 @@ justify-content: space-between;
 
 #center_line1{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    color: gray;
+    align-items: center;
 }
 
 #center_line1 .staffName , .staffLank{
-    padding: 10px 5px;
+    padding: 10px 13px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
      background-color: #f8fafc;
@@ -148,18 +155,28 @@ justify-content: space-between;
 
 #center_line2{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    color: gray;
+
+}
+
+#center_line2 .imgselect{
+    width: 290px;
+    height: 100px;
 }
 
 
+
 #center_line2 select.department{
-    padding: 10px 10px;
+    padding: 10px 75px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
      background-color: #f8fafc;
-     width: 280px;
+    
     }
+
+
 
 
 #center_line3{
@@ -210,17 +227,19 @@ td .delete{ color: red;}
 
 #center_bottom tbody td{
     text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
 }
 
 #center_bottom tbody img{
  width: 100px; height: 100px;
- object-fit: cover;
 }
+
 
 /***************************right************************/
 #right{
     width: 290px;
-    height: 850px;
+    height: 1000px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -244,10 +263,21 @@ td .delete{ color: red;}
     width: 300px;
 }
 
+#right_top{
+    color: gray;
+    font-size: 15px;
+}
+
+#right_top .right_topline1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #right_top .right_topline2{
     display: flex;
     justify-content: space-between;
-    width: 240px;
+    width: 226px;
 
 }
 

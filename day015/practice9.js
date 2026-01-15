@@ -79,14 +79,14 @@ function departmentPrint( ){
     // 3. 출력
     tbody.innerHTML = html;
 
-    // 부서 Select에 넣기??
-    const Select = document.querySelector(".department");
-    let html1 = '';
-    for( let index = 0 ; index <= departments.length-1 ; index++){
-        let dep = departments[index];
-        html1 += `<option value="${dep.dcode}">${dep.departmentName}</option>`
-    }
-    Select.innerHTML = html1;   // console.log(Select)
+    // // 부서 Select에 넣기??
+    // const Select = document.querySelector(".department");
+    // let html1 = '';
+    // for( let index = 0 ; index <= departments.length-1 ; index++){
+    //     let dep = departments[index];
+    //     html1 += `<option value="${dep.dcode}">${dep.departmentName}</option>`
+    // }
+    // Select.innerHTML = html1;   // console.log(Select)
 }
 
 //3-3] 부서 수정함수
@@ -133,6 +133,7 @@ function staffAdd( ){
     // 유효성 검사
     if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
+   
     // 2. 객체 구성하기. (입력받은 값 / 식별코드)
     scode += 1;
     
@@ -144,6 +145,10 @@ function staffAdd( ){
          "staffImg": staffImgs == undefined ? "https://placehold.co/100" : URL.createObjectURL( staffImgs ), 
          "dcode": staffDepartment
     };
+
+    for( let i = 0 ; i <= staff.length -1 ; i++){
+            if(staff[i] == obj ){ alert("중복입니다."); return;}
+        }
 
     // 4. 화면 새로고침/렌더링
     staff.push(obj);
@@ -196,6 +201,7 @@ function staffDel(scode){ // 사원 삭제 함수
     staffPrint();// 화면 새로고침
 }
 
+
 function staffFix(scode){ // 사원 수정 함수
     for(let i = 0; i < staff.length; i++){ //staff 배열 순회
         if(scode == staff[i].scode) { // 매개변수로 받은 사원 코드와 배열의 객체 안에 있는 사원 코드와 같으면
@@ -212,7 +218,7 @@ function staffFix(scode){ // 사원 수정 함수
 // 휴가 목록 출력 함수
 vacationPrint()
 function vacationPrint(){
-    const right_bottomDom = document.querySelector("#right_bottom") // html에 따라 바꿔야 하는곳
+    const right_bottomDom = document.querySelector("#right_bottom_inner") // html에 따라 바꿔야 하는곳
     let html = "";
     for(let i = 0; i<vacationArray.length; i++){ // 휴가 배열를 순회
         const vacation = vacationArray[i]; // 휴가의 객체 하나를 저장
@@ -226,7 +232,7 @@ function vacationPrint(){
         };
 
         html += `
-                <div id="box2">
+                <div id="box">
                     <div class="line1">
                         <div>${staffName}</div><button class="vacationDel" onclick="vacationDel(${vacation.vcode})">신청취소</button>
                     </div>
@@ -257,14 +263,14 @@ function vacationDel(vcode){
 let vcode = 3;
 function vacationAdd(){
     const staffDom = document.querySelector(".staffselect");
-    const scode = staffDom.value;
+    const selectName = staffDom.value;
     const startDom = document.querySelector(".startdate")
     const start = startDom.value;
     const endDom = document.querySelector(".enddate");
     const end = endDom.value;
     const reasonDom = document.querySelector(".reason");
     const reason = reasonDom.value; 
-    if(scode == "disabled"){
+    if(selectName == "disabled"){
         alert("사원을 선택하세요!");
         return;
     };
@@ -276,11 +282,17 @@ function vacationAdd(){
         alert("휴가 사유를 적어주세요!");
         return;
     }
-
+    let foundScode = 0; // 찾은 사원코드를 저장할 변수
+    for (let i = 0; i < staff.length; i++) {
+        if (selectName == staff[i].staffName) {
+            foundScode = staff[i].scode; // 이름이 일치하는 사원의 번호를 저장
+            break; // 찾았으니 반복문 종료
+        }
+    }
     vcode +=1
     const obj = {
         "vcode" : vcode,
-        "scode" : scode,
+        "scode" : foundScode,
         "vacationStart" : start,
         "vacationEnd" : end,
         "vacationReason" : reason
