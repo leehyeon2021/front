@@ -168,7 +168,10 @@ const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
 // 출력 예시: { A: 3, B: 3, C: 1 }  후보(키):득표수(값)
 let votesObj = {};
 for( let i = 0 ; i <= votes.length-1 ; i++){
-   let candidate
+   let candidate = votes[i];
+   if(votesObj[votes[i]] === undefined){
+      votesObj = 
+   }
 }
 
 // 문제 10: 웹툰 평점 시각화하기
