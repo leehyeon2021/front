@@ -55,6 +55,15 @@ function signup(){
     const signPwDom = document.querySelector(".signPw");
     const pw = signPwDom.value;
 
+/// ======= localStorage 활용하여 memberList 호출 =======\\\
+    let memberList = localStorage.getItem("memberList"); // 로컬저장소 'memberList' 값 가져오기
+    if( memberList == null){ // 자료가 비어있으면
+        memberList = []; // 새로운 배열 선언
+    }else{  // memberList 자료가 있으면
+        memberList = JSON.parse(memberList); // memberList 타입변환
+    }
+///=====================================================\\\
+
     // 2. 입력받은 값들을 객체로 구성한다.
     let no = memberList.length >= 1 ? memberList[memberList.length-1].no + 1  : 1
     // no가 존재하면 ? 마지막 인덱스 넘버 가져옴 : 아니면 1
@@ -63,7 +72,10 @@ function signup(){
     // 3. 구성한 객체를 배열에 저장한다.
     memberList.push(obj); alert("회원가입 성공.")
 
-    console.log(memberList)
+/// ======= localStorage 활용하여 memberList 저장 =======\\\
+    localStorage.setItem("memberList", JSON.stringify(memberList));
+///=====================================================\\\
+    //console.log(memberList)
 }
 
 // [3] 로그인함수 구현: 로그인버튼을 클릭했을 때
@@ -74,6 +86,15 @@ function login(){
     const loginPwDom = document.querySelector(".loginPw");
     const pw = loginPwDom.value;
 
+/// ======= localStorage 활용하여 memberList 호출 =======\\\
+    let memberList = localStorage.getItem("memberList"); // 로컬저장소 'memberList' 값 가져오기
+    if( memberList == null){ // 자료가 비어있으면
+        memberList = []; // 새로운 배열 선언
+    }else{  // memberList 자료가 있으면
+        memberList = JSON.parse(memberList); // memberList 타입변환
+    }
+///=====================================================\\\
+
     // 2. 입력받은 값이 배열(회원목록) 내 존재하면 로그인 성공, 아니면 실패. 일일이 다 찾아야하는 수밖에 없음.
     for( let i = 0 ; i <= memberList.length -1 ; i++){
         const member = memberList[i];           // i번째 맴버(객체) 꺼내기
@@ -83,6 +104,7 @@ function login(){
     }
     alert("로그인 실패");
 }
+//localStorage.clear()
 
 // [4] 
 

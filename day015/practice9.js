@@ -132,22 +132,23 @@ function staffAdd( ){
     const staffImgDom = document.querySelector(".image");
     const staffImgs = staffImgDom.files[0];
     // 유효성 검사
-    if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
-   
-    // // 부서코드를 부서명으로 저장
-    // let memDepartment = ''; // 부서명 가져오는 변수
-    // for(let j = 0 ; j <= staff.length-1 ; j++){
-    //     const member = staff[j];
-        
-    //     for(let i = 0 ; i <= departments.length-1 ; i++){
-    //         if(member.dcode == departments[i].dcode){
-    //             memDepartment == departments[i].department;
-    //             break;
-    //         }
-    //     }
-    // }
+    if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
 
+    // 부서명을 부서코드로 저장
+       // staffDepartment == '개발팀' -> 이걸 숫자로 obj에 넣을 수 있도록.
+    let memDepartmentcode = ``; // 부서코드 가져오는 변수
+    for(let index = 0 ; index <= departments.length-1 ; index++){
+        const dep = departments[index];
+        if( staffDepartment == dep.departmentName){
+            memDepartmentcode = dep.dcode ;
+            break;
+        }
+        console.log(memDepartmentcode)
+          
+        }
+    
+    
     // 2. 객체 구성하기. (입력받은 값 / 식별코드)
     scode += 1;
     
@@ -157,7 +158,7 @@ function staffAdd( ){
          "staffName": staffNames, 
          "staffRank": staffRanks, 
          "staffImg": staffImgs == undefined ? "https://placehold.co/100" : URL.createObjectURL( staffImgs ), 
-         "dcode": staffDepartment
+         "dcode": memDepartmentcode
     };
 
     for( let i = 0 ; i <= staff.length -1 ; i++){
