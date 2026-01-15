@@ -127,7 +127,7 @@ function staffAdd( ){
     const staffNames = staffNameDom.value;
     const staffRankDom = document.querySelector(".staffLank");
     const staffRanks = staffRankDom.value;
-    const staffDepartmentDom = document.querySelector(".department");
+    const staffDepartmentDom = document.querySelector("#department");
     const staffDepartment = staffDepartmentDom.value;
     const staffImgDom = document.querySelector(".image");
     const staffImgs = staffImgDom.files[0];

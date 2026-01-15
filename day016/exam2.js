@@ -40,12 +40,12 @@ let visitCount = 1;
     let visit =  sessionStorage.getItem('visit');
 
     // (2) 만약에 존재하지 않은 웹스토리지 이면 스토리지 추가
-    if( visit == null ){   //null 이란? 자료가 없다는 뜻. undfined 자료가 정의되지 않음
+    if( visit == null ){   //null 이란? 자료가 없다는 뜻. undefined 자료가 정의되지 않음
         sessionStorage.setItem('visit', visitCount);
 
     }else{ 
-        // (3) 존재하면 스토리지에서 꺼내온 값에 +1한다. <<문제: 스토리지는 문자열만 저장한다.>>
-        visitCount = Number(visit)+ 1 //Number아니면 JSON.
+        // (3) 존재하면 스토리지에서 꺼내온 값에 +1 한다. <<문제: 스토리지는 문자열만 저장한다.>>
+        visitCount = Number(visit)+ 1 //Number아니면 JSON. ⬅️ 숫자로 바꾸기. ⤴️
 
         // (4) 더한 값을 스토리지에도 저장한다.
         sessionStorage.setItem('visit', visitCount);
