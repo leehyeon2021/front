@@ -78,6 +78,15 @@ function departmentPrint( ){
     }
     // 3. 출력
     tbody.innerHTML = html;
+
+    // 부서 Select에 넣기??
+    const Select = document.querySelector(".department");
+    let html1 = '';
+    for( let index = 0 ; index <= departments.length-1 ; index++){
+        let dep = departments[index];
+        html1 += `<option value="${dep.dcode}">${dep.departmentName}</option>`
+    }
+    Select.innerHTML = html1;   // console.log(Select)
 }
 
 //3-3] 부서 수정함수
