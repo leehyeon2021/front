@@ -44,7 +44,12 @@ function departmentAdd( ){
     const departmentNameDom = document.querySelector(".department");
     const departmentNames = departmentNameDom.value;
     // 유효성 검사
-    if(departmentNames == "" || `${departmentNames}` in departments == true ){ alert("부서명을 확인하십시오."); return;}
+    if(departmentNames == "" ){ alert("부서명을 확인하십시오."); return;}
+    for(let i = 0 ; i <= departments.length-1 ; i++){
+        if( departmentNames == departments[i].departmentName){
+            alert("이미 존재하는 부서입니다."); return;
+        }
+    }
     // 2. 식별코드
     dcode += 1;
     // 3. 구성한 객체를 배열에 저장한다.
@@ -115,7 +120,7 @@ function staffAdd( ){
     const staffDepartmentDom = document.querySelector(".department");
     const staffDepartment = staffDepartmentDom.value;
     const staffImgDom = document.querySelector(".image");
-    const staffImgs = staffImgDom.value;
+    const staffImgs = staffImgDom.files[0];
     // 유효성 검사
     if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
