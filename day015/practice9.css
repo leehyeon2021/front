@@ -1,4 +1,5 @@
 /***************************전체************************/
+
 #wrap{
     width: 1400px;
     height: 1500px;
@@ -17,13 +18,14 @@ margin-bottom: 35px;}
 
 #all{display: flex;
 justify-content: space-between;
+width: 100%;
 }
 
 /***************************left************************/
 
 #left{
-    width: 310px;
-    height: 1000px;
+    width: 20%;
+    height: 1350px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -34,7 +36,6 @@ justify-content: space-between;
 
 #left table{
     width: 100%;
-    table-layout: fixed;
     
 }
 #left_title{
@@ -55,12 +56,10 @@ justify-content: space-between;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: #f8fafc;
 }
 
 
-.th-content .span2{
-    margin-right: 15px;
-}
 
 #left .inputline{
     padding-bottom: 10px;
@@ -70,10 +69,9 @@ justify-content: space-between;
     border: 1px solid #eeeeee;
     padding: 10px 20px;
     border-radius: 10px;
+    
 }
-#left table tbody{
-    width: 200px;
-}
+
 
 .dpt{
     display: flex;
@@ -85,9 +83,7 @@ justify-content: space-between;
     padding-top: 5px;
 }
 
-.dpt .dptbtn{
-    
-}
+
 .dpt span{
     margin-left: 6px;
 }
@@ -111,16 +107,14 @@ justify-content: space-between;
 }
 
 #left > table th{
-    background-color: #f8fafc;
-    padding : 10px;
     
-;
+    padding : 10px;
 }
 
 /***************************center************************/
 #center{
-    width: 600px;
-    height: 1000px;
+    width: 50%;
+    height: 1350px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -168,13 +162,12 @@ justify-content: space-between;
 
 
 
-#center_line2 select.department{
+#department{
     padding: 10px 75px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
      background-color: #f8fafc;
-    
-    }
+ }
 
 
 
@@ -238,8 +231,8 @@ td .delete{ color: red;}
 
 /***************************right************************/
 #right{
-    width: 290px;
-    height: 1000px;
+    width: 100%;
+    height: 1350px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -256,11 +249,11 @@ td .delete{ color: red;}
 }
 
 #right_top .staffselect{
-    padding: 10px 5px;
+    padding: 10px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
      background-color: #f8fafc;
-    width: 300px;
+    width: 100%;
 }
 
 #right_top{
@@ -286,11 +279,11 @@ td .delete{ color: red;}
 }
 
 #right_top .right_topline3 input{
-    padding: 10px 5px;
+    padding: 10px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
      background-color: #f8fafc;
-    width: 300px;
+    width: 100%;
 
 }
 
@@ -299,10 +292,10 @@ td .delete{ color: red;}
 
 
 #right_top .right_topline4 input{
-   padding: 10px 5px;
+   padding: 10px 40px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
-     background-color: #f8fafc;
+    background-color: #f8fafc;
     width: 275px;
 
 }
@@ -324,7 +317,7 @@ td .delete{ color: red;}
 }
 
 
-#box{
+#right #right_bottom .box{
     border: 1px solid #eeeeee;
     background-color: #f1f5f9;
     border-radius: 10px;
@@ -333,12 +326,12 @@ td .delete{ color: red;}
 
 }
 
-#box .line1{
+.box .line1{
     display: flex;
     justify-content: space-between;
 }
 
-#box .line1 button{
+.box .line1 button{
     border-radius: 10px;
     background-color: #94a3b8;
     color: white;
@@ -346,6 +339,6 @@ td .delete{ color: red;}
     border: none;
 }
 
-#box .line2 , .line3{
+.box .line2 , .box .line3{
     color: gray;
 }

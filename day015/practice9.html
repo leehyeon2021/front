@@ -41,8 +41,8 @@
                     <div class="dpt">
                     <span>개발팀</span>
                         <div class="dptbtn">
-                        <button class="update" onclick="departmentUpdate(`${dep.dcode}`)">수정</button>
-                        <button class="delete" onclick="departmentDelete(`${dep.dcode}`)">삭제</button>
+                        <button class="update">수정</button>
+                        <button class="delete">삭제</button>
                         </div>
                     </div>
                     </td>
@@ -182,44 +182,46 @@
 
     </div> <!--center END-->
 
-    <div id="right">
-        <h3 id="right_top_title">사원 휴가 신청</h3>
-        <div id="right_top">
-            <div class=right_topline1>
-        <h4>신청 사원</h4>
-        <select class="staffselect">
-                    <option value="disabled">휴가 신청 사원을 선택하세요.</option>
-                    <option>김민준</option>
-                    <option>이서연</option>
-                    <option>박도윤</option>
-                    <option>유재석</option>
-                </select>
-                </div>
-                 <div class=right_topline2>
-                <h4>휴가 시작일</h4>
-                <h4>휴가 종료일</h4>
-                </div>
-                <div class="right_topline3">  
-                <input class="startdate" type="date"/>
-                <input class="enddate" type="date"/>
-                </div>
-        
-             <div class=right_topline4>
-                <h4>휴가 사유</h4>
-                <input class="reason" type="text" placeholder="예:여름 휴가">
-             </div>
-             <div class=right_topline5>
-                <button onclick="vacationAdd()">신청</button>
-             </div>
+            <div id="right">
+                <h3 id="right_top_title">사원 휴가 신청</h3>
+                <div id="right_top">
+                    <h4>신청 사원</h4>
+                    <div class=right_topline1>
 
-             </div> <!--right_top END-->
+                        <select class="staffselect">
+                            <option value="disabled">휴가 신청 사원을 선택하세요.</option>
+                            <option>김민준</option>
+                            <option>이서연</option>
+                            <option>박도윤</option>
+                            <option>유재석</option>
+                        </select>
+                    </div>
+                    <div class=right_topline2>
+                        <h4>휴가 시작일</h4>
+                        <h4>휴가 종료일</h4>
+                    </div>
+                    <div class="right_topline3">
+                        <input class="startdate" type="date" />
+                        <input class="enddate" type="date" />
+                    </div>
 
-             <div id="right_bottom">
-                <h3 id="right_bottom_title">휴가 신청 전체 목록</h3>
-                <div id="right_bottom_inner">
-                    <div id="box">
+                    <div class=right_topline4>
+                        <h4>휴가 사유</h4>
+                        <input class="reason" type="text" placeholder="예:여름 휴가">
+                    </div>
+                    <div class=right_topline5>
+                        <button onclick="vacationAdd()" type="button">신청</button>
+                    </div>
+
+                </div> <!--right_top END-->
+
+                <div id="right_bottom">
+                    <h3 id="right_bottom_title">휴가 신청 전체 목록</h3>
+                    <div id="right_bottom_inner">
+                    <div class="box">
                         <div class="line1">
-                            <div>김민준</div><button>신청취소</button>
+                            <div>김민준</div>
+                            <button onclick="vacationDel()" type="button">신청취소</button>
                         </div>
                         <div class="line2">
                             2025-08-04 ~ 2025-08-04
@@ -229,9 +231,10 @@
                         </div>
                     </div>
 
-                    <div id="box">
+                    <div class="box">
                         <div class="line1">
-                            <div>이서연</div><button>신청취소</button>
+                            <div>이서연</div>
+                            <button type="button">신청취소</button>
                         </div>
                         <div class="line2">
                             2025-08-04 ~ 2025-08-04
@@ -240,18 +243,19 @@
                             사유:여름 휴가
                         </div>
                     </div>
+                    </div>
                 </div>
-             </div> <!--right_bottom END-->
-            
-    </div> <!--right END-->
 
-</div> <!--all END-->
+            </div> <!--right END-->
 
-   </div> <!--wrap END-->
-    
+        </div> <!--all END-->
+
+    </div> <!--wrap END-->
 
 
-     <script src='practice9.js'></script>
+
+    <script src='practice9.js'></script>
 
 </body>
+
 </html>

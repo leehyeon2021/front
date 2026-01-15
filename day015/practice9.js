@@ -206,6 +206,8 @@ function staffPrint(){
     tbody.innerHTML = html; // 상단 이름에 맞춰 변경해야 하는곳
 };
 
+
+
 function staffDel(scode){ // 사원 삭제 함수
     for(let i = 0; i < staff.length; i++){ //staff 배열 순회
         if(scode == staff[i].scode) { // 매개변수로 받은 사원 코드와 배열의 객체 안에 있는 사원 코드와 같으면
@@ -230,6 +232,8 @@ function staffFix(scode){ // 사원 수정 함수
     staffPrint();
 }
 
+
+
 // 휴가 목록 출력 함수
 vacationPrint()
 function vacationPrint(){
@@ -247,7 +251,7 @@ function vacationPrint(){
         };
 
         html += `
-                <div id="box">
+                <div class="box">
                     <div class="line1">
                         <div>${staffName}</div><button class="vacationDel" onclick="vacationDel(${vacation.vcode})">신청취소</button>
                     </div>
@@ -273,6 +277,7 @@ function vacationDel(vcode){
     }
     vacationPrint();
 }
+
 
 // 휴가 신청 함수
 let vcode = 3;
