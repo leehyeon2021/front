@@ -71,12 +71,19 @@ function departmentPrint( ){
     let html = ``;
     for( let index = 0 ; index <= departments.length-1 ; index++){
         let dep = departments[index];
-        html += `<tr>
-                    <td>${dep.departmentName}</td>
-                    <td><button class="update" onclick="departmentUpdate(${dep.dcode})">수정</button></td>
-                    <td><button class="delete" onclick="departmentDelete(${dep.dcode})">삭제</button></td>
+        html +=   `<tr>
+                    <td>
+                    <div class="dpt">
+                    <span>${dep.departmentName}</span>
+                    <div class="dptbtn">
+                        <button class="update" onclick="departmentUpdate(${dep.dcode})">수정</button>
+                        <button class="delete" onclick="departmentDelete(${dep.dcode})">삭제</button>
+                        </div>
+                    </div>
+                    </td>
                 </tr>`
     }
+    
     // 3. 출력
     tbody.innerHTML = html;
 

@@ -1,4 +1,5 @@
 boardPrint(); // JS가 실행될 때 해당 함수를 1번 호출
+// 출력함수
 function boardPrint(){
     // 1. 어디에, <tbody id="boardTbody">
     const boardTbody = document.querySelector(`#boardTbody`)
@@ -10,6 +11,14 @@ function boardPrint(){
         // 2-2: 반목문 이용하여 배열내 하나씩 조회
     let html = ``;
     for(let index = 0 ; index <= boardList.length -1 ; index++){
-        
-    }
+        const obj = boardList[index];
+        // 2-3: 하나씩 <tr>구성.
+        html += `<tr>
+                    <td> ${obj.no} </td>
+                    <td> <a href="view.html?no=${obj.no}"> ${obj.title} </a></td>
+                </tr>`
+    
+    }// for end
+    // 3. 출력
+    boardTbody.innerHTML = html;
 }   
