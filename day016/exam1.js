@@ -39,6 +39,9 @@ console.log('var1'); // 다른 test1.js에서 선언된 변수 사용
           : 세션/로컬 저장소에 'key' 삭제. (value 같이 삭제됨.)
            .clear();
           : 모든 key 삭제.
+    4] JSON 변환: 세션/로컬 저장소는 문자열 저장이 가능하다.
+        1] 저장: JSON.stringify(): JS객체 -> JSON문자열
+        2] 호출: JSON.parse(): ?JSON문자열 -> JS객체?
 */
 
 // (1) 저장
@@ -50,9 +53,18 @@ console.log(sessionStorage.getItem('name'));
     // session저장소에 저장된 name키를 갖는 값을 호출한다.
 console.log(localStorage.getItem('age'));
     // 로컬저장소에 저장된 'age' 키 갖는 값 호출.
+
 // (3) 삭제
 sessionStorage.removeItem('name');
     // 세션저장소에 'name' 키 삭제
 localStorage.removeItem('age');
     // 로컬저장소에 'age' 키 삭제
+
 // (4) 활용: 복잡한 (샘플) 데이터
+    // * 세션/로컬 저장소는 문자열만 저장이 가능하다.
+    // 그래서--> 배열/객체를 문자열로 변환하는 방법 
+            // => JSON : 자바스크립트 객체 기반의 문자열 형식
+sessionStorage.setItem('회원 목록' , [{name: "유재석", age: 40}, {name: "강감찬", age: 50}]);                   // -> 저장 안 된다.
+sessionStorage.setItem('회원 목록' , JSON.stringify([{name: "유재석", age: 40}, {name: "강감찬", age: 50}]));   // -> 저장된다.
+console.log(sessionStorage.getItem('회원 목록')); //-> 회색백그라운드로 뜸. -> 객체 아님. 문자열.
+console.log(JSON.parse(sessionStorage.getItem('회원 목록'))); //-> 객체로 뜸. 붉은글자색

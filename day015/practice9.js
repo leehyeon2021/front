@@ -67,6 +67,7 @@ function departmentPrint( ){
     // 1. 어디에
     const tbody = document.querySelector("tbody");
     // 2. 무엇을 어떻게. 입력받은 것들을 html의 '어디에'에 tr 출력.
+    
     let html = ``;
     for( let index = 0 ; index <= departments.length-1 ; index++){
         let dep = departments[index];
@@ -134,17 +135,18 @@ function staffAdd( ){
     if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
    
-    // 부서코드를 부서명으로 저장
-    for(let j = 0 ; j <= staff.length-1 ; j++){
-        const member = staff[j];
-        let memDepartmentName = ''; // 부서명 가져오는 변수
-        for(let i = 0 ; i <= departments.length-1 ; i++){
-            if(member.dcode == departments[i].dcode){
-                memDepartmentName == departments[i].departmentName;
-                break;
-            }
-        }
-    }
+    // // 부서코드를 부서명으로 저장
+    // let memDepartment = ''; // 부서명 가져오는 변수
+    // for(let j = 0 ; j <= staff.length-1 ; j++){
+    //     const member = staff[j];
+        
+    //     for(let i = 0 ; i <= departments.length-1 ; i++){
+    //         if(member.dcode == departments[i].dcode){
+    //             memDepartment == departments[i].department;
+    //             break;
+    //         }
+    //     }
+    // }
 
     // 2. 객체 구성하기. (입력받은 값 / 식별코드)
     scode += 1;
