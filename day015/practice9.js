@@ -6,8 +6,15 @@
         { "dcode": 1,  "departmentName" : "개발팀"},
         { "dcode": 2,  "departmentName" : "디자인팀"},
         { "dcode": 3,  "departmentName" : "기획팀"} 
-    ]
-    const staff = [{ "scode": 1, "staffName": "김민준", "staffRank": "선임개발자", "staffImg": "https://placehold.co/100", "dcode": 1 },  { "scode": 2, "staffName": "이서연", "staffRank": "수석 디자이너", "staffImg": "https://placehold.co/100", "dcode": 2 }, { "scode": 3, "staffName": "박도윤", "staffRank": "팀장", "staffImg": "https://placehold.co/100", "dcode": 3 }, { "scode": 4, "staffName": "유재석", "staffRank": "대리", "staffImg": "https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/07/109129807.1.jpg", "dcode": 1 } ]
+    ];
+    
+    const staff = [
+        { "scode": 1, "staffName": "김민준", "staffRank": "선임개발자", "staffImg": "https://placehold.co/100", "dcode": 1 },  
+        { "scode": 2, "staffName": "이서연", "staffRank": "수석 디자이너", "staffImg": "https://placehold.co/100", "dcode": 2 }, 
+        { "scode": 3, "staffName": "박도윤", "staffRank": "팀장", "staffImg": "https://placehold.co/100", "dcode": 3 }, 
+        { "scode": 4, "staffName": "유재석", "staffRank": "대리", "staffImg": "https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/07/109129807.1.jpg", "dcode": 1 } 
+    ];
+    
     const vacationArray = [
         {"vcode": 1, "scode": 1, "vacationStart": "2025-08-04", "vacationEnd": "2025-08-04", "vacationReason" : "병원 진료"}, 
         {"vcode": 2, "scode": 2, "vacationStart": "2025-07-21", "vacationEnd": "2025-07-25", "vacationReason" : "여름 휴가"}
@@ -60,8 +67,8 @@ function departmentPrint( ){
         let dep = departments[index];
         html += `<tr>
                     <td>${dep.departmentName}</td>
-                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
-                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>
+                    <td><button class="update" onclick="departmentUpdate(${dep.dcode})">수정</button></td>
+                    <td><button class="delete" onclick="departmentDelete(${dep.dcode})">삭제</button></td>
                 </tr>`
     }
     // 3. 출력
@@ -84,10 +91,11 @@ function departmentUpdate( dcode ){
 function departmentDelete( dcode ){
     for(let index = 0 ; index <= departments.length-1 ; index++){
         for(let index = 0 ; index <= staff.length-1 ; index++){
-            if( dcode == staff[index].dcode){ 
+            if(dcode == departments[index].dcode){
+                if( dcode == staff[index].dcode){ 
                 alert("부서에 소속된 사원이 존재하므로 삭제할 수 없습니다."); 
                 return; }
-            if(dcode == departments[index].dcode){
+            
             departments.splice(index, 1);
             departmentPrint();               
             return;}

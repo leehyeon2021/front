@@ -1,7 +1,7 @@
 /***************************전체************************/
 #wrap{
     width: 1400px;
-    height: 960px;
+    height: 1000px;
     margin: 0 auto;
     background-color: #f1f5f9;
     padding: 50px;
@@ -17,8 +17,8 @@ justify-content: space-between;
 /***************************left************************/
 
 #left{
-    width: 400px;
-    height: 875px;
+    width: 310px;
+    height: 850px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -27,6 +27,11 @@ justify-content: space-between;
     
 }
 
+#left table{
+    width: 100%;
+    table-layout: fixed;
+    
+}
 #left_title{
     padding-bottom: 10px;
     border-bottom: 1px solid #eeeeee;
@@ -34,48 +39,83 @@ justify-content: space-between;
     text-align: start;
 }
 
-#left > input , button{
+
+#left > .inputline > input , button{
     align-items: start;
 }
-#left > table{
-    margin-top: 10px;
+
+
+.th-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
-#left > table tbody td{
-    text-align: start;
+
+.th-content .span2{
+    margin-right: 15px;
 }
 
-#left > table tbody td > .update , .delete{
-    
+#left .inputline{
+    padding-bottom: 10px;
 }
 
-#left > input , #left > button{
+#left .inputline > input , #left > button{
     border: 1px solid #eeeeee;
     padding: 10px 20px;
     border-radius: 10px;
 }
-
-#left > table thead th{
-    text-align: start;
+#left table tbody{
+    width: 200px;
 }
 
-#left > input{
+.dpt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.dpt .dptbtn{
+    
+}
+.dpt span{
+    margin-left: 6px;
+}
+
+
+#left tbody td{
+    width: 100%;
+    
+}
+
+#left .inputline > input{
     background-color: #f8fafc;
+    padding: 10px 20px;
 }
 
-#left > button{
+#left .inputline > button{
     background-color: #9333ea;
+    padding: 9px 10px;
+    color: white;
+    border: none;
 }
 
 #left > table th{
     background-color: #f8fafc;
+    padding : 10px;
+    
+;
 }
 
 /***************************center************************/
 #center{
     width: 600px;
-    height: 875px;
+    height: 850px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -150,6 +190,7 @@ justify-content: space-between;
 
 #center_bottom > .staffTable thead th{
     text-align: center;
+    padding: 10px;
 }
 
 #center_bottom > .staffTable td img , button{
@@ -166,10 +207,20 @@ td .update{ color:blue;}
 td .delete{ color: red;}
 
 
+
+#center_bottom tbody td{
+    text-align: center;
+}
+
+#center_bottom tbody img{
+ width: 100px; height: 100px;
+ object-fit: cover;
+}
+
 /***************************right************************/
 #right{
-    width: 400px;
-    height: 875px;
+    width: 290px;
+    height: 850px;
     border: 1px solid #eeeeee;
     background-color: white;
     border-radius: 10px;
@@ -196,7 +247,7 @@ td .delete{ color: red;}
 #right_top .right_topline2{
     display: flex;
     justify-content: space-between;
-    width: 210px;
+    width: 240px;
 
 }
 
@@ -204,6 +255,67 @@ td .delete{ color: red;}
     display: flex;
 }
 
-#right_top .right_topline3 > input .startdate , .enddate{
-    margin-right: 20px;
+#right_top .right_topline3 input{
+    padding: 10px 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+     background-color: #f8fafc;
+    width: 300px;
+
+}
+
+#right_top .right_topline3 input.startdate {
+    margin-right: 20px;}
+
+
+#right_top .right_topline4 input{
+   padding: 10px 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+     background-color: #f8fafc;
+    width: 275px;
+
+}
+
+#right_top .right_topline5{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+
+#right_top .right_topline5 button{
+     margin-right: 10px;
+    background-color: #0c9386;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+#box{
+    border: 1px solid #eeeeee;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+#box .line1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#box .line1 button{
+    border-radius: 10px;
+    background-color: #94a3b8;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+#box .line2 , .line3{
+    color: gray;
 }

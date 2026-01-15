@@ -14,37 +14,62 @@
     <h1 id="title">인사 관리 대시보드</h1>
      <h3 id="subtitle">부서,사원,휴가 통합 관리 시스템</h3>
 
-     <div id="all">
+    <div id="all">
 
 
     <div id="left">
+        <div class="inputline">
         <h3 id="left_title">부서관리</h3>
-        <input type="text" class="department" placeholder="신규 부서명 입력">
+        <input class="department" placeholder="신규 부서명 입력">
         <button onclick="departmentAdd( )">추가</button>
-        
+        </div>
         <table>
             <thead>
             <tr>
-                <th>부서명</th>
-                <th>관리</th>
+                <th>
+                    <div class="th-content">
+                    <span>부서명</span>
+                    <span class="span2">관리</span>
+                    </div>
+                </th>
             </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>개발팀</td>                    
-                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
-                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
+                    <td>
+                    <div class="dpt">
+                    <span>개발팀</span>
+                        <div class="dptbtn">
+                        <button class="update" onclick="departmentUpdate(`${dep.dcode}`)">수정</button>
+                        <button class="delete" onclick="departmentDelete(`${dep.dcode}`)">삭제</button>
+                        </div>
+                    </div>
+                    </td>
                 </tr>
+
                 <tr>
-                    <td>디자인팀</td>                    
-                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
-                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
+                    <td>
+                    <div class="dpt">
+                    <span>디자인팀</span>
+                    <div class="dptbtn">
+                        <button class="update">수정</button>
+                        <button class="delete">삭제</button>
+                        </div>
+                    </div>
+                    </td>
                 </tr>
+
                 <tr>
-                    <td>기획팀</td>                    
-                    <td><button class="update" onclick="departmentUpdate( )">수정</button></td>
-                    <td><button class="delete" onclick="departmentDelete( )">삭제</button></td>                
+                    <td>
+                    <div class="dpt">
+                    <span>기획팀</span>
+                    <div class="dptbtn">
+                        <button class="update">수정</button>
+                        <button class="delete">삭제</button>
+                        </div>
+                    </div>
+                    </td>
                 </tr>
             </tbody>
 
@@ -60,12 +85,12 @@
         <div id="center_line1">
             <div>
                 <h4>이름</h4>
-                <input class="staffName"/>
+                <input class="staffName">
             </div>
 
             <div>
                  <h4>직급</h4>
-                <input class="staffLank"/>
+                <input class="staffLank">
             </div>
         </div> <!--center_line1 END-->
         <div id="center_line2">
@@ -138,7 +163,7 @@
                     </tr>
 
                      <tr>
-                        <td><img src="https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/07/109129807.1.jpg/"></td>
+                        <td><img src="https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/07/109129807.1.jpg"></td>
                         <td>유재석</td>
                         <td>개발팀</td>
                         <td>대리</td>
@@ -151,6 +176,7 @@
                 </tbody>
 
             </table>
+
 
         </div> <!--center_bottom END-->
 
@@ -173,24 +199,24 @@
                 <h4>휴가 시작일</h4>
                 <h4>휴가 종료일</h4>
                 </div>
-                <div class="right_top_line3">  
+                <div class="right_topline3">  
                 <input class="startdate" type="date"/>
                 <input class="enddate" type="date"/>
                 </div>
         
              <div class=right_topline4>
                 <h4>휴가 사유</h4>
-                <input class="reason" type="text" placeholder="예:여름 휴가">
+                <input type="text" placeholder="예:여름 휴가">
              </div>
              <div class=right_topline5>
-                <button onclick="vacationAdd()">신청</button>
+                <button>신청</button>
              </div>
 
              </div> <!--right_top END-->
 
              <div id="right_bottom">
                 <h3 id="right_bottom_title">휴가 신청 전체 목록</h3>
-                <div id="box1">
+                <div id="box">
                     <div class="line1">
                         <div>김민준</div><button>신청취소</button>
                     </div>
@@ -202,7 +228,7 @@
                     </div>
                 </div>
 
-                <div id="box2">
+                <div id="box">
                     <div class="line1">
                         <div>이서연</div><button>신청취소</button>
                     </div>
@@ -221,7 +247,9 @@
 
    </div> <!--wrap END-->
     
-     <script src='practice9_.js'></script>
+
+
+     <script src='practice9.js'></script>
 
 </body>
 </html>
