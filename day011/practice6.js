@@ -149,12 +149,27 @@ const productsInfo = [
 ];
 // 장바구니에 담긴 상품들의 총 결제 금액을 저장할 변수
 let sum8 = 0 ;
+// cart의 id를 productsInfo의 id에서 찾아서 productsInfo가격*cart개수
+for(let i = 0 ; i <= cart.length-1 ; i++){
+   let cartInv = cart[i];
+   for(let j = 0; j < productsInfo.length ; j++){
+      let productsInfoInv = productsInfo[j];
+      if(cartInv.id == productsInfo[j].id){
+         sum8 += cartInv.quantity * productsInfoInv.price;
+      }
+   }
+}
+console.log(`총 결제금액: ${sum8}`);
 
 
 // 문제 9: 투표 결과 집계하기
 // 다음 votes 배열은 투표 결과를 나타냅니다. 각 후보가 몇 표를 받았는지 집계하여, 후보의 이름이 키이고 득표수가 값인 객체를 만들어 콘솔에 출력하시오.
-// const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
-// 출력 예시: { A: 3, B: 3, C: 1 }
+const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
+// 출력 예시: { A: 3, B: 3, C: 1 }  후보(키):득표수(값)
+let votesObj = {};
+for( let i = 0 ; i <= votes.length-1 ; i++){
+   let candidate
+}
 
 // 문제 10: 웹툰 평점 시각화하기
 // webtoons 배열의 데이터를 이용하여, 각 웹툰의 평점을 별(★, ☆)로 시각화하여 HTML에 출력하시오.
