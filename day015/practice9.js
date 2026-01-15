@@ -103,18 +103,18 @@ function departmentUpdate( dcode ){
 
 //3-4] 부서 삭제함수
 function departmentDelete( dcode ){
-    for(let index = 0 ; index <= departments.length-1 ; index++){
-        for(let index = 0 ; index <= staff.length-1 ; index++){
-            if(dcode == departments[index].dcode){
-                if( dcode == staff[index].dcode){ 
-                alert("부서에 소속된 사원이 존재하므로 삭제할 수 없습니다."); 
-                return; }
-            
-            departments.splice(index, 1);
+    
+    for(let index = 0 ; index <= staff.length-1 ; index++){
+        if( dcode == staff[index].dcode){ 
+            alert("부서에 소속된 사원이 존재하므로 삭제할 수 없습니다."); 
+            return; }}
+
+    for(let i = 0 ; i <= departments.length-1 ; i++){
+            if(dcode == departments[i].dcode){
+            departments.splice(i, 1);
             departmentPrint();               
             return;}
         }
-    }
 }
 
 // [4] 사원영역 구현
@@ -134,6 +134,18 @@ function staffAdd( ){
     if(staffDepartment == 'disabled'){alert("부서를 선택하세요."); return;}
     if(staffNames == "" || staffRanks == ""){alert("이름과 직급 입력은 필수입니다."); return;}
    
+    // 부서코드를 부서명으로 저장
+    for(let j = 0 ; j <= staff.length-1 ; j++){
+        const member = staff[j];
+        let memDepartmentName = ''; // 부서명 가져오는 변수
+        for(let i = 0 ; i <= departments.length-1 ; i++){
+            if(member.dcode == departments[i].dcode){
+                memDepartmentName == departments[i].departmentName;
+                break;
+            }
+        }
+    }
+
     // 2. 객체 구성하기. (입력받은 값 / 식별코드)
     scode += 1;
     
@@ -151,13 +163,13 @@ function staffAdd( ){
         }
 
     // 4. 화면 새로고침/렌더링
-    staff.push(obj);
+    staff.push(obj); console.log( obj);
     staffPrint();
-}
+} 
 
 
 
-// ======= 아래는 장민서님이 하신 것 =======
+// ======= 아래는 장민서 님이 하신 것 =======
 
 //사원 출력 함수
 staffPrint()
