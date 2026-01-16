@@ -55,7 +55,7 @@
 // } 
 // console.log( i / scores.length );
 /* 교수님 풀이
-1) 눈으로 계산: let sum1 = 80 +어쩌고
+1) 눈으로 계산: let sum1 = 80 +기타등등
 2) 배열 안에 객체 안에 속성명: let sum2 = scores[0].math + scores[1].math + scores[2].math;
 3) 반복문: int sum3 = 0;
 (풀이는 같음)
@@ -79,7 +79,9 @@
    let ary = [ 3, 4, 5];
    let value = ary[0];      // 중간저장소 만들기
    let result = value + 10; // value는 3이다.
+
 ⬆️ 변수 만들었느냐 아니냐만 다르고 같은 거다. ⬇️
+
    let ary = [3, 4, 5];
    let result = ary[0] + 10;
 
@@ -169,26 +171,45 @@ const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
 let votesObj = {};
 for( let i = 0 ; i <= votes.length-1 ; i++){
    let candidate = votes[i];
-   if(votesObj[votes[i]] === undefined){
-      votesObj = 
-   }
-}
+   // 만약 voteObj 객체에 해당 후보가 아직 없다면 - 키생성후득표수1 - 이미있으면득표수++
+   if(votesObj[candidate] === undefined){
+      // 해당 후보를 키로 생성하고 득표 수를 1로 설정
+      votesObj[candidate] = 1;
+      // 이미 존재하는 후보라면 득표 수를 1 증가.
+   }else{ votesObj[candidate]++}
+}console.log(votesObj)
 
 // 문제 10: 웹툰 평점 시각화하기
 // webtoons 배열의 데이터를 이용하여, 각 웹툰의 평점을 별(★, ☆)로 시각화하여 HTML에 출력하시오.
 // 조건 1: 평점(rating)은 10점 만점입니다.
 // 조건 2: 평점의 정수 부분만큼 꽉 찬 별(★)을, 10 - 정수 만큼 빈 별(☆)을 출력합니다. (예: 평점이 8.5이면 ★ 8개, ☆ 2개)
 // 조건 3: HTML에 웹툰 제목과 변환된 별점을 한 줄씩 출력합니다.
-// const webtoons = [
-//   { title: '나 혼자만 레벨업', rating: 9.8 },
-//   { title: '유미의 세포들', rating: 9.9 },
-//   { title: '전지적 독자 시점', rating: 9.7 }
-// ];
+const webtoons = [
+  { title: '나 혼자만 레벨업', rating: 9.8 },
+  { title: '유미의 세포들', rating: 9.9 },
+  { title: '전지적 독자 시점', rating: 9.7 }
+];
 /* HTML 출력 예시:
    나 혼자만 레벨업 ★★★★★★★★★☆
    유미의 세포들 ★★★★★★★★★☆
    전지적 독자 시점 ★★★★★★★★★☆
 */
+let html = ``;
+for(let i = 0 ; i < webtoons.length-1 ; i++){
+   let title = webtoons[i].title;
+   let rating = webtoons[i].rating;
+   let starCount = parseInt(rating);
+   html += `<div>${title} : `;
+   for(let j = 0 ; j <= starCount.length-1 ; j++){
+      html+= `★`;
+   }
+   for(let j = 0 ; j <= 10 - starCount ; j++){  // 전체 10개에서 남은 개수만큼 반복 !!
+      html+= `☆`;
+   }
+   html+= `</div>`
+}
+console.log(html);
+document.write(html);
 
 // 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기
 // [구현 조건]

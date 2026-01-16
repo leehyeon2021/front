@@ -40,7 +40,7 @@ console.log('var1'); // 다른 test1.js에서 선언된 변수 사용
            .clear();
           : 모든 key 삭제.
     4] JSON 변환
-      : 세션/로컬 저장소는 문자열 저장이 가능하다.
+      : 세션/로컬 저장소는 ⭐문자열 저장⭐이 가능하다.
         1] 저장
           : JSON.stringify()
             : JS객체 -> JSON문자열

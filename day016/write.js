@@ -21,4 +21,5 @@ function boardWrite(){
     // 7. 기타 등등
     alert("게시물 작성 성공");
     location.href = 'list.html' // 글쓰기 성공시 게시물 목록(list)페이지로 이동
+    // location.href: 페이지 쓰기
 }
