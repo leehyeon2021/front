@@ -3,12 +3,23 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>개별 출력 페이지</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    
+
+
+    <div>
+        제목: <div id="title"> 선택된 게시물 제목 자리 </div>
+        내용: <div id="content"> 선택된 게시물 내용 자리 </div>
+        <a href="list.html"> 목록보기 </a>
+        <button onclick="boardDelete()"> 삭제 </button>
+        <button onclick="boardUpdateView()"> 수정 </button>
+    </div>
+
+
+    <script src="view.js"></script>
 </body>
 </html>
